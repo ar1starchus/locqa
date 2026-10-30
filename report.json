@@ -979,6 +979,39 @@
     "reviewed_by_human": false
   },
   {
+    "key": "dragRacingBattlePass",
+    "issue_type": "glossary_violation",
+    "severity": "high",
+    "source": "Боевой пропуск",
+    "target": "Жауынгерлік билет",
+    "evidence": "Термин 'Боевой пропуск' должен переводиться как 'Баттл пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Баттл пасс' [Контекст: Battle Pass / боевой пропуск]",
+    "suggestion": "Баттл пасс",
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "newYearInfoTitle0",
+    "issue_type": "glossary_violation",
+    "severity": "high",
+    "source": "СЕЗОННЫЙ ПРОПУСК",
+    "target": "МЕЗГІЛДІК ПАСС",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
+    "suggestion": "СЕЗОНДЫҚ ПАСС",
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "schPassSeasonPass",
+    "issue_type": "glossary_violation",
+    "severity": "high",
+    "source": "Сезонный пропуск",
+    "target": "Маусымдық пасс",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
+    "suggestion": "Сезондық пасс",
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
     "key": "blackListLeaderboardRank",
     "issue_type": "glossary_violation",
     "severity": "high",
@@ -1397,89 +1430,12 @@
     "reviewed_by_human": false
   },
   {
-    "key": "summerRushBpRequiredText",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "для доступа Необходимо приобрести сезонный пропуск",
-    "target": "қатынау үшін Сезондық пас сатып алу қажет",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "summerRushSeasonPassRequired",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "требуется сезонный пропуск",
-    "target": "Сезондық пас қажет",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "summerRushRewardsSeasonPassTitle",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "СЕЗОННЫЙ ПРОПУСК",
-    "target": "СЕЗОНДЫҚ ПАС",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": "РҰҚСАТНАМА",
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "summerRushRewardsBuyPassButton",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "КУПИТЬ ПРОПУСК",
-    "target": "ПАС САТЫП АЛУ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": "РҰҚСАТНАМА",
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
     "key": "newYearPassAvailable",
     "issue_type": "glossary_violation",
     "severity": "medium",
     "source": "СЕЗОННЫЙ ПРОПУСК ДОСТУПЕН",
     "target": "МЕЗГІЛДІК ПАСС ҚОЛЖЕТІМДІ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearPassSkipActs",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Пропуск всех актов",
-    "target": "Барлық актілерді өткізіп жіберу",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearPassSkipLevels",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Пропуск 5 уровней",
-    "target": "5 деңгейді өткізіп жіберу",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearStagesSkipAvailable",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "ПРОПУСК {stageId} АКТА ДОСТУПЕН",
-    "target": "{stageId} АКТІСІН ӨТКІЗУ ҚОЛЖЕТІМДІ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
@@ -1490,7 +1446,7 @@
     "severity": "medium",
     "source": "КУПИТЬ СЕЗОННЫЙ ПРОПУСК",
     "target": "МЕЗГІЛДІК ПАСС САТЫП АЛУ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
@@ -1501,63 +1457,8 @@
     "severity": "medium",
     "source": "Требуется сезонный пропуск",
     "target": "Мезгілдік пасс қажет",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearThreeActsSkip",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "ПРОПУСК ТРЕХ АКТОВ",
-    "target": "ҮШ АКТІ ӨТКІЗУ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearActSkip",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "ПРОПУСК {act} АКТА",
-    "target": "{act} АКТІ ӨТКІЗУ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearInfoTitle0",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "СЕЗОННЫЙ ПРОПУСК",
-    "target": "МЕЗГІЛДІК ПАСС",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": "РҰҚСАТНАМА",
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearInfoDesc0",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Проходи задания, получай опыт и леденцы и забирай крутые награды ивента!\n\nНе забудь заглянуть в магазин и оценить уникальное предложение, которое даст +5 уровней сезонного пропуска, а также пропуск к каждому акту.",
-    "target": "Тапсырмаларды орындап, тәжірибе мен кәмпиттер жинап, ивенттің керемет сыйлықтарын алыңыз!\n\nДүкенге кіріп, мезгілдік пасстың +5 деңгейін және әрбір актіге қолжетімділік беретін бірегей ұсынысты бағалауды ұмытпаңыз.",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "dragRacingBattlePass",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Боевой пропуск",
-    "target": "Жауынгерлік билет",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": "рұқсатнама",
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1567,19 +1468,8 @@
     "severity": "medium",
     "source": "ДЛЯ ДОСТУПА К ЗАДАНИЯМ НЕОБХОДИМО\nПРИОБРЕСТИ СЕЗОННЫЙ ПРОПУСК",
     "target": "ТАПСЫРМАЛАРҒА ҚОЛ ЖЕТКІЗУ ҮШІН\nМАУСЫМДЫҚ ПРОПУСК САТЫП АЛУ ҚАЖЕТ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "srv2Step5Part0Title",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Пропуск ивента",
-    "target": "Ивент пропускы",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": "Рұқсатнама",
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1589,7 +1479,7 @@
     "severity": "medium",
     "source": "Купи сезонный пропуск, чтобы открыть\nдоступ к премиальным наградам пропуска.",
     "target": "Пропусктың премиум сыйлықтарына\nқолжетімділікті ашу үшін маусымдық пропуск сатып ал.",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
@@ -1600,18 +1490,7 @@
     "severity": "medium",
     "source": "ТРЕБУЕТСЯ СЕЗОННЫЙ ПРОПУСК",
     "target": "МАУСЫМДЫҚ ПРОПУСК ҚАЖЕТ",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schGoToPass",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Перейти в пропуск",
-    "target": "Пасқа өту",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
@@ -1622,40 +1501,7 @@
     "severity": "medium",
     "source": "Вы покупаете сезонный пропуск",
     "target": "Сіз маусымдық пасс сатып алып жатырсыз",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schPassSeasonPass",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Сезонный пропуск",
-    "target": "Маусымдық пасс",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": "рұқсатнама",
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schTutorialT1S4",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "А если хочешь забирать в два раза больше лута и прокатиться\nна эксклюзивном <g>Mercedes-Benz</g>, активируй <g>Премиум пропуск!</g>\nТем более, сейчас на него действует отличная скидка.",
-    "target": "Ал егер екі есе көп олжа алып, эксклюзивті\n<g>Mercedes-Benz</g>-пен жүргің келсе, <g>Премиум пассты!</g> белсендір.\nОның үстіне, қазір оған жақсы жеңілдік бар.",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schTutorialT1S5",
-    "issue_type": "glossary_violation",
-    "severity": "medium",
-    "source": "Хватит считать ворон за окном! Прокачивай\nпропуск и забирай свои первые награды!",
-    "target": "Терезеге қарап бос отырма! Пассыңды\nкөтеріп, алғашқы сыйлықтарыңды ал!",
-    "evidence": "Термин 'пропуск' должен переводиться как 'рұқсатнама' (согласно глоссарию), но в целевом тексте отсутствует 'рұқсатнама' [Контекст: Battle Pass / боевой пропуск]",
+    "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
     "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false

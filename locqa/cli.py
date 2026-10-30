@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 from typing import Dict, List, Optional
@@ -56,7 +57,12 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     check_parser.add_argument(
         "--fix",
         default=None,
-        help="Path to write fixed ARB file (e.g. intl_kk_fixed.arb)",
+        help="Optional path to write fixed ARB file (e.g. intl_kk_fixed.arb)",
+    )
+    check_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force overwrite fixed ARB if it already exists",
     )
     check_parser.add_argument(
         "--mark-reviewed",
@@ -84,6 +90,14 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         default=None,
         help="Optional Gemini API key for semantic calque detection (or set GEMINI_API_KEY env var)",
     )
+
+    # Command: apply (applies fixes from report.json without re-running checks)
+    apply_parser = subparsers.add_parser("apply", help="Apply reviewed fixes from report.json to target ARB")
+    apply_parser.add_argument("--target", "-t", required=True, help="Path to target ARB file (e.g. intl_kk.arb)")
+    apply_parser.add_argument("--report", "-r", default="report.json", help="Path to report.json (default: report.json)")
+    apply_parser.add_argument("--out", "-o", default="intl_kk_fixed.arb", help="Output fixed ARB (default: intl_kk_fixed.arb)")
+    apply_parser.add_argument("--only-reviewed", action="store_true", help="Only apply fixes marked as reviewed_by_human: true")
+    apply_parser.add_argument("--force", action="store_true", help="Force overwrite existing output file")
 
     # Command: glossary
     gloss_parser = subparsers.add_parser("build-glossary", help="Build glossary.csv from ARB files")
@@ -148,23 +162,32 @@ def run_check(args: argparse.Namespace) -> int:
         print(f"[✓] Saved JSON report: {args.out}")
 
     if args.html:
+        with open(args.target, "r", encoding="utf-8") as f:
+            target_raw = f.read()
         Reporter.save_html(
             findings,
             args.html,
             source_name=os.path.basename(args.source),
             target_name=os.path.basename(args.target),
+            target_raw_content=target_raw,
         )
         print(f"[✓] Saved HTML dashboard: {args.html}")
 
     # Generate fixed ARB if requested
     if args.fix:
-        applied_cnt, _ = ArbFixer.apply_fixes(
-            target_arb=tgt_arb,
-            findings=findings,
-            output_path=args.fix,
-            mark_all_reviewed=args.mark_reviewed,
-        )
-        print(f"[✓] Applied {applied_cnt} automatic fixes to {args.fix}")
+        if os.path.exists(args.fix) and not args.force:
+            print(
+                f"[i] Файл {args.fix} уже существует и НЕ был перезаписан "
+                f"(защита от случайной потери ручных правок). Используйте --force для перезаписи."
+            )
+        else:
+            applied_cnt, _ = ArbFixer.apply_fixes(
+                target_arb=tgt_arb,
+                findings=findings,
+                output_path=args.fix,
+                mark_all_reviewed=args.mark_reviewed,
+            )
+            print(f"[✓] Applied {applied_cnt} automatic fixes to {args.fix}")
 
     # Bonus: Latin transliteration
     if args.transliterate_latin:
@@ -173,14 +196,50 @@ def run_check(args: argparse.Namespace) -> int:
         for k, e in tgt_arb.entries.items():
             latin_entries[k] = KazakhLatinTransliteration.transliterate_text(e.value)
 
-        # Write out Latin ARB
         ArbParser.write_file(tgt_arb, args.transliterate_latin, replacements=latin_entries)
-        # Verify length growth
         overflows = KazakhLatinTransliteration.verify_lengths(
             {k: e.value for k, e in tgt_arb.entries.items()}
         )
         print(f"[✓] Generated Latin ARB: {args.transliterate_latin} (noted {len(overflows)} length shifts)")
 
+    return 0
+
+
+def run_apply(args: argparse.Namespace) -> int:
+    if os.path.exists(args.out) and not args.force:
+        print(f"[!] Файл {args.out} уже существует. Используйте --force для перезаписи.")
+        return 1
+
+    tgt_arb = ArbParser.parse_file(args.target)
+    with open(args.report, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    findings: List[Finding] = []
+    for item in data:
+        if args.only_reviewed and not item.get("reviewed_by_human"):
+            continue
+        if item.get("suggestion"):
+            findings.append(
+                Finding(
+                    key=item["key"],
+                    issue_type=item["issue_type"],
+                    severity=item["severity"],
+                    source=item.get("source", ""),
+                    target=item.get("target", ""),
+                    evidence=item.get("evidence", ""),
+                    suggestion=item["suggestion"],
+                    confidence=item.get("confidence", 1.0),
+                    reviewed_by_human=item.get("reviewed_by_human", False),
+                )
+            )
+
+    applied_cnt, _ = ArbFixer.apply_fixes(
+        target_arb=tgt_arb,
+        findings=findings,
+        output_path=args.out,
+        mark_all_reviewed=False,
+    )
+    print(f"[✓] Применено {applied_cnt} правок из {args.report} в {args.out}")
     return 0
 
 
@@ -208,6 +267,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     args = parse_args(argv)
     if args.command == "check":
         return run_check(args)
+    elif args.command == "apply":
+        return run_apply(args)
     elif args.command == "build-glossary":
         return run_build_glossary(args)
     elif args.command == "transliterate":

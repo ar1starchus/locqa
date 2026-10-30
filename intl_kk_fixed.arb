@@ -3142,18 +3142,8 @@
   "summerRushRaceMaxSpeedSuffix": "КМ/САғ",
   "summerRushRaceSelectCarButton": "АВТОКӨЛІКТІ ТАҢДАҢЫЗ",
   "summerRushRaceStartRacePrefix": "ЖАРЫС",
-  "summerRushRewardsSeasonPassTitle": "РҰҚСАТНАМА",
-  "@summerRushRewardsSeasonPassTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "СЕЗОНДЫҚ ПАС"
-  },
-  "summerRushRewardsBuyPassButton": "РҰҚСАТНАМА",
-  "@summerRushRewardsBuyPassButton": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "ПАС САТЫП АЛУ"
-  },
+  "summerRushRewardsSeasonPassTitle": "СЕЗОНДЫҚ ПАС",
+  "summerRushRewardsBuyPassButton": "ПАС САТЫП АЛУ",
   "summerRushResultsButton": "НӘТИЖЕЛЕР",
   "summerRushPlayerStoreRareReward": "Сирек сыйақылар",
   "summerRushPlayerStoreCongratBp": "Құттықтаймыз\nПремиум PASS қолжетімді",
@@ -4103,7 +4093,7 @@
     "previous_value": "НЕГІЗГІ СЫЙЛЫҚ"
   },
   "newYearActSkip": "{act} АКТІ ӨТКІЗУ",
-  "newYearInfoTitle0": "РҰҚСАТНАМА",
+  "newYearInfoTitle0": "СЕЗОНДЫҚ ПАСС",
   "@newYearInfoTitle0": {
     "reviewed_by_human": false,
     "issue_type": "glossary_violation",
@@ -5054,7 +5044,7 @@
   "dragRacingGarage": "Гараж",
   "dragRacingWarehouse": "Қойма",
   "dragRacingRating": "Жарыстар",
-  "dragRacingBattlePass": "рұқсатнама",
+  "dragRacingBattlePass": "Баттл пасс",
   "@dragRacingBattlePass": {
     "reviewed_by_human": false,
     "issue_type": "glossary_violation",
@@ -6332,12 +6322,7 @@
   "srv2Step3Part3Text": "Көлік таңдалды. Жарысты іздеуді бастау үшін\n“Жарыс” батырмасын бас.",
   "srv2Step3Part3RaceButton": "Жарыс",
   "srv2Step3Part3VehicleNotSelectedLabel": "Көлік таңдалмаған",
-  "srv2Step5Part0Title": "Рұқсатнама",
-  "@srv2Step5Part0Title": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Ивент пропускы"
-  },
+  "srv2Step5Part0Title": "Ивент пропускы",
   "srv2Step5Part0Text": "Ивентте тәжірибе жина, пропуск\nдеңгейін көтер және сыйлықтарды ал.",
   "srv2Step5Part0LevelLabel": "ДЕҢГЕЙ",
   "srv2Step5Part1Title": "Премиум сыйлықтар",
@@ -6718,7 +6703,7 @@
   "schGiftPassReceivedTitle": "Сізге Premium Pass сыйлады!",
   "schGiftPassFromPlayer": "Ойыншыдан: ",
   "schGiftPassGoToRewards": "Сыйлықтарға өту",
-  "schPassSeasonPass": "рұқсатнама",
+  "schPassSeasonPass": "Сезондық пасс",
   "@schPassSeasonPass": {
     "reviewed_by_human": false,
     "issue_type": "glossary_violation",
