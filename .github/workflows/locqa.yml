@@ -1,0 +1,52 @@
+name: Localization QA (locqa)
+
+on:
+  pull_request:
+    paths:
+      - '**.arb'
+  push:
+    branches:
+      - main
+    paths:
+      - '**.arb'
+
+jobs:
+  check-localization:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run LocQA on Kazakh locale
+        run: |
+          python3 ./locqa_cli.py check \
+            --source handout/intl_ru.arb \
+            --target handout/intl_kk.arb \
+            --glossary glossary.csv \
+            --out report_kk.json \
+            --html report_kk.html
+
+      - name: Run LocQA on Uzbek locale (Bonus)
+        run: |
+          python3 ./locqa_cli.py check \
+            --source handout/intl_ru.arb \
+            --target handout/intl_uz.arb \
+            --glossary glossary.csv \
+            --out report_uz.json \
+            --html report_uz.html
+
+      - name: Upload QA Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: locqa-reports
+          path: |
+            report_kk.json
+            report_kk.html
+            report_uz.json
+            report_uz.html
+            glossary.csv
