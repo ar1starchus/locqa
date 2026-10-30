@@ -1,65 +1,71 @@
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from locqa.checkers.base import BaseChecker
 from locqa.glossary import Glossary
 from locqa.models import ArbFile, Finding, IssueType, Severity
+from locqa.morphology import KazakhMorphology
 
 
 class GlossaryChecker(BaseChecker):
     """Detects terminology violations against an approved glossary.csv
-    and generates case-adapted suggestions.
+    and generates case-adapted, grammatically inflected suggestions.
     
     Verifies that canonical game terms (e.g. 'фракция', 'семья', 'бизнес',
     'Grand Coins', 'варн', 'мут', 'аккаунт', 'ранг', 'награда', 'донат')
     are translated consistently in accordance with approved gaming terminology.
+    
+    Uses KazakhMorphology to transfer grammatical affixes (possessive, plural, case)
+    from the mistranslated word to the approved term with full vowel harmony.
     """
 
-    # Common unapproved / divergent translations for core gaming terms
-    MISTRANSLATION_PATTERNS: Dict[str, List[str]] = {
+    # Mapping of canonical Russian terms to tuples of (regex_pattern, base_stem)
+    MISTRANSLATION_PATTERNS: Dict[str, List[Tuple[str, str]]] = {
         "аккаунт": [
-            r"тіркелгі[а-яәғқңөұүһі]*",
-            r"есептік жазба[а-яәғқңөұүһі]*",
-            r"есепті[а-яәғқңөұүһі]*",
-            r"есеп[а-яәғқңөұүһі]*",
+            (r"тіркелгі[а-яәғқңөұүһі]*", "тіркелгі"),
+            (r"есептік жазба[а-яәғқңөұүһі]*", "есептік жазба"),
+            (r"есепті[а-яәғқңөұүһі]*", "есеп"),
+            (r"есеп[а-яәғқңөұүһі]*", "есеп"),
         ],
         "ранг": [
-            r"дәреже[а-яәғқңөұүһі]*",
-            r"рейтинг[а-яәғқңөұүһі]*",
+            (r"дәреже[а-яәғқңөұүһі]*", "дәреже"),
+            (r"рейтинг[а-яәғқңөұүһі]*", "рейтинг"),
         ],
         "награда": [
-            r"сыйақы[а-яәғқңөұүһі]*",
-            r"сыйлы[қғ][а-яәғқңөұүһі]*",
-            r"марапат[а-яәғқңөұүһі]*",
-            r"сый[а-яәғқңөұүһі]*",
+            (r"сыйақы[а-яәғқңөұүһі]*", "сыйақы"),
+            (r"сыйлы[қғ][а-яәғқңөұүһі]*", "сыйлық"),
+            (r"марапат[а-яәғқңөұүһі]*", "марапат"),
+            (r"сый[а-яәғқңөұүһі]*", "сый"),
         ],
         "донат": [
-            r"сыйлық[а-яәғқңөұүһі]*",
-            r"қайырымдылық[а-яәғқңөұүһі]*",
+            (r"сыйлық[а-яәғқңөұүһі]*", "сыйлық"),
+            (r"қайырымдылық[а-яәғқңөұүһі]*", "қайырымдылық"),
         ],
         "пропуск": [
-            r"жауынгерлік билет[а-яәғқңөұүһі]*",
-            r"билет[а-яәғқңөұүһі]*",
+            (r"жауынгерлік билет[а-яәғқңөұүһі]*", "жауынгерлік билет"),
+            (r"билет[а-яәғқңөұүһі]*", "билет"),
+            (r"пасс?[а-яәғқңөұүһі]*", "пасс"),
         ],
         "боевой пропуск": [
-            r"жауынгерлік билет[а-яәғқңөұүһі]*",
-            r"билет[а-яәғқңөұүһі]*",
+            (r"жауынгерлік билет[а-яәғқңөұүһі]*", "жауынгерлік билет"),
+            (r"билет[а-яәғқңөұүһі]*", "билет"),
+            (r"пасс?[а-яәғқңөұүһі]*", "пасс"),
         ],
         "фракция": [
-            r"ұйым[а-яәғқңөұүһі]*",
+            (r"ұйым[а-яәғқңөұүһі]*", "ұйым"),
         ],
         "семья": [
-            r"клан[а-яәғқңөұүһі]*",
-            r"әулет[а-яәғқңөұүһі]*",
+            (r"клан[а-яәғқңөұүһі]*", "клан"),
+            (r"әулет[а-яәғқңөұүһі]*", "әулет"),
         ],
         "бизнес": [
-            r"кәсіп[а-яәғқңөұүһі]*",
+            (r"кәсіп[а-яәғқңөұүһі]*", "кәсіп"),
         ],
         "Grand Coins": [
-            r"гранд коинс[а-яәғқңөұүһі]*",
-            r"монета[а-яәғқңөұүһі]*",
+            (r"гранд коинс[а-яәғқңөұүһі]*", "гранд коинс"),
+            (r"монета[а-яәғқңөұүһі]*", "монета"),
         ],
     }
 
@@ -126,7 +132,7 @@ class GlossaryChecker(BaseChecker):
                         is_exact_match = src_val.strip().lower() == term_ru.lower()
                         severity = Severity.HIGH if is_exact_match else Severity.MEDIUM
 
-                        # Generate case-adapted suggestion
+                        # Generate case-adapted and grammatically inflected suggestion
                         suggestion = None
                         if is_exact_match:
                             # Exact string replacement: match source case
@@ -136,13 +142,28 @@ class GlossaryChecker(BaseChecker):
                             lookup_key = term_ru.lower()
                             candidate_patterns = self.MISTRANSLATION_PATTERNS.get(lookup_key, [])
 
-                            for wrong_pat in candidate_patterns:
+                            for wrong_pat, wrong_stem in candidate_patterns:
                                 m_tgt = re.search(rf"\b{wrong_pat}\b", tgt_val, re.IGNORECASE)
                                 if m_tgt:
                                     matched_target_text = m_tgt.group(0)
+
+                                    # Morphological suffix transfer:
+                                    # Extracts plural, possessive, case tags from the mistranslated word
+                                    # and applies them to the approved term obeying Kazakh vowel harmony
+                                    inflected_term = KazakhMorphology.transfer_affixes(
+                                        wrong_word=matched_target_text,
+                                        wrong_stem=wrong_stem,
+                                        approved_term=term_kk,
+                                    )
+
                                     # Adapt casing to match either source or target caps
-                                    adapted_term = self.adapt_casing(term_kk, matched_src_text, matched_target_text)
-                                    # Replace the first occurrence of incorrect word
+                                    adapted_term = self.adapt_casing(
+                                        inflected_term,
+                                        matched_src_text,
+                                        matched_target_text,
+                                    )
+
+                                    # Replace the incorrect word with inflected approved term
                                     suggestion = re.sub(
                                         rf"\b{wrong_pat}\b",
                                         adapted_term,

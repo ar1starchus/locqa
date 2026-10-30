@@ -134,6 +134,33 @@ class TestCheckers(unittest.TestCase):
         latin = KazakhLatinTransliteration.transliterate_text(text)
         self.assertEqual(latin, "Qazaqstan, {name} üşin!")
 
+    def test_kazakh_morphological_transfer(self):
+        from locqa.morphology import KazakhMorphology
+
+        # 1. Ваша награда -> Сіздің жүлдеңіз
+        inflected = KazakhMorphology.transfer_affixes("сыйлығыңыз", "сыйлық", "жүлде")
+        self.assertEqual(inflected, "жүлдеңіз")
+
+        # 2. Google аккаунты
+        inflected2 = KazakhMorphology.transfer_affixes("тіркелгісі", "тіркелгі", "аккаунт")
+        self.assertEqual(inflected2, "аккаунты")
+
+        # 3. Множественное число: сыйлықтар -> жүлделер
+        inflected3 = KazakhMorphology.transfer_affixes("сыйлықтар", "сыйлық", "жүлде")
+        self.assertEqual(inflected3, "жүлделер")
+
+    def test_glossary_with_morphology(self):
+        src = ArbFile(path="", locale="ru", entries={
+            "k1": ArbEntry(key="k1", value="Ваша награда", raw_line="", line_number=1),
+        })
+        tgt = ArbFile(path="", locale="kk", entries={
+            "k1": ArbEntry(key="k1", value="Сіздің сыйлығыңыз", raw_line="", line_number=1),
+        })
+        glo = Glossary([GlossaryEntry(term_ru="награда", term_kk="жүлде", term_en="reward")])
+        findings = GlossaryChecker().check(src, tgt, context={"glossary": glo})
+        self.assertEqual(len(findings), 1)
+        self.assertEqual(findings[0].suggestion, "Сіздің жүлдеңіз")
+
 
 if __name__ == "__main__":
     unittest.main()

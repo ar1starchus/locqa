@@ -78,10 +78,14 @@ class QAEngine:
 
         # If a key is flagged as wrong_language, drop same_as_source for that key
         wrong_lang_keys = {f.key for f in seen.values() if f.issue_type == IssueType.WRONG_LANGUAGE}
+        # If a key is flagged as glossary_violation, drop inconsistent_term for that key
+        glossary_keys = {f.key for f in seen.values() if f.issue_type == IssueType.GLOSSARY_VIOLATION}
         final_list: List[Finding] = []
 
         for (key, it), finding in seen.items():
             if it == IssueType.SAME_AS_SOURCE.value and key in wrong_lang_keys:
+                continue
+            if it == IssueType.INCONSISTENT_TERM.value and key in glossary_keys:
                 continue
             final_list.append(finding)
 
