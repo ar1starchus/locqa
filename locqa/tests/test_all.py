@@ -108,13 +108,21 @@ class TestCheckers(unittest.TestCase):
     def test_orthography(self):
         src = ArbFile(path="", locale="ru", entries={
             "k1": ArbEntry(key="k1", value="Текст", raw_line="", line_number=1),
+            "k2": ArbEntry(key="k2", value="Сезонный пропуск", raw_line="", line_number=2),
+            "k3": ArbEntry(key="k3", value="Устроиться в Chicken", raw_line="", line_number=3),
+            "k4": ArbEntry(key="k4", value="Ранг в PVP", raw_line="", line_number=4),
         })
-        # Latin 'i' inside Cyrillic word
+        # Latin 'i' inside Cyrillic word, plus valid English words with Kazakh affixes
         tgt = ArbFile(path="", locale="kk", entries={
             "k1": ArbEntry(key="k1", value="бөлімiне өту", raw_line="", line_number=1),
+            "k2": ArbEntry(key="k2", value="Season Pass-ты сатып алыңыз", raw_line="", line_number=2),
+            "k3": ArbEntry(key="k3", value="GRAND CHICKEN-қа қош келдіңіз!", raw_line="", line_number=3),
+            "k4": ArbEntry(key="k4", value="PVP-дегі жеңіс пен VIP-і бар ойыншы", raw_line="", line_number=4),
         })
         findings = OrthographyChecker().check(src, tgt)
+        # Only k1 with 'бөлімiне' should be flagged; English words with affixes should NOT be false positives
         self.assertEqual(len(findings), 1)
+        self.assertEqual(findings[0].key, "k1")
         self.assertEqual(findings[0].suggestion, "бөліміне өту")
 
     def test_length_overflow(self):

@@ -34,8 +34,10 @@ class OrthographyChecker(BaseChecker):
         "P": "Р",
         "x": "х",  # Latin small x -> Cyrillic small kh (U+0445)
         "X": "Х",
-        "y": "у",
-        "k": "к",
+        "y": "у",  # Latin small y -> Cyrillic small u (U+0443)
+        "Y": "У",
+        "k": "к",  # Latin small k -> Cyrillic small k (U+043A)
+        "K": "К",
     }
 
     @property
@@ -68,6 +70,8 @@ class OrthographyChecker(BaseChecker):
                 src_placeholders = {p.strip("{}").lower() for p in re.findall(r"\{[a-zA-Z0-9_]+\}", src_val)}
 
             # Check 1: Algorithmic Homoglyph detection (mixed Latin inside Cyrillic word)
+            # Detects accidental visual homoglyph keystrokes (e.g. Latin 'i' in 'бөлімiне', Latin 'c' in 'көтерілеcің')
+            # while respecting legitimate English words, acronyms, and hyphenated inflections (e.g. 'CHICKEN-қа', 'Pass-ты', 'GPS-белгі').
             words = re.findall(r"\b[\w\-]+\b", clean_text, re.UNICODE)
             for word in words:
                 clean_word = word.lower().split("-")[0]
@@ -75,22 +79,48 @@ class OrthographyChecker(BaseChecker):
                 if clean_word in src_placeholders:
                     continue
 
-                has_cyrillic = bool(re.search(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІ]", word))
-                has_latin = bool(re.search(r"[a-zA-Z]", word))
+                parts = word.split("-")
+                word_has_error = False
+                fixed_word = word
+                replaced_letters: List[str] = []
 
-                if has_cyrillic and has_latin:
-                    # Ignore pure standalone acronyms like ID, XP, GC
-                    fixed_word = word
-                    replaced_letters: List[str] = []
-                    for ch in word:
-                        if ch in self.LATIN_HOMOGLYPH_MAP:
-                            fixed_word = fixed_word.replace(ch, self.LATIN_HOMOGLYPH_MAP[ch])
+                for part in parts:
+                    has_cyrillic = bool(re.search(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІ]", part))
+                    has_latin = bool(re.search(r"[a-zA-Z]", part))
+
+                    # If part is purely Latin or purely Cyrillic, it is script-homogeneous: valid!
+                    # E.g. in 'Pass-ты', 'Pass' is 100% Latin, 'ты' is 100% Cyrillic.
+                    if not (has_cyrillic and has_latin):
+                        continue
+
+                    lat_chars = [c for c in part if ("a" <= c <= "z" or "A" <= c <= "Z")]
+                    cyr_chars = [c for c in part if re.search(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІ]", c)]
+
+                    # If the Latin sub-part is an intentional foreign word from the source, skip it
+                    if src_val and len(part) >= 2 and re.search(rf"\b{re.escape(part)}\b", src_val, re.IGNORECASE):
+                        continue
+
+                    # Criteria for genuine homoglyph error:
+                    # 1. The word/part is predominantly Cyrillic (Cyrillic letters >= 60%)
+                    # 2. ALL Latin letters in the part are recognized visual homoglyphs in LATIN_HOMOGLYPH_MAP
+                    #    (if it has non-homoglyph Latin letters like 's', 'r', 'n', 'h', it's an English word).
+                    all_lat_in_map = all(c in self.LATIN_HOMOGLYPH_MAP for c in lat_chars)
+                    total_letters = len(cyr_chars) + len(lat_chars)
+                    cyr_ratio = len(cyr_chars) / total_letters if total_letters > 0 else 0
+
+                    if all_lat_in_map and cyr_ratio >= 0.6:
+                        fixed_part = part
+                        for ch in lat_chars:
+                            fixed_part = fixed_part.replace(ch, self.LATIN_HOMOGLYPH_MAP[ch])
                             replaced_letters.append(f"'{ch}' -> '{self.LATIN_HOMOGLYPH_MAP[ch]}'")
+                        fixed_word = fixed_word.replace(part, fixed_part)
+                        word_has_error = True
 
+                if word_has_error and replaced_letters:
                     evidence_items.append(
                         f"Смешение алфавитов в слове '{word}' (латиница внутри кириллицы: {', '.join(replaced_letters)})"
                     )
-                    suggested_text = re.sub(rf"\b{re.escape(word)}\b", fixed_word, suggested_text)
+                    suggested_text = re.sub(rf"\b{re.escape(word)}\b", lambda _: fixed_word, suggested_text)
 
             # Check 2: Custom orthography dictionary if supplied via configuration
             if custom_dictionary:
