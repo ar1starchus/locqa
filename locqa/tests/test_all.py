@@ -161,6 +161,48 @@ class TestCheckers(unittest.TestCase):
         self.assertEqual(len(findings), 1)
         self.assertEqual(findings[0].suggestion, "Сіздің жүлдеңіз")
 
+    def test_glossary_casing_target_precedence(self):
+        # Russian source has 'Награда' capitalized as first word,
+        # but in Kazakh syntax 'сыйлығы' is lowercase in mid-sentence position.
+        src = ArbFile(path="", locale="ru", entries={
+            "rewardForSubscription": ArbEntry(key="rewardForSubscription", value="Награда за подписку", raw_line="", line_number=1),
+        })
+        tgt = ArbFile(path="", locale="kk", entries={
+            "rewardForSubscription": ArbEntry(key="rewardForSubscription", value="жазылым сыйлығы", raw_line="", line_number=1),
+        })
+        glo = Glossary([GlossaryEntry(term_ru="награда", term_kk="жүлде", term_en="reward")])
+        findings = GlossaryChecker().check(src, tgt, context={"glossary": glo})
+        self.assertEqual(len(findings), 1)
+        self.assertEqual(findings[0].suggestion, "жазылым жүлдесі")
+
+    def test_reporter_html_textarea_newlines(self):
+        import tempfile
+        from locqa.reporter import Reporter
+        from locqa.models import Finding, IssueType, Severity
+
+        multiline_sug = "Жеңімпаз\nбәрін алады!"
+        finding = Finding(
+            key="testKey",
+            issue_type=IssueType.GLOSSARY_VIOLATION,
+            severity=Severity.HIGH,
+            source="Победитель\nзабирает всё!",
+            target="Жеңімпаз\nбәрін сыйлық алады!",
+            evidence="тест",
+            suggestion=multiline_sug,
+            confidence=0.95,
+        )
+        with tempfile.NamedTemporaryFile("w+", suffix=".html", delete=False) as tmp:
+            tmp_path = tmp.name
+
+        Reporter.save_html([finding], tmp_path, target_raw_content='{"testKey": "..."}')
+        with open(tmp_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Should render <textarea> preserving newlines, never <input type="text">
+        self.assertIn("<textarea class=\"sug-input\"", content)
+        self.assertIn("Жеңімпаз\nбәрін алады!", content)
+        self.assertNotIn('<input type="text" class="sug-input"', content)
+
 
 if __name__ == "__main__":
     unittest.main()

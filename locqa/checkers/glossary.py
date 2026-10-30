@@ -86,20 +86,36 @@ class GlossaryChecker(BaseChecker):
     @staticmethod
     def adapt_casing(term: str, sample_source: str, sample_target: Optional[str] = None) -> str:
         """Adapt grammatical casing (UPPERCASE, Title Case, lowercase)
-        to match the source original and surrounding target context.
+        to match the surrounding target context and source original.
         """
+        if not term:
+            return term
+
+        # Proper nouns or terms with Latin characters (e.g. 'Grand Coins') or short acronyms (e.g. 'ГК')
+        if any("a" <= c <= "z" or "A" <= c <= "Z" for c in term) or (len(term) <= 3 and term.isupper()):
+            if (sample_target and sample_target.isupper()) or sample_source.isupper():
+                return term.upper()
+            return term
+
         # If target word is ALL CAPS (e.g. СІЗДІҢ СЫЙЛЫҒЫҢЫЗ) or source is ALL CAPS (АККАУНТ)
         if (sample_target and sample_target.isupper()) or sample_source.isupper():
             return term.upper()
-        # If source is Title Case (e.g. Аккаунт, Донат)
+
+        # If target word context is provided, target position casing takes precedence
+        # over source (e.g. Russian first-word 'Награда за ...' is capitalized,
+        # but Kazakh 'жазылым сыйлығы' is lowercase mid-sentence).
+        if sample_target:
+            if sample_target.islower():
+                return term.lower()
+            if sample_target[0].isupper():
+                return term[0].upper() + term[1:].lower() if term.isupper() else term[0].upper() + term[1:]
+
+        # If no target sample or target case undetermined, fall back to source casing
         if sample_source.istitle():
-            return term.capitalize()
-        # If target word starts with capital letter (e.g. sentence beginning)
-        if sample_target and sample_target[0].isupper():
             return term[0].upper() + term[1:]
-        # If source is lowercase (e.g. аккаунт, донат)
         if sample_source.islower():
             return term.lower()
+
         return term
 
     def check(
@@ -148,8 +164,9 @@ class GlossaryChecker(BaseChecker):
                         # Generate case-adapted and grammatically inflected suggestion
                         suggestion = None
                         if is_exact_match:
-                            # Exact string replacement: match source case
-                            suggestion = self.adapt_casing(term_kk, matched_src_text, tgt_val)
+                            # Exact string replacement: match source case (or ALL CAPS if target was all caps)
+                            target_caps = tgt_val if tgt_val.isupper() else None
+                            suggestion = self.adapt_casing(term_kk, matched_src_text, target_caps)
                         else:
                             # Sentence replacement: find mistranslated token in target
                             lookup_key = term_ru.lower()
@@ -179,7 +196,7 @@ class GlossaryChecker(BaseChecker):
                                     # Replace the incorrect word with inflected approved term
                                     suggestion = re.sub(
                                         rf"\b{wrong_pat}\b",
-                                        adapted_term,
+                                        lambda _: adapted_term,
                                         tgt_val,
                                         count=1,
                                         flags=re.IGNORECASE,
@@ -188,7 +205,8 @@ class GlossaryChecker(BaseChecker):
 
                         # Fallback for short UI strings if no regex pattern hit
                         if not suggestion and len(src_val.split()) <= 2:
-                            suggestion = self.adapt_casing(term_kk, matched_src_text, tgt_val)
+                            target_caps = tgt_val if tgt_val.isupper() else None
+                            suggestion = self.adapt_casing(term_kk, matched_src_text, target_caps)
 
                         evidence = (
                             f"Термин '{term_ru}' должен переводиться как '{term_kk}' "

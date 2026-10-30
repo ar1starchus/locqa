@@ -75,8 +75,9 @@ class Reporter:
             else:
                 btn_html = '<span style="color:#94a3b8;font-size:12px;">—</span>'
 
+            sug_rows = max(1, min(6, sug_val.count("\n") + 1))
             sug_cell = (
-                f'<input type="text" class="sug-input" id="sug-{k_esc}" value="{sug_esc}" onchange="updateCustomSuggestion(\'{k_esc}\', this.value)">'
+                f'<textarea class="sug-input" id="sug-{k_esc}" rows="{sug_rows}" oninput="updateCustomSuggestion(\'{k_esc}\', this.value)" onchange="updateCustomSuggestion(\'{k_esc}\', this.value)">{sug_esc}</textarea>'
                 if has_sug
                 else '<span style="color:#94a3b8;">—</span>'
             )
@@ -145,9 +146,10 @@ class Reporter:
     
     code {{ font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #0284c7; word-break: break-all; }}
     .badge {{ display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; white-space: nowrap; }}
-    .text-cell {{ max-width: 220px; word-break: break-word; }}
-    .evidence-cell {{ max-width: 260px; color: #475569; font-size: 12px; }}
-    .sug-input {{ width: 100%; min-width: 180px; padding: 6px 10px; border: 1px solid #a7f3d0; background: #f0fdf4; border-radius: 6px; font-size: 13px; color: #065f46; font-weight: 500; outline: none; }}
+    .text-cell {{ max-width: 240px; word-break: break-word; white-space: pre-wrap; line-height: 1.4; }}
+    .evidence-cell {{ max-width: 260px; color: #475569; font-size: 12px; line-height: 1.4; }}
+    .sug-cell {{ min-width: 220px; }}
+    .sug-input {{ width: 100%; min-width: 200px; padding: 6px 10px; border: 1px solid #a7f3d0; background: #f0fdf4; border-radius: 6px; font-size: 13px; font-family: inherit; color: #065f46; font-weight: 500; outline: none; resize: vertical; white-space: pre-wrap; line-height: 1.4; box-sizing: border-box; }}
     .sug-input:focus {{ border-color: #10b981; background: #fff; box-shadow: 0 0 0 2px rgba(16,185,129,0.2); }}
     
     .btn-approve {{ background: #fff; border: 1px solid #cbd5e1; color: #475569; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }}
@@ -310,11 +312,19 @@ class Reporter:
 
     function resetApprovals() {{
       approvals = {{}};
+      customSuggestions = {{}};
       localStorage.removeItem('locqa_approvals');
+      localStorage.removeItem('locqa_custom_sug');
       document.querySelectorAll('tr.row-approved').forEach(r => r.classList.remove('row-approved'));
       document.querySelectorAll('.btn-approved').forEach(b => {{
         b.classList.remove('btn-approved');
         b.innerText = 'Одобрить';
+      }});
+      findingsData.forEach(f => {{
+        if (f.suggestion) {{
+          const inp = document.getElementById('sug-' + f.key);
+          if (inp) inp.value = f.suggestion;
+        }}
       }});
       updateCounter();
     }}
