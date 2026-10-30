@@ -34,10 +34,10 @@ class WrongLanguageChecker(BaseChecker):
     # Universal brand / acronym filter
     GLOBAL_BRANDS: Set[str] = {
         "BATTLE PASS", "GRAND", "GRAND MOBILE", "ROLE PLAY", "MOBILE",
-        "DISCORD", "GOOGLE", "APPLE", "TWITTER", "VK", "VK PAY", "LATAM",
+        "DISCORD", "TELEGRAM", "GOOGLE", "APPLE", "TWITTER", "VK", "VK PAY", "LATAM",
         "SPAIN", "JACKPOT", "FPS", "HUD", "CDN", "API", "DEV", "ID", "VIP",
         "LVL", "EXP", "GC", "ROSTICS", "CHICKEN", "CARBALL LEAGUE", "SUMMER RUSH",
-        "SEASON PASS",
+        "SEASON PASS", "1XBET", "SILVERSTAR",
     }
 
     @property
@@ -51,7 +51,7 @@ class WrongLanguageChecker(BaseChecker):
         if re.fullmatch(r"[\d\s\W%_{}\\\/–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34]+", s):
             return True
         upper = s.upper()
-        if any(b in upper for b in self.GLOBAL_BRANDS) and len(s.split()) <= 3:
+        if any(b in upper for b in self.GLOBAL_BRANDS) and len(s.split()) <= 4:
             return True
         if s.startswith("http://") or s.startswith("https://"):
             return True
@@ -74,13 +74,26 @@ class WrongLanguageChecker(BaseChecker):
         for key, tgt_entry in target.entries.items():
             tgt_val = tgt_entry.value.strip()
             src_entry = source.entries.get(key)
-            src_val = src_entry.value if src_entry else ""
+            src_val = src_entry.value.strip() if src_entry else ""
 
             if not tgt_val or self.is_brand_or_code(tgt_val):
                 continue
 
             clean_text = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", tgt_val).strip()
+            clean_src = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", src_val).strip()
             if not clean_text or len(clean_text) < 4:
+                continue
+
+            # Universal Rule for Brands & Preserved English terms:
+            # If the target text is identical to source, or all its Latin words were already
+            # present in the Russian source, it is an approved English brand, car model,
+            # technical term, or phrase preserved from the source original.
+            if clean_text.lower() == clean_src.lower():
+                continue
+
+            tgt_latin_words = set(re.findall(r"[a-zA-Z]+", clean_text.lower()))
+            src_latin_words = set(re.findall(r"[a-zA-Z]+", clean_src.lower()))
+            if tgt_latin_words and tgt_latin_words.issubset(src_latin_words):
                 continue
 
             detected_lang = None

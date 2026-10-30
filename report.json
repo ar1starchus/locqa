@@ -737,23 +737,12 @@
     "reviewed_by_human": false
   },
   {
-    "key": "battlepass_premium_plus",
+    "key": "laAuthorisationError",
     "issue_type": "wrong_language",
     "severity": "high",
-    "source": "BATTLE PASS PREMIUM + 30 LVLS",
-    "target": "BATTLE PASS PREMIUM + 30 LVLS",
-    "evidence": "Текст содержит служебные слова английского языка: 'BATTLE PASS PREMIUM + 30 LVLS'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "battlepass_premium_plus_button",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "BATTLE PASS\nPREMIUM + 30 LVLS",
-    "target": "BATTLE PASS\nPREMIUM + 30 LVLS",
-    "evidence": "Текст содержит служебные слова английского языка: 'BATTLE PASS\nPREMIUM + 30 LVLS'",
+    "source": "Ошибка авторизации",
+    "target": "Avtorizatsiya xatosi",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Avtorizatsiya xatosi'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -764,7 +753,7 @@
     "severity": "high",
     "source": "ПРИВЯЗКА СОЦИАЛЬНЫХ СЕТЕЙ",
     "target": "IJTIMOIY TARMOQNI BOG‘LASH",
-    "evidence": "Обнаружена узбекская латиница с характерными апострофами (o'/g'): 'IJTIMOIY TARMOQNI BOG‘LASH'",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'IJTIMOIY TARMOQNI BOG‘LASH'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -775,18 +764,40 @@
     "severity": "high",
     "source": "На почту",
     "target": "Pochta bo‘limiga",
-    "evidence": "Обнаружена узбекская латиница с характерными апострофами (o'/g'): 'Pochta bo‘limiga'",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Pochta bo‘limiga'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
   },
   {
-    "key": "carNameWohooooooo",
+    "key": "start_english",
     "issue_type": "wrong_language",
     "severity": "high",
-    "source": "Car name wohooooooo",
-    "target": "Car name wohooooooo",
-    "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'Car name wohooooooo'",
+    "source": "старт",
+    "target": "start",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'start'",
+    "suggestion": null,
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "repeat",
+    "issue_type": "wrong_language",
+    "severity": "high",
+    "source": "Ещё раз",
+    "target": "Takrorlash",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Takrorlash'",
+    "suggestion": null,
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "arena_starting_health",
+    "issue_type": "wrong_language",
+    "severity": "high",
+    "source": "стартовое здоровье",
+    "target": "Standart salomatlik",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Standart salomatlik'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -797,7 +808,18 @@
     "severity": "high",
     "source": "Итого к оплате:",
     "target": "Jami to‘lov:",
-    "evidence": "Обнаружена узбекская латиница с характерными апострофами (o'/g'): 'Jami to‘lov:'",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Jami to‘lov:'",
+    "suggestion": null,
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "summerRushFreshCases",
+    "issue_type": "wrong_language",
+    "severity": "high",
+    "source": "Свежие кейсы",
+    "target": "Yangi qutilar",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Yangi qutilar'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -814,12 +836,23 @@
     "reviewed_by_human": false
   },
   {
-    "key": "blackListPacksTitle",
+    "key": "edu_tablet_purchase_item_lottery_ticket",
     "issue_type": "wrong_language",
     "severity": "high",
-    "source": "Black list Pack",
-    "target": "Black list Pack",
-    "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'Black list Pack'",
+    "source": "Лотерейный билет",
+    "target": "Lotereya chiptasi",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Lotereya chiptasi'",
+    "suggestion": null,
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "inventoryEquipped",
+    "issue_type": "wrong_language",
+    "severity": "high",
+    "source": "Надето",
+    "target": "Equipped",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Equipped'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -830,18 +863,7 @@
     "severity": "high",
     "source": "Метка, означающая, что предмет надет/экипирован",
     "target": "Label indicating that an item is equipped",
-    "evidence": "Текст содержит служебные слова английского языка: 'Label indicating that an item is equipped'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "getAppsOfferUniqueCase",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "BMW M5 F90 GTA",
-    "target": "BMW M5 F90 GTA",
-    "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'BMW M5 F90 GTA'",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'Label indicating that an item is equipped'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -852,7 +874,7 @@
     "severity": "high",
     "source": "СОБЫТИЕ ЗАКОНЧИТСЯ ЧЕРЕЗ:",
     "target": "EVENT TUGASHIGA QOLDI:",
-    "evidence": "Текст содержит служебные слова английского языка: 'EVENT TUGASHIGA QOLDI:'",
+    "evidence": "Текст полностью совпадает с переводом в узбекском файле локализации: 'EVENT TUGASHIGA QOLDI:'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false

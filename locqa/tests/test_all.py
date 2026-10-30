@@ -125,6 +125,28 @@ class TestCheckers(unittest.TestCase):
         self.assertEqual(findings[0].key, "k1")
         self.assertEqual(findings[0].suggestion, "бөліміне өту")
 
+    def test_wrong_language_brand_preservation(self):
+        src = ArbFile(path="", locale="ru", entries={
+            "telegram": ArbEntry(key="telegram", value="Telegram", raw_line="", line_number=1),
+            "app_1xbet": ArbEntry(key="app_1xbet", value="1XBET", raw_line="", line_number=2),
+            "err": ArbEntry(key="err", value="Ошибка авторизации", raw_line="", line_number=3),
+        })
+        tgt = ArbFile(path="", locale="kk", entries={
+            "telegram": ArbEntry(key="telegram", value="Telegram", raw_line="", line_number=1),
+            "app_1xbet": ArbEntry(key="app_1xbet", value="1XBET", raw_line="", line_number=2),
+            "err": ArbEntry(key="err", value="Avtorizatsiya xatosi", raw_line="", line_number=3),
+        })
+        uz = ArbFile(path="", locale="uz", entries={
+            "telegram": ArbEntry(key="telegram", value="Telegram", raw_line="", line_number=1),
+            "app_1xbet": ArbEntry(key="app_1xbet", value="1XBET", raw_line="", line_number=2),
+            "err": ArbEntry(key="err", value="Avtorizatsiya xatosi", raw_line="", line_number=3),
+        })
+        findings = WrongLanguageChecker().check(src, tgt, context={"auxiliary_arb_files": {"uz": uz}})
+        # Only 'err' should be flagged as Uzbek wrong_language, 'Telegram' and '1XBET' are preserved brands
+        self.assertEqual(len(findings), 1)
+        self.assertEqual(findings[0].key, "err")
+        self.assertIn("узбекском", findings[0].evidence.lower())
+
     def test_length_overflow(self):
         src = ArbFile(path="", locale="ru", entries={
             "action_btn": ArbEntry(key="action_btn", value="Арендовать", raw_line="", line_number=1),

@@ -130,6 +130,16 @@ def run_check(args: argparse.Namespace) -> int:
                 print(f"[*] Loading auxiliary ARB ({loc}): {path}")
                 aux_files[loc] = ArbParser.parse_file(path)
 
+    # Auto-detect sibling aux files in target/source directory if not explicitly passed
+    for base_path in (args.target, args.source):
+        base_dir = os.path.dirname(os.path.abspath(base_path))
+        for auto_loc in ("uz", "en"):
+            if auto_loc not in aux_files:
+                candidate = os.path.join(base_dir, f"intl_{auto_loc}.arb")
+                if os.path.exists(candidate):
+                    print(f"[*] Auto-detected auxiliary ARB ({auto_loc}): {candidate}")
+                    aux_files[auto_loc] = ArbParser.parse_file(candidate)
+
     # Load or build glossary
     glossary: Optional[Glossary] = None
     if os.path.exists(args.glossary):
