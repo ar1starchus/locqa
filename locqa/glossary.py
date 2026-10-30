@@ -166,11 +166,29 @@ class GlossaryBuilder:
             else:
                 best_en = term_ru
 
+            # Normalize term casing in dictionary: keep acronyms/proper names, lowercase ordinary nouns
+            def normalize_term_casing(term: str) -> str:
+                t = term.strip()
+                if not t:
+                    return ""
+                # If short acronym (<= 3 chars, e.g. GC, ГК), keep uppercase
+                if len(t) <= 3 and t.isupper():
+                    return t
+                # If multi-word brand like Grand Coins, keep Title Case
+                if any(w in t.lower() for w in ("grand", "coins", "pass")):
+                    return t.title()
+                # Otherwise standard lowercase
+                return t.lower()
+
+            clean_kk = normalize_term_casing(best_kk)
+            clean_en = normalize_term_casing(best_en)
+            clean_ru = normalize_term_casing(term_ru)
+
             glossary.add_entry(
                 GlossaryEntry(
-                    term_ru=term_ru,
-                    term_kk=best_kk,
-                    term_en=best_en,
+                    term_ru=clean_ru,
+                    term_kk=clean_kk,
+                    term_en=clean_en,
                     comment=comment,
                     status=status,
                 )
