@@ -40,8 +40,23 @@ class ArbFixer:
         metadata_additions: Dict[str, dict] = {}
         reviewed_status: Dict[str, bool] = {}
 
-        for f in findings:
+        # Sort findings so that highest severity and highest confidence are applied first
+        severity_rank = {"high": 3, "medium": 2, "low": 1}
+        sorted_findings = sorted(
+            findings,
+            key=lambda f: (
+                severity_rank.get(str(f.severity).lower(), 0),
+                f.confidence,
+            ),
+            reverse=True,
+        )
+
+        for f in sorted_findings:
             if not f.suggestion or f.confidence < min_confidence:
+                continue
+
+            # If this key was already fixed by a higher-priority finding, skip lower-priority
+            if f.key in replacements:
                 continue
 
             current_val = target_arb.get_value(f.key)

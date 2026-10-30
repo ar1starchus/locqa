@@ -3236,7 +3236,7 @@
   "birthday_league_leagues": "Лигалар",
   "birthday_main_player_role": "Сенің үлесің",
   "birthday_main_league": "Лига {name}",
-  "birthday_main_updates_in": "Жаңарады: time {time}",
+  "birthday_main_updates_in": "Жаңарады: {time}",
   "@birthday_main_updates_in": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -4434,7 +4434,7 @@
   "blackListLeaderboardRank": "Ранг",
   "@blackListLeaderboardRank": {
     "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
+    "issue_type": "glossary_violation",
     "previous_value": "Дәреже"
   },
   "blackListLeaderboardPoints": "Ұпай саны",
@@ -4970,7 +4970,7 @@
   "dragRacingV2YourLeague": "Сіздің лигаңыз:",
   "dragRacingV2CompetitionEnded": "Жарыс аяқталды!",
   "dragRacingV2BuyDesc0": "Сіз шынымен\nсатып алғыңыз келе ме",
-  "dragRacingV2BuyDesc1": "blueprintTitle үшін сызбалар {blueprintTitle}",
+  "dragRacingV2BuyDesc1": "{blueprintTitle} үшін сызбалар",
   "@dragRacingV2BuyDesc1": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -5068,12 +5068,7 @@
   "dragRacingV2TutorialHudRaceControlDesc2": "Максималды жылдамдық үшін жасыл аймақта ауыстыр.\nБасқалар артта қалсын!",
   "dragRacingV2TutorialHudRaceNitrousOxideTitle": "Азот оксиді",
   "dragRacingV2TutorialHudRaceNitrousOxideDesc": "Бұл — нитро. Жарыста қолдансаң, алға шығасың.\nЕң бастысы — дұрыс сәтті таңдау!",
-  "dragRacingHelpLink": "https://support.grnd.gg/en/articles/14740550-drag-racing-season-2 %81% %D %B",
-  "@dragRacingHelpLink": {
-    "reviewed_by_human": false,
-    "issue_type": "placeholder_mismatch",
-    "previous_value": "https://support.grnd.gg/en/articles/14740550-drag-racing-season-2"
-  },
+  "dragRacingHelpLink": "https://support.grnd.gg/en/articles/14740550-drag-racing-season-2",
   "userMenuEventsHeaderEvents": "ОҚИҒАЛАР",
   "userMenuEventsHeaderPromotions": "АКЦИЯЛАР",
   "userMenuEventsHeaderExclusive": "ЭКСКЛЮЗИВ",
@@ -5339,7 +5334,7 @@
   "predictionsReward": "жүлде",
   "@predictionsReward": {
     "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
+    "issue_type": "glossary_violation",
     "previous_value": "Сыйлық"
   },
   "predictionsHint": "Кеңес",
@@ -5352,10 +5347,10 @@
   "predictionsBuyCoinsInputCount": "Сатып алу санын енгізіңіз",
   "predictionsBuyCoinsCurrentDiscount": "Ағымдағы жеңілдік:",
   "predictionsBuyCoinsDiscountHint": "Сома неғұрлым көп болса, жеңілдік соғұрлым жоғары!",
-  "predictionsBuyCoinsMinError": "mіn-нан аз сатып алуға болмайды",
+  "predictionsBuyCoinsMinError": "{min}-нан аз сатып алуға болмайды",
   "@predictionsBuyCoinsMinError": {
     "reviewed_by_human": false,
-    "issue_type": "orthography",
+    "issue_type": "placeholder_mismatch",
     "previous_value": "min-нан аз сатып алуға болмайды"
   },
   "predictionsBuyCoinsMaxError": "{max} санынан көп сатып алуға болмайды",
@@ -5566,7 +5561,7 @@
   "rustoreOfferAngelWingsAnimation": "Періште қанаттары анимациясы №1",
   "rustoreOfferTeslaCyberpunk": "Tesla CyberPunk",
   "rustoreOfferCaseKeys": "Кейстерге арналған 100 сынық",
-  "rustoreOfferBuyFor": "price бағасына сатып алу {price}",
+  "rustoreOfferBuyFor": "{price} бағасына сатып алу",
   "@rustoreOfferBuyFor": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -5675,7 +5670,7 @@
   "bingoHeistReward": "жүлде",
   "@bingoHeistReward": {
     "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
+    "issue_type": "glossary_violation",
     "previous_value": "Сыйақы"
   },
   "bingoHeistRewardReceived": "Сыйақы алынды!",
@@ -5803,7 +5798,7 @@
   "chaosVehiclesInfo": "Көліктер туралы жалпы ақпарат",
   "chaosGarageInfo0": "Сюжеттік желіні өту арқылы алынған барлық көліктер <g>«Мәңгілік»</g> мәртебесімен беріледі. Бүкіл сюжеттік желіні аяқтағаннан кейін сізге тілектер тізімі беріледі — сіз <g>«Мәңгілік»</g> мәртебесін алып тастағыңыз келетін екі көлікті таңдай аласыз.\nСондай-ақ тілектер санын <g>GC</g> арқылы арттыра аласыз. <g>«Мәңгілік»</g> мәртебесі бар қалған барлық көліктер жоғалады.",
   "chaosGarageInfo1": "<g>GC</g> арқылы сатып алынған барлық көліктер <g>«Мәңгілік»</g> мәртебесімен беріледі.\nИвент аяқталғаннан кейін бұл көліктерден <g>«Мәңгілік»</g> мәртебесі алынады, тіпті сіз сюжеттік желіні аяқтамасаңыз да.",
-  "chaosUpgradeText": "Сіз өз көлігіңіздің upgradeTitle\nкөрсеткішін {upgradeLevel} деңгейге дейін жақсарттыңыз! {upgradeTitle}",
+  "chaosUpgradeText": "Сіз өз көлігіңіздің {upgradeTitle}\nкөрсеткішін {upgradeLevel} деңгейге дейін жақсарттыңыз!",
   "@chaosUpgradeText": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -6316,7 +6311,7 @@
   "schAssignmentBiologyTeacher": "Биология мұғалімі",
   "schAssignmentBiologyIntro": "Сәлем! Сен жақсы оқушы екенсің! Маған көмектесе аласың ба?\nАртқы аулада <g>ағаштар</g> өсіп тұр, ал менің оларды суаруға\nмүлде уақытым жоқ. Егер <g>оларды суарып</g>, маған қайта келсең, сені сыйлық күтіп тұрады!",
   "schAssignmentPeTeacher": "Дене шынықтыру мұғалімі",
-  "schAssignmentTrainerIntro": "Бәрінен үздік болғың келе ме? Онда үздік бол!\n<g>Әр сағат сайын</g> бүкіл картада шамамен <g>books кітап</g> пайда болады!\nОларды жинау үшін бәрінен жылдам әрі епті болуың керек!\nКітаптарды жинап, маған әкелсең – сыйлық аласың. {books}",
+  "schAssignmentTrainerIntro": "Бәрінен үздік болғың келе ме? Онда үздік бол!\n<g>Әр сағат сайын</g> бүкіл картада шамамен <g>{books} кітап</g> пайда болады!\nОларды жинау үшін бәрінен жылдам әрі епті болуың керек!\nКітаптарды жинап, маған әкелсең – сыйлық аласың.",
   "@schAssignmentTrainerIntro": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -6336,7 +6331,7 @@
   "schDuelsTeamNerds": "ҮЗДІК ОҚУШЫЛАР КОМАНДАСЫ",
   "schDuelsTeamBullies": "БҰЗАҚЫЛАР КОМАНДАСЫ",
   "schDuelsInfluencePointsAmount": "{points} ЫҚПАЛ ҰПАЙЫ",
-  "schDuelsPointsAmount": "ҰПАЙ {points}",
+  "schDuelsPointsAmount": "{points} ҰПАЙ",
   "@schDuelsPointsAmount": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -6424,7 +6419,7 @@
   "schPassBuyGoldPassMultiline": "Сатып алу\nGOLD PREMIUM PASS",
   "schPassUnlocksRewards": "Сыйлықтарға қолжетімділікті ашады",
   "schPassRewardLevels": "сыйлық деңгейі",
-  "schGiftPassConfirmQuestion": "Сіз шынымен name сыйлағыңыз келе ме {name}",
+  "schGiftPassConfirmQuestion": "Сіз шынымен {name} сыйлағыңыз келе ме",
   "@schGiftPassConfirmQuestion": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -6486,7 +6481,7 @@
   "schRatingAllRewards": "Барлық сыйлықтар",
   "schRewardsChallengeComplete": "Сынақ сәтті аяқталды",
   "schRewardsYourRewards": "Сіздің сыйлықтарыңыз",
-  "schStoreCasePossiblePrizes": "Мүмкін сыйлықтар: title {title}",
+  "schStoreCasePossiblePrizes": "Мүмкін сыйлықтар: {title}",
   "@schStoreCasePossiblePrizes": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",
@@ -6519,7 +6514,7 @@
   "schTutorialT2S0": "Мектеп гаражының артындағы айқасқа қош келдің! <g>Дуэль</g>\nэкраны — <g>Үздік оқушылар</g> мен <g>Бұзақылардың</g> мәңгілік тартысы.\nМұнда қай фракция бүкіл мектепті басқаратыны шешіледі!",
   "schTutorialT2S1PlayerTeamBlue": "көк түс — сенің командаң, қызыл — қарсыластар",
   "schTutorialT2S1PlayerTeamRed": "қызыл түс — сенің командаң, көк — қарсыластар",
-  "schTutorialT2S1": "Жолақты бақыла: playerTeamText.\nҰпайлар фракцияның барлық мүшелерінің әрекеттерінен жиналады.\nДуэльдердің ережелері мен қатысу шарттарын білу үшін\n<g>Шайқас ақпараты</g> түймесін бас! {playerTeamText}",
+  "schTutorialT2S1": "Жолақты бақыла: {playerTeamText}.\nҰпайлар фракцияның барлық мүшелерінің әрекеттерінен жиналады.\nДуэльдердің ережелері мен қатысу шарттарын білу үшін\n<g>Шайқас ақпараты</g> түймесін бас!",
   "@schTutorialT2S1": {
     "reviewed_by_human": false,
     "issue_type": "placeholder_mismatch",

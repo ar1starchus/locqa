@@ -63,9 +63,18 @@ class OrthographyChecker(BaseChecker):
             evidence_items: List[str] = []
             suggested_text = tgt_val
 
+            src_placeholders = set()
+            if src_val:
+                src_placeholders = {p.strip("{}").lower() for p in re.findall(r"\{[a-zA-Z0-9_]+\}", src_val)}
+
             # Check 1: Algorithmic Homoglyph detection (mixed Latin inside Cyrillic word)
             words = re.findall(r"\b[\w\-]+\b", clean_text, re.UNICODE)
             for word in words:
+                clean_word = word.lower().split("-")[0]
+                # If word matches a known source placeholder identifier, skip it
+                if clean_word in src_placeholders:
+                    continue
+
                 has_cyrillic = bool(re.search(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІ]", word))
                 has_latin = bool(re.search(r"[a-zA-Z]", word))
 
