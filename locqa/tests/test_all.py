@@ -293,6 +293,71 @@ class TestCheckers(unittest.TestCase):
         self.assertIn("Жеңімпаз\nбәрін алады!", content)
         self.assertNotIn('<input type="text" class="sug-input"', content)
 
+    def test_inconsistent_term_with_options(self):
+        src = ArbFile(path="", locale="ru", entries={
+            "cancel": ArbEntry(key="cancel", value="Отмена", raw_line="", line_number=1),
+            "battlepass_cancel": ArbEntry(key="battlepass_cancel", value="ОТМЕНА", raw_line="", line_number=2),
+            "expedition_cancel": ArbEntry(key="expedition_cancel", value="Отмена", raw_line="", line_number=3),
+            "newYearCancel": ArbEntry(key="newYearCancel", value="ОТМЕНА", raw_line="", line_number=4),
+        })
+        tgt = ArbFile(path="", locale="kk", entries={
+            "cancel": ArbEntry(key="cancel", value="Болдырмау", raw_line="", line_number=1),
+            "battlepass_cancel": ArbEntry(key="battlepass_cancel", value="БАСТАУ", raw_line="", line_number=2),
+            "expedition_cancel": ArbEntry(key="expedition_cancel", value="БАСТАУ", raw_line="", line_number=3),
+            "newYearCancel": ArbEntry(key="newYearCancel", value="БАС ТАРТУ", raw_line="", line_number=4),
+        })
+        findings = InconsistentTermChecker().check(src, tgt)
+
+        flagged_keys = {f.key for f in findings}
+        # The anchor key 'cancel' (Болдырмау) must NOT be flagged
+        self.assertNotIn("cancel", flagged_keys)
+        # All keys with incorrect 'БАСТАУ' or alternative 'БАС ТАРТУ' must be flagged
+        self.assertIn("battlepass_cancel", flagged_keys)
+        self.assertIn("expedition_cancel", flagged_keys)
+        self.assertIn("newYearCancel", flagged_keys)
+
+        # Check options for battlepass_cancel
+        bp_finding = [f for f in findings if f.key == "battlepass_cancel"][0]
+        self.assertEqual(bp_finding.suggestion, "БОЛДЫРМАУ")
+        self.assertIsNotNone(bp_finding.options)
+        self.assertEqual(bp_finding.options, ["БОЛДЫРМАУ", "БАС ТАРТУ"])
+
+        # Check options for newYearCancel
+        ny_finding = [f for f in findings if f.key == "newYearCancel"][0]
+        self.assertEqual(ny_finding.suggestion, "БОЛДЫРМАУ")
+        self.assertIsNotNone(ny_finding.options)
+        self.assertEqual(ny_finding.options, ["БОЛДЫРМАУ", "БАСТАУ"])
+
+    def test_reporter_html_with_options_select(self):
+        import tempfile
+        from locqa.reporter import Reporter
+        from locqa.models import Finding, IssueType, Severity
+
+        finding = Finding(
+            key="cancelKey",
+            issue_type=IssueType.INCONSISTENT_TERM,
+            severity=Severity.MEDIUM,
+            source="Отмена",
+            target="БАСТАУ",
+            evidence="тест",
+            suggestion="Болдырмау",
+            options=["Болдырмау", "Бас тарту"],
+            confidence=0.90,
+        )
+        with tempfile.NamedTemporaryFile("w+", suffix=".html", delete=False) as tmp:
+            tmp_path = tmp.name
+
+        Reporter.save_html([finding], tmp_path, target_raw_content='{"cancelKey": "..."}')
+        with open(tmp_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Should render <select class="sug-select"> and <textarea class="sug-input">
+        self.assertIn('<select class="sug-select"', content)
+        self.assertIn('value="Болдырмау"', content)
+        self.assertIn('value="Бас тарту"', content)
+        self.assertIn('value="__custom__"', content)
+        self.assertIn('<textarea class="sug-input"', content)
+
 
 if __name__ == "__main__":
     unittest.main()

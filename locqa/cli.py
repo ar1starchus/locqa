@@ -259,6 +259,7 @@ def run_apply(args: argparse.Namespace) -> int:
                     target=item.get("target", ""),
                     evidence=item.get("evidence", ""),
                     suggestion=item["suggestion"],
+                    options=item.get("options"),
                     confidence=item.get("confidence", 1.0),
                     reviewed_by_human=item.get("reviewed_by_human", False),
                 )

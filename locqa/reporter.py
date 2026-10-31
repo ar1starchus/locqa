@@ -76,11 +76,34 @@ class Reporter:
                 btn_html = '<span style="color:#94a3b8;font-size:12px;">—</span>'
 
             sug_rows = max(1, min(6, sug_val.count("\n") + 1))
-            sug_cell = (
-                f'<textarea class="sug-input" id="sug-{k_esc}" rows="{sug_rows}" oninput="updateCustomSuggestion(\'{k_esc}\', this.value)" onchange="updateCustomSuggestion(\'{k_esc}\', this.value)">{sug_esc}</textarea>'
-                if has_sug
-                else '<span style="color:#94a3b8;">—</span>'
-            )
+            if f.options and len(f.options) >= 2:
+                opt_elements = []
+                for o_idx, opt in enumerate(f.options):
+                    opt_esc = html.escape(opt)
+                    is_sel = " selected" if opt == sug_val else ""
+                    rec_label = " (рекомендуемый)" if o_idx == 0 else ""
+                    opt_elements.append(f'<option value="{opt_esc}"{is_sel}>{opt_esc}{rec_label}</option>')
+                opt_elements.append('<option value="__custom__">✏️ Свой вариант (вручную)...</option>')
+
+                sel_html = (
+                    f'<select class="sug-select" id="sel-{k_esc}" onchange="onSelectOption(\'{k_esc}\', this.value)">'
+                    f'{"".join(opt_elements)}'
+                    f'</select>'
+                )
+                txt_html = (
+                    f'<textarea class="sug-input" id="sug-{k_esc}" rows="{sug_rows}" '
+                    f'oninput="onCustomInput(\'{k_esc}\', this.value)" '
+                    f'onchange="onCustomInput(\'{k_esc}\', this.value)">{sug_esc}</textarea>'
+                )
+                sug_cell = f'<div class="sug-wrapper">{sel_html}{txt_html}</div>'
+            elif has_sug:
+                sug_cell = (
+                    f'<textarea class="sug-input" id="sug-{k_esc}" rows="{sug_rows}" '
+                    f'oninput="updateCustomSuggestion(\'{k_esc}\', this.value)" '
+                    f'onchange="updateCustomSuggestion(\'{k_esc}\', this.value)">{sug_esc}</textarea>'
+                )
+            else:
+                sug_cell = '<span style="color:#94a3b8;">—</span>'
 
             row = f"""
             <tr data-sev="{sev}" data-type="{itype}" id="row-{k_esc}" data-key="{k_esc}" data-has-sug="{str(has_sug).lower()}" data-conf="{f.confidence}">
@@ -149,6 +172,9 @@ class Reporter:
     .text-cell {{ max-width: 240px; word-break: break-word; white-space: pre-wrap; line-height: 1.4; }}
     .evidence-cell {{ max-width: 260px; color: #475569; font-size: 12px; line-height: 1.4; }}
     .sug-cell {{ min-width: 220px; }}
+    .sug-wrapper {{ display: flex; flex-direction: column; gap: 6px; width: 100%; min-width: 200px; }}
+    .sug-select {{ width: 100%; padding: 5px 8px; border: 1px solid #93c5fd; background: #eff6ff; border-radius: 6px; font-size: 12px; font-weight: 600; color: #1e40af; outline: none; cursor: pointer; }}
+    .sug-select:focus {{ border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.2); }}
     .sug-input {{ width: 100%; min-width: 200px; padding: 6px 10px; border: 1px solid #a7f3d0; background: #f0fdf4; border-radius: 6px; font-size: 13px; font-family: inherit; color: #065f46; font-weight: 500; outline: none; resize: vertical; white-space: pre-wrap; line-height: 1.4; box-sizing: border-box; }}
     .sug-input:focus {{ border-color: #10b981; background: #fff; box-shadow: 0 0 0 2px rgba(16,185,129,0.2); }}
     
@@ -276,6 +302,39 @@ class Reporter:
       localStorage.setItem('locqa_custom_sug', JSON.stringify(customSuggestions));
     }}
 
+    function onSelectOption(key, val) {{
+      const textarea = document.getElementById('sug-' + key);
+      if (val === '__custom__') {{
+        if (textarea) {{
+          textarea.focus();
+          textarea.select();
+        }}
+      }} else {{
+        if (textarea) {{
+          textarea.value = val;
+        }}
+        updateCustomSuggestion(key, val);
+      }}
+    }}
+
+    function onCustomInput(key, val) {{
+      updateCustomSuggestion(key, val);
+      const select = document.getElementById('sel-' + key);
+      if (select) {{
+        let matched = false;
+        for (let i = 0; i < select.options.length; i++) {{
+          if (select.options[i].value === val) {{
+            select.selectedIndex = i;
+            matched = true;
+            break;
+          }}
+        }}
+        if (!matched) {{
+          select.value = '__custom__';
+        }}
+      }}
+    }}
+
     function approveHighConfidence() {{
       findingsData.forEach(f => {{
         if (f.suggestion && f.confidence >= 0.95) {{
@@ -324,6 +383,8 @@ class Reporter:
         if (f.suggestion) {{
           const inp = document.getElementById('sug-' + f.key);
           if (inp) inp.value = f.suggestion;
+          const sel = document.getElementById('sel-' + f.key);
+          if (sel) sel.selectedIndex = 0;
         }}
       }});
       updateCounter();
