@@ -10,74 +10,15 @@ from locqa.morphology import KazakhMorphology
 
 
 class GlossaryChecker(BaseChecker):
-    """Detects terminology violations against an approved glossary.csv
-    and generates case-adapted, grammatically inflected suggestions.
+    """Detects terminology violations against an approved glossary.csv.
     
     Verifies that canonical game terms (e.g. 'фракция', 'семья', 'бизнес',
     'Grand Coins', 'варн', 'мут', 'аккаунт', 'ранг', 'награда', 'донат')
     are translated consistently in accordance with approved gaming terminology.
     
-    Uses KazakhMorphology to transfer grammatical affixes (possessive, plural, case)
-    from the mistranslated word to the approved term with full vowel harmony.
+    Provides direct suggestions for exact single-term keys, and flags
+    contextual violations in sentences for human review without hardcoding.
     """
-
-    # Mapping of canonical Russian terms to tuples of (regex_pattern, base_stem)
-    MISTRANSLATION_PATTERNS: Dict[str, List[Tuple[str, str]]] = {
-        "аккаунт": [
-            (r"тіркелгі[а-яәғқңөұүһі]*", "тіркелгі"),
-            (r"есептік жазба[а-яәғқңөұүһі]*", "есептік жазба"),
-            (r"есепті[а-яәғқңөұүһі]*", "есеп"),
-            (r"есеп[а-яәғқңөұүһі]*", "есеп"),
-        ],
-        "ранг": [
-            (r"дәреже[а-яәғқңөұүһі]*", "дәреже"),
-            (r"рейтинг[а-яәғқңөұүһі]*", "рейтинг"),
-        ],
-        "награда": [
-            (r"сыйақы[а-яәғқңөұүһі]*", "сыйақы"),
-            (r"сыйлы[қғ][а-яәғқңөұүһі]*", "сыйлық"),
-            (r"марапат[а-яәғқңөұүһі]*", "марапат"),
-            (r"сый[а-яәғқңөұүһі]*", "сый"),
-        ],
-        "донат": [
-            (r"сыйлық[а-яәғқңөұүһі]*", "сыйлық"),
-            (r"қайырымдылық[а-яәғқңөұүһі]*", "қайырымдылық"),
-        ],
-        "пропуск": [
-            (r"жауынгерлік билет[а-яәғқңөұүһі]*", "жауынгерлік билет"),
-            (r"билет[а-яәғқңөұүһі]*", "билет"),
-            (r"пропуск[а-яәғқңөұүһі]*", "пропуск"),
-            (r"пасс?[а-яәғқңөұүһі]*", "пасс"),
-        ],
-        "боевой пропуск": [
-            (r"(жауынгерлік|соғыс)?\s*(билет|пасс?|пропуск)[а-яәғқңөұүһі]*", "билет"),
-            (r"жауынгерлік билет[а-яәғқңөұүһі]*", "жауынгерлік билет"),
-            (r"билет[а-яәғқңөұүһі]*", "билет"),
-            (r"пропуск[а-яәғқңөұүһі]*", "пропуск"),
-            (r"пасс?[а-яәғқңөұүһі]*", "пасс"),
-        ],
-        "сезонный пропуск": [
-            (r"(маусымдық|мезгілдік|сезондық)\s+(пропуск|билет|пасс?)[а-яәғқңөұүһі]*", "пасс"),
-            (r"(маусымдық|мезгілдік)\s+пасс?[а-яәғқңөұүһі]*", "пасс"),
-            (r"пропуск[а-яәғқңөұүһі]*", "пропуск"),
-            (r"билет[а-яәғқңөұүһі]*", "билет"),
-            (r"пасс?[а-яәғқңөұүһі]*", "пасс"),
-        ],
-        "фракция": [
-            (r"ұйым[а-яәғқңөұүһі]*", "ұйым"),
-        ],
-        "семья": [
-            (r"клан[а-яәғқңөұүһі]*", "клан"),
-            (r"әулет[а-яәғқңөұүһі]*", "әулет"),
-        ],
-        "бизнес": [
-            (r"кәсіп[а-яәғқңөұүһі]*", "кәсіп"),
-        ],
-        "Grand Coins": [
-            (r"гранд коинс[а-яәғқңөұүһі]*", "гранд коинс"),
-            (r"монета[а-яәғқңөұүһі]*", "монета"),
-        ],
-    }
 
     @property
     def issue_type(self) -> IssueType:
@@ -161,50 +102,9 @@ class GlossaryChecker(BaseChecker):
                         is_exact_match = src_val.strip().lower() == term_ru.lower()
                         severity = Severity.HIGH if is_exact_match else Severity.MEDIUM
 
-                        # Generate case-adapted and grammatically inflected suggestion
+                        # Provide suggestion for exact single-term keys directly from glossary
                         suggestion = None
                         if is_exact_match:
-                            # Exact string replacement: match source case (or ALL CAPS if target was all caps)
-                            target_caps = tgt_val if tgt_val.isupper() else None
-                            suggestion = self.adapt_casing(term_kk, matched_src_text, target_caps)
-                        else:
-                            # Sentence replacement: find mistranslated token in target
-                            lookup_key = term_ru.lower()
-                            candidate_patterns = self.MISTRANSLATION_PATTERNS.get(lookup_key, [])
-
-                            for wrong_pat, wrong_stem in candidate_patterns:
-                                m_tgt = re.search(rf"\b{wrong_pat}\b", tgt_val, re.IGNORECASE)
-                                if m_tgt:
-                                    matched_target_text = m_tgt.group(0)
-
-                                    # Morphological suffix transfer:
-                                    # Extracts plural, possessive, case tags from the mistranslated word
-                                    # and applies them to the approved term obeying Kazakh vowel harmony
-                                    inflected_term = KazakhMorphology.transfer_affixes(
-                                        wrong_word=matched_target_text,
-                                        wrong_stem=wrong_stem,
-                                        approved_term=term_kk,
-                                    )
-
-                                    # Adapt casing to match either source or target caps
-                                    adapted_term = self.adapt_casing(
-                                        inflected_term,
-                                        matched_src_text,
-                                        matched_target_text,
-                                    )
-
-                                    # Replace the incorrect word with inflected approved term
-                                    suggestion = re.sub(
-                                        rf"\b{wrong_pat}\b",
-                                        lambda _: adapted_term,
-                                        tgt_val,
-                                        count=1,
-                                        flags=re.IGNORECASE,
-                                    )
-                                    break
-
-                        # Fallback for short UI strings if no regex pattern hit
-                        if not suggestion and len(src_val.split()) <= 2:
                             target_caps = tgt_val if tgt_val.isupper() else None
                             suggestion = self.adapt_casing(term_kk, matched_src_text, target_caps)
 

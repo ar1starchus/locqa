@@ -39,7 +39,7 @@ class UntranslatedChecker(BaseChecker):
                         source=src_val,
                         target="",
                         evidence=f"Ключ отсутствует в целевом файле локализации (строка {src_entry.line_number} в исходнике)",
-                        suggestion=src_val,
+                        suggestion=None,
                         confidence=1.0,
                         reviewed_by_human=False,
                     )
@@ -53,7 +53,7 @@ class UntranslatedChecker(BaseChecker):
                         source=src_val,
                         target=tgt_entry.value,
                         evidence=f"Перевод пустой при непустом исходнике (строка {tgt_entry.line_number})",
-                        suggestion=src_val,
+                        suggestion=None,
                         confidence=1.0,
                         reviewed_by_human=False,
                     )

@@ -118,13 +118,18 @@ class TestCheckers(unittest.TestCase):
     def test_suffix_harmony(self):
         src = ArbFile(path="", locale="ru", entries={
             "k1": ArbEntry(key="k1", value="Купить за {price}", raw_line="", line_number=1),
+            "k2": ArbEntry(key="k2", value="{days} дн.", raw_line="", line_number=2),
         })
         tgt = ArbFile(path="", locale="kk", entries={
             "k1": ArbEntry(key="k1", value="{price}-ге сатып алу", raw_line="", line_number=1),
+            "k2": ArbEntry(key="k2", value="{days} күн", raw_line="", line_number=2),
         })
         findings = SuffixHarmonyChecker().check(src, tgt)
+        # {price}-ге is a hardcoded case affix -> flagged
+        # {days} күн is a separate noun phrase -> not flagged
         self.assertEqual(len(findings), 1)
-        self.assertIn("сомасына", findings[0].suggestion)
+        self.assertEqual(findings[0].key, "k1")
+        self.assertIsNone(findings[0].suggestion)
 
     def test_orthography(self):
         src = ArbFile(path="", locale="ru", entries={
@@ -178,21 +183,26 @@ class TestCheckers(unittest.TestCase):
         inflected3 = KazakhMorphology.transfer_affixes("сыйлықтар", "сыйлық", "жүлде")
         self.assertEqual(inflected3, "жүлделер")
 
-    def test_glossary_with_morphology(self):
+    def test_glossary_exact_match(self):
         src = ArbFile(path="", locale="ru", entries={
-            "k1": ArbEntry(key="k1", value="Ваша награда", raw_line="", line_number=1),
+            "k1": ArbEntry(key="k1", value="Награда", raw_line="", line_number=1),
+            "k2": ArbEntry(key="k2", value="РАНГ", raw_line="", line_number=2),
         })
         tgt = ArbFile(path="", locale="kk", entries={
-            "k1": ArbEntry(key="k1", value="Сіздің сыйлығыңыз", raw_line="", line_number=1),
+            "k1": ArbEntry(key="k1", value="Сыйлық", raw_line="", line_number=1),
+            "k2": ArbEntry(key="k2", value="ДӘРЕЖЕ", raw_line="", line_number=2),
         })
-        glo = Glossary([GlossaryEntry(term_ru="награда", term_kk="жүлде", term_en="reward")])
+        glo = Glossary([
+            GlossaryEntry(term_ru="награда", term_kk="жүлде", term_en="reward"),
+            GlossaryEntry(term_ru="ранг", term_kk="ранг", term_en="rank"),
+        ])
         findings = GlossaryChecker().check(src, tgt, context={"glossary": glo})
-        self.assertEqual(len(findings), 1)
-        self.assertEqual(findings[0].suggestion, "Сіздің жүлдеңіз")
+        self.assertEqual(len(findings), 2)
+        # Direct glossary suggestion with casing adaptation
+        self.assertEqual(findings[0].suggestion, "Жүлде")
+        self.assertEqual(findings[1].suggestion, "РАНГ")
 
-    def test_glossary_casing_target_precedence(self):
-        # Russian source has 'Награда' capitalized as first word,
-        # but in Kazakh syntax 'сыйлығы' is lowercase in mid-sentence position.
+    def test_glossary_sentence_violation_requires_human_review(self):
         src = ArbFile(path="", locale="ru", entries={
             "rewardForSubscription": ArbEntry(key="rewardForSubscription", value="Награда за подписку", raw_line="", line_number=1),
         })
@@ -202,7 +212,8 @@ class TestCheckers(unittest.TestCase):
         glo = Glossary([GlossaryEntry(term_ru="награда", term_kk="жүлде", term_en="reward")])
         findings = GlossaryChecker().check(src, tgt, context={"glossary": glo})
         self.assertEqual(len(findings), 1)
-        self.assertEqual(findings[0].suggestion, "жазылым жүлдесі")
+        # Sentence violations flag the defect but do not fabricate hardcoded suggestions
+        self.assertIsNone(findings[0].suggestion)
 
     def test_reporter_html_textarea_newlines(self):
         import tempfile

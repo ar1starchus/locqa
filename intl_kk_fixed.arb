@@ -13,12 +13,7 @@
   "@@comment": "COMMON",
   "currencySymbol": "",
   "skip": "Өткізу",
-  "cancel": "БАСТАУ",
-  "@cancel": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Болдырмау"
-  },
+  "cancel": "Болдырмау",
   "members_count": "Қатысушылар саны",
   "bonus": "бонус",
   "bones": "сүйектер",
@@ -97,12 +92,7 @@
   "@@comment": "CARNIVAL",
   "confirm_revard_purchase": "Сіз шынымен\nсыйақыны сатып алғыңыз келе ме",
   "confirm_revard_desc_purchase": "Тауардың бағасы\nқолданылған жеңілдіктермен",
-  "current_reward": "Ағымдағы жүлде",
-  "@current_reward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Ағымдағы сыйақы"
-  },
+  "current_reward": "Ағымдағы сыйақы",
   "purchased_v2": "Сатып алынды",
   "beat": "Саудаласу",
   "beat_price": "Саудаласу құны",
@@ -251,12 +241,7 @@
 
   "@@comment": "BONES",
   "bones_select": "Аймақты таңдаңыз",
-  "bones_selected": "Таңдалды",
-  "@bones_selected": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "таңдалған"
-  },
+  "bones_selected": "таңдалған",
   "bones_bet": "Ставка",
   "bones_bank": "банк",
   "bones_empty": "бос",
@@ -327,12 +312,7 @@
   "battlepass_up_balance_value_hint": "ТОЛЫҚТЫРУ СОМАСЫ",
   "battlepass_you_lost": "ҰТЫЛДЫ",
   "battlepass_sell": "сату",
-  "battlepass_congratulate": "ҚҰТТЫҚТАЙМЫЗ!",
-  "@battlepass_congratulate": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сүйінші!"
-  },
+  "battlepass_congratulate": "Сүйінші!",
   "battlepass_lvl": "LVL",
   "battlepass_exp": "EXP",
   "battlepass_premium": "BATTLE PASS PREMIUM",
@@ -488,31 +468,11 @@
   "laTwitterLinkingError": "Twitter байланыстыру қатесі",
   "laVKLinkingError": "VK байланыстыру қатесі",
   "laDiscordLinkingError": "Discord байланыстыру қатесі",
-  "laThisGoogleIsOccupiedByAnotherUser": "Бұл Google аккаунты басқа пайдаланушымен толтырылған",
-  "@laThisGoogleIsOccupiedByAnotherUser": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бұл Google тіркелгісі басқа пайдаланушымен толтырылған"
-  },
-  "laThisAppleIsOccupiedByAnotherUser": "Бұл Apple аккаунты басқа пайдаланушымен толтырылған",
-  "@laThisAppleIsOccupiedByAnotherUser": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бұл Apple тіркелгісі басқа пайдаланушымен толтырылған"
-  },
+  "laThisGoogleIsOccupiedByAnotherUser": "Бұл Google тіркелгісі басқа пайдаланушымен толтырылған",
+  "laThisAppleIsOccupiedByAnotherUser": "Бұл Apple тіркелгісі басқа пайдаланушымен толтырылған",
   "laThisTwitterIsOccupiedByAnotherUser": "Бұл Twitter аккаунты басқа пайдаланушымен толтырылған",
-  "laThisDiscordIsOccupiedByAnotherUser": "Бұл Discord аккаунты басқа пайдаланушымен толтырылған",
-  "@laThisDiscordIsOccupiedByAnotherUser": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бұл Discord тіркелгісі басқа пайдаланушымен толтырылған"
-  },
-  "laThisVKIsOccupiedByAnotherUser": "Бұл VK аккаунтын басқа пайдаланушы қолдануда",
-  "@laThisVKIsOccupiedByAnotherUser": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бұл VK тіркелгісін басқа пайдаланушы қолдануда"
-  },
+  "laThisDiscordIsOccupiedByAnotherUser": "Бұл Discord тіркелгісі басқа пайдаланушымен толтырылған",
+  "laThisVKIsOccupiedByAnotherUser": "Бұл VK тіркелгісін басқа пайдаланушы қолдануда",
   "laYouDidntCharacterSecondName": "Кейіпкердің тегін енгізбедіңіз",
   "laFirstNameLongWarningV2": "Есім кемінде 3 таңбадан тұруы керек",
   "laFirstNameLongWarning": "Атаудың ұзындығы екі таңбадан кем болмауы керек",
@@ -552,28 +512,13 @@
   "laNeedEmail": "Электрондық пошта адресін көрсетіңіз",
   "laNeedValidEmail": "Төлем сомасын анықтау сәтсіз аяқталды",
   "laDeleteAccount": "аккаунтты жою",
-  "laDeleteAccountHelp1": "СІЗ ШЫНЫМЕН ДЕ АККАУНТТЫ\nӨШІРГІҢІЗ КЕЛЕ МЕ?",
-  "@laDeleteAccountHelp1": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "СІЗ ШЫНЫМЕН ДЕ ЕСЕПТІ\nӨШІРГІҢІЗ КЕЛЕ МЕ?"
-  },
+  "laDeleteAccountHelp1": "СІЗ ШЫНЫМЕН ДЕ ЕСЕПТІ\nӨШІРГІҢІЗ КЕЛЕ МЕ?",
   "laDeleteAccountHelp2": "Аккаунтты өшіруді төмендегі өріске «#» сөзін енгізіп растаңыз.\nЕсіңізде болсын, аккаунт өшірілсе, барлық дерек қайтарымсыз жоғалады.",
   "laDelete": "ӨШІРУ",
   "laCancelDelete": "ӨШІРУДЕН БАС ТАРТУ",
   "laAccountDeleted": "Сіздің аккаунтыңыз өшірілді!",
-  "laBillingRetrying": "{provider} арқылы қосылу мәселесі. Қайталау…",
-  "@laBillingRetrying": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{provider}-ға қосылу мәселесі. Қайталау…"
-  },
-  "laBillingUnavailable": "Бұл құрылғыда {provider} арқылы төлемі қолжетімді емес.",
-  "@laBillingUnavailable": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "Бұл құрылғыда {provider}-ға төлемі қолжетімді емес."
-  },
+  "laBillingRetrying": "{provider}-ға қосылу мәселесі. Қайталау…",
+  "laBillingUnavailable": "Бұл құрылғыда {provider}-ға төлемі қолжетімді емес.",
   "laApkUpdateError": "Қосымшаны жаңарту кезінде қате",
   "laDownloadError": "%s файлын жүктеу қатесі. Интернет байланысын тексеріңіз",
   "laDonateCheckPayments": "Түскен қаражатты тексеру",
@@ -633,12 +578,7 @@
   "complaint_withResponse": "Жауабы бар",
   "complaint_state_created": "Құрылды",
   "complaint_state_considered": "Қаралды",
-  "complaint_state_user_comment": "Пікір алынды",
-  "@complaint_state_user_comment": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Пікир алынды"
-  },
+  "complaint_state_user_comment": "Пікир алынды",
   "complaint_error_image_loading": "Скриншоттардың жүктелуін күтіңіз",
   "complaint_error_to_name_missing": "Бұзушының нигін көрсетіңіз",
   "complaint_error_name": "Никнейм серверде жоқ",
@@ -671,12 +611,7 @@
   "news": "ЖАҢАЛЫҚТАР",
   "shortVideoAboutNewItems": "ҚЫСҚА ВИДЕО\nЖАҢАЛЫҚТАР ТУРАЛЫ",
   "fullDescription": "ТОЛЫҚ СИПАТТАМА",
-  "rewardForSubscription": "жазылым жүлдесі",
-  "@rewardForSubscription": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "жазылым сыйлығы"
-  },
+  "rewardForSubscription": "жазылым сыйлығы",
   "getCoinsForSubscription": "Біздің\nәлеуметтік желілерге жазылғаныңыз үшін коин алыңыз",
   "subscribe": "жазылу",
   "verify": "ТЕКСЕРУ",
@@ -907,12 +842,7 @@
   "accessories_type_hats": "ҚАЛПАҚТАР",
   "accessories_type_caps": "КЕПКИ",
   "accessories_type_masks": "НЫСПА",
-  "accessories_type_glasses": "Ұпай",
-  "@accessories_type_glasses": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "КӨЗІЛДІРІК"
-  },
+  "accessories_type_glasses": "КӨЗІЛДІРІК",
   "accessories_type_other": "Басқа режимін қосу және жалғастыру",
 
   "@@comment": "SIM_CARD_TERMINAL",
@@ -1003,12 +933,7 @@
   "car_fuel": "бак",
   "car_trunk": "багаж",
   "car_seats": "орын",
-  "cars": "Автомобильдер",
-  "@cars": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "АВТОКӨЛІКТЕР"
-  },
+  "cars": "АВТОКӨЛІКТЕР",
   "car_buy": "СІЗ КӨЛІК САТЫП АЛҒЫҢЫЗ КЕЛЕДІ",
   "car_test_drive": "Сынап көру",
   "car_seets_count": "САНЫ\nОРЫН",
@@ -1111,12 +1036,7 @@
   "tune_detail_neon": "НЕОН",
   "tune_detail_toner": "ТОНИРЛЕУ",
   "tune_detail_headlights_color": "ФАР ТҮСІ",
-  "tune_detail_suspension": "аспа",
-  "@tune_detail_suspension": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ІЛГІШ"
-  },
+  "tune_detail_suspension": "ІЛГІШ",
   "tune_detail_nitro": "НИТРО",
   "tune_detail_hydraulics": "ГИДРАВЛИКА",
   "tune_detail_rear_bumper": "АРТҚЫ БАМПЕР",
@@ -1131,21 +1051,11 @@
   "tune_detail_back_alignment": "АРТҚЫ ЖАРЫҚ",
   "tune_detail_width": "ДӨҢГЕЛЕК ЕНІ",
   "tune_detail_engine": "МОТОР",
-  "tune_detail_turbocharging": "турбоүрлеу",
-  "@tune_detail_turbocharging": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ТУРБОНАДДУВ"
-  },
+  "tune_detail_turbocharging": "ТУРБОНАДДУВ",
   "tune_detail_tires": "Шиналар",
   "tune_detail_transmission": "ТАРАТУ",
   "tune_detail_chip_tuning": "ЧИП-ТЮНИНГ",
-  "tune_detail_brakes": "тежегіш",
-  "@tune_detail_brakes": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ТЕЖЕУ"
-  },
+  "tune_detail_brakes": "ТЕЖЕУ",
   "tune_details_missing": "ДЕРЕКТЕР ЖОҚ",
   "tune_standart": "СТАНДАРТ",
   "tune_modification": "МОДИФИКАЦИЯ",
@@ -1170,12 +1080,7 @@
   "tune_buy_toner_rear": "Артқы әйнектерді реңдеу",
   "tune_buy_wheels_color": "Диск бояуы",
   "tune_buy_body_color": "Көлікті бояу",
-  "tune_buy_headlights_color": "ФАР ТҮСІ",
-  "@tune_buy_headlights_color": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Бағдаршамның түсі"
-  },
+  "tune_buy_headlights_color": "Бағдаршамның түсі",
   "tune_buy_front_offset": "Алдыңғы дөңгелектердің ұзындығы - +",
   "tune_buy_back_offset": "Артқы доңғалақтардың қашықтығы - +",
   "tune_buy_front_alignment": "Алдыңғы дөңгелектердің қирауы - ",
@@ -1344,12 +1249,7 @@
   "drag_select_first_car": "Бірінші көлікті таңдаңыз",
   "drag_race_refresh_now": "Қазір жаңарту",
   "drag_1every12": "12 сагат сайын 1 рет",
-  "drag_reward_for_win": "ЖЕҢІС ҮШІН ЖҮЛДЕ",
-  "@drag_reward_for_win": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "ЖЕҢІС ҮШІН СЫЙЛЫҚ"
-  },
+  "drag_reward_for_win": "ЖЕҢІС ҮШІН СЫЙЛЫҚ",
   "drag_race_spare_parts_refresh_time": "Қосалқы бөлшектер жаңартылады",
   "drag_race_refresh_shop_confirmation": "Дүкен мазмұнын жаңарту?",
   "drag_race_refresh_shop": "дүкендегі барлық заттар жаңартылады",
@@ -1382,12 +1282,7 @@
   "bingo_about_promo": "акция туралы",
   "bingo_ticket_limits": "билеттер лимиті",
   "bingo_opened_slots": "Ашық ұяшықтар",
-  "bingo_reward_for_completion": "орындалғаны үшін жүлде",
-  "@bingo_reward_for_completion": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "орындалғаны үшін марапат"
-  },
+  "bingo_reward_for_completion": "орындалғаны үшін марапат",
   "bingo_buy_confirmation": "Сатып алуды нақты қалайсыз ба?",
   "bingo_daily_tasks": "Күн сайын тапсырмалар беріледі, оларды орындау арқылы Ticket аласыз.",
   "bingo_ticket_usage": "Ticket кездейсоқ ұяшықты ашуға жұмсалады, одан шағын сыйлық шығады.",
@@ -1408,12 +1303,7 @@
   "alchemic_tab_book": "алхимик кітабы",
   "alchemic_tab_shop": "дүкен",
   "alchemic_reward": "жүлде",
-  "alchemic_reward_received": "Жүлде алынды",
-  "@alchemic_reward_received": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сыйлық алынды"
-  },
+  "alchemic_reward_received": "Сыйлық алынды",
   "alchemic_prizes_received": "сыйлықтар алынды",
   "alchemic_super_prize_level1": "супер жүлде 1 деңгей",
   "alchemic_super_prize_level2": "супер жүлде 2 деңгей",
@@ -1627,12 +1517,7 @@
   "level": "ДЕҢГЕЙ",
   "help": "Көмек",
   "play": "Ойнау",
-  "cancel": "БАСТАУ",
-  "@cancel": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Болдырмау"
-  },
+  "cancel": "Болдырмау",
   "cancel_1": "Болдыру",
   "ready": "Дайын",
   "ok": "ОК",
@@ -1641,12 +1526,7 @@
   "online": "Желіде",
   "meters": "м",
   "second_3": "с.",
-  "start_english": "Бастау",
-  "@start_english": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "start"
-  },
+  "start_english": "start",
   "year": "жыл",
   "years": "жыл",
   "month": "ай",
@@ -1673,12 +1553,7 @@
   "repeat": "Takrorlash",
   "send": "Жіберу",
   "search": "Іздеу",
-  "select": "Аймақты таңдаңыз",
-  "@select": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Таңдау"
-  },
+  "select": "Таңдау",
   "speed_type": "км/сағ",
   "kilometers": "км",
   "fuel_type": "л.",
@@ -1719,12 +1594,7 @@
   "and": "және",
   "connect": "қосылу",
   "upgrades": "жақсарту",
-  "purchased": "Сатып алынды",
-  "@purchased": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "сатып алынған"
-  },
+  "purchased": "сатып алынған",
   "count": "дана.",
   "continue_": "Жалғастыру",
   "thanks": "Рахмет",
@@ -1907,12 +1777,7 @@
   "onex_profile_bet": "Ставка",
   "onex_profile_sum": "Ұтыс",
   "onex_bet_draw_suffix": "НИЧЬЯ",
-  "onex_bet_state_lose": "Жеңіліс",
-  "@onex_bet_state_lose": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Ұтылды"
-  },
+  "onex_bet_state_lose": "Ұтылды",
   "onex_bet_state_win": "Ұтыс",
   "onex_bet_line_express": "Желілік экспресс",
   "onex_payment_method": "төлем әдісі",
@@ -1987,20 +1852,10 @@
   "@@comment": "BANK",
   "bank_org_1": "баланс\nфракциялар",
   "bank_to": "шотты толтыру",
-  "bank_to_edit_info": "ТОЛЫҚТЫРУ СОМАСЫ",
-  "@bank_to_edit_info": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ТОЛТЫРУ СОМАСЫ"
-  },
+  "bank_to_edit_info": "ТОЛТЫРУ СОМАСЫ",
   "bank_from": "қаржыны алу",
   "bank_c_transfer_info": "Сіз шынымен ойыншыға %s аударғыңыз келе ме",
-  "bank_piggy_bank": "ЖИНАҚ САНДЫҒЫ",
-  "@bank_piggy_bank": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Қойма"
-  },
+  "bank_piggy_bank": "Қойма",
   "bank_piggy_bank_smash": "жинауышты бұзу",
   "bank_piggy_bank_smash_desc": "Жинақ жәшігін жару үшін оны 50% толтыру керек",
 
@@ -2092,18 +1947,8 @@
   "dq_title": "күнделікті\nтапсырмалар",
   "dq_all_tasks": "орындалды\nбарлық тапсырмалар",
   "dq_consecutive_days": "күн\nқатарынан",
-  "dq_daily_reward": "күніне\nжүлде",
-  "@dq_daily_reward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "күніне\nсыйлық"
-  },
-  "dq_reward_title": "Жүлде үшін",
-  "@dq_reward_title": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сыйлық үшін"
-  },
+  "dq_daily_reward": "күніне\nсыйлық",
+  "dq_reward_title": "Сыйлық үшін",
   "dq_reward_title_2": "3 күн",
   "dq_donate": "Донат",
   "@dq_donate": {
@@ -2116,12 +1961,7 @@
   "dq_reward_desc": "ЖОҒАРЫДАҒЫ СЫЙЛЫҚТАРДЫҢ БІРІН алу үшін тапсырмаларды 3 күн қатарынан орындаңыз",
 
   "@@comment": "CAR_MARKET",
-  "owner": "ИЕСІ",
-  "@owner": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Иеленуші"
-  },
+  "owner": "Иеленуші",
   "gosNumber": "МЕМЛЕКЕТТІК НӨМІР",
   "showTechnicalPassport": "техпаспортты көрсету",
 
@@ -2151,12 +1991,7 @@
 
   "@@comment": "FRACTION",
   "fraction_title": "Ұйым мәзірі:",
-  "fraction_your_rang": "сіздің рангыңыз",
-  "@fraction_your_rang": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "сіздің дәрежеңіз"
-  },
+  "fraction_your_rang": "сіздің дәрежеңіз",
   "fraction_show_online_hint": "Тек желіде \nболған қатысушылар",
   "fraction_stock": "Қойма",
   "fraction_vehicles": "автокөліктер",
@@ -2185,23 +2020,13 @@
   "family_message": "Отбасылық хабарлама",
 
   "@@comment": "FAMILY",
-  "family_search": "Ойыншының нигін, рангын немесе идентификаторын енгізіңіз",
-  "@family_search": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Ойыншының нигін, дәрежесін немесе идентификаторын енгізіңіз"
-  },
+  "family_search": "Ойыншының нигін, дәрежесін немесе идентификаторын енгізіңіз",
   "fam_in_the_treasury": "Қазынада:",
   "fam_treasury_sum": "Қайтару/алу сомасы",
   "fam_all_members": "Жалпы қатысушылар: %s",
   "fam_online_members": "Желіде: %s",
   "fam_contribution_to_the_treasury": "Қазынаға салым",
-  "fam_member_name": "Аты және рангы",
-  "@fam_member_name": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Аты және дәрежесі"
-  },
+  "fam_member_name": "Аты және дәрежесі",
   "fam_member_info": "Қатысушы туралы ақпарат",
   "fam_edit_rang": "РАНГТІ ӨҢДЕУ",
   "fam_point_time": "бақылауда",
@@ -2250,12 +2075,7 @@
   "@@comment": "DROM",
   "drom_my_ads": "Менің жарнамаларым",
   "drom_choose_car_to_sell": "Сататын көлікті таңдаңыз",
-  "drom_choose_car": "КӨЛІКТІ ТАҢДАУ",
-  "@drom_choose_car": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Автомобильди таңдау"
-  },
+  "drom_choose_car": "Автомобильди таңдау",
   "drom_set_details_publish": "Егжей-тегжейлерді баптау және жариялау",
   "drom_day_count_publish": "хабарландыруды орналастыру үшін күндер саны",
   "drom_car_price": "Көлік сату бағасы",
@@ -2355,12 +2175,7 @@
   "arena_sort_active": "БЕЛСЕНДІ",
   "arena_sort_fight": "ЖЕКПЕ-ЖЕК ӨЛІМ",
   "arena_br_title": "Корольдік шайқас",
-  "arena_sort_duels": "дуэльдер",
-  "@arena_sort_duels": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ДУЭЛЬ"
-  },
+  "arena_sort_duels": "ДУЭЛЬ",
   "arena_sort_arms_race": "ҚАРУ ЖАРЫСЫ",
   "arena_sort_derby": "дерби",
   "arena_select_gun": "қаруды таңдау",
@@ -2470,12 +2285,7 @@
   "rm_title_2": "құжаттар",
   "rm_title_3": "Лицензияны алу",
   "rm_title_4": "Әскери билетті көрсету",
-  "rm_title_5": "Айырбастау",
-  "@rm_title_5": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Айырбас"
-  },
+  "rm_title_5": "Айырбас",
   "rm_title_6": "Лицензияны алу",
   "rm_title_7": "Кісенді кию",
   "rm_title_8": "Ұстау",
@@ -2546,12 +2356,7 @@
   "rm_title_73": "Напугать",
   "rmError": "Алдымен позицияны таңдаңыз",
   "favorite": "Қолжетерлік іс-әрекеттер",
-  "resources": "Ресурстар",
-  "@resources": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ҚОРЛАР"
-  },
+  "resources": "ҚОРЛАР",
   "resourcesDescription": "Ресурстар қолөнер, әртүрлі тапсырмаларды орындау үшін қажет және сатып алушыларға сату үшін қолжетімді",
   "metal": "Металл",
   "buyerItemNotAvailable": "қолжетімсіз",
@@ -2682,30 +2487,15 @@
 
   "@@comment": "JUNGLE_TREASURES",
   "jungleTreasuresTimeRemaining": "аяқталғанға дейін",
-  "jungleTreasuresTimeDaysHours": "{days} (күн) {hours} сағ.",
-  "@jungleTreasuresTimeDaysHours": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{days} күн {hours} сағ."
-  },
+  "jungleTreasuresTimeDaysHours": "{days} күн {hours} сағ.",
   "jungleTreasuresTimeHoursMinutes": "{hours} сағ. {minutes} мин.",
   "jungleTreasuresTimeMinutesSeconds": "{minutes} мин. {seconds} сек.",
   "jungleTreasuresTimeSeconds": "{seconds} сек.",
-  "jungleTreasuresBalance": "қолма-қол ақша",
-  "@jungleTreasuresBalance": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Баланс"
-  },
+  "jungleTreasuresBalance": "Баланс",
   "jungleTreasuresInfo": "Алағыңыз келген сыйлықты таңдаңыз да, барлық сыйлықтарды алу үшін әрі қарай жүріңіз.",
   "jungleTreasuresBuy": "сатып алу",
   "jungleTreasuresSkip": "Өткізу",
-  "jungleTreasuresSkipWaiting": "Күтуді өткізу?",
-  "@jungleTreasuresSkipWaiting": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Күтуді өткізу керек пе?"
-  },
+  "jungleTreasuresSkipWaiting": "Күтуді өткізу керек пе?",
   "jungleTreasuresRecieveImmediately": "и получить предмет сразу",
   "jungleTreasuresConfirm": "Растаңыз",
   "jungleTreasuresUntilReceive": "алғанға дейін",
@@ -2737,24 +2527,14 @@
   "expeditionTasks": "тапсырмалар",
   "expeditionStore": "дүкен",
   "expeditionMapTaskCompleted": "Орындалды",
-  "expeditionMapTaskReward": "орындалғаны үшін жүлде",
-  "@expeditionMapTaskReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "орындалғаны үшін марапат"
-  },
+  "expeditionMapTaskReward": "орындалғаны үшін марапат",
   "expeditionMapUnlock": "ашу",
   "expeditionMapCancel": "БАСТАУ",
   "expeditionTasksCompleted": "Орындалды",
   "expeditionTasksRewards": "жүлделер",
   "expeditionTasksCollectReward": "жүлдені алу",
   "expeditionTasksNextPageAfter": "келесі бет арқылы қолжетімді болады",
-  "expeditionAboutHowToTitle": "ҚАЛАЙ ЖҮЛДЕ АЛУҒА БОЛАДЫ",
-  "@expeditionAboutHowToTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ҚАЛАЙ ЖҮЛДЕ АЛУҒА"
-  },
+  "expeditionAboutHowToTitle": "ҚАЛАЙ ЖҮЛДЕ АЛУҒА",
   "expeditionAboutAdditionalTitle": "Қосымша",
   "expeditionEverydayPrizes": "күнделікті сыйлықтар",
   "expeditionLeftMinute": "минут",
@@ -2788,12 +2568,7 @@
   "expedition_piggy_bank_title": "Энергия\nжинақ жәшігі",
   "expedition_piggy_bank_confirm": "Жинақ жәшігін шынымен сатып алғыңыз келе ме?",
   "expedition_booster_gift": "Энергия жинауға бустер",
-  "expedition_your_gifts": "СІЗДІҢ СЫЙЛЫҚТАРЫҢЫЗ",
-  "@expedition_your_gifts": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сіздің сыйақыларыңыз"
-  },
+  "expedition_your_gifts": "Сіздің сыйақыларыңыз",
   "expeditionBoosters": "Бустерлер",
   "expeditionEnergyTopUp": "Энергияны толықтыру",
   "expeditionEnergyBuy": "Энергия сатып алу",
@@ -3028,22 +2803,12 @@
   "summerRushSpeedTide": "Жылдамдық толқыны",
   "summerRushFlightToTop": "Биікке ұшу",
   "summerRushUnlocksAtStage": "келесі кезеңде ашылады:",
-  "summerRushNextReward": "Келесі жүлде",
-  "@summerRushNextReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Келесі сый"
-  },
+  "summerRushNextReward": "Келесі сый",
   "summerRushUpdateTaskList": "тапсырмалар тізімі жаңаруына дейін",
   "summerRushUntilStartStage": "кезең басталуына дейін",
   "summerRushLauncherTitle": "Жазғы екпін",
   "summerRushLauncherEventLocation": "ивент локациясы",
-  "summerRushHUD": "Жазғы екпін",
-  "@summerRushHUD": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "SUMMER RUSH"
-  },
+  "summerRushHUD": "SUMMER RUSH",
   "summerRushTop50Racers": "ТОП - 50 шабандоз:",
   "summerRushDoKoncaSorevnovaniya": "Сайыс аяқталуына дейін",
   "summerRushSorevnovanieZaversheno": "Сайыс аяқталды",
@@ -3064,12 +2829,7 @@
   "summerRushPlayerFinished": "финишке жетті",
   "summerRushPlayerPlaceSuffix": "-ші!",
   "summerRushPlacePrefix": "Сіз алдыңыз",
-  "summerRushRewardTitle": "Сіздің жүлдеңіз",
-  "@summerRushRewardTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сіздің сыйыңыз"
-  },
+  "summerRushRewardTitle": "Сіздің сыйыңыз",
   "summerRushRaceConfirmPurchaseTitle": "САТЫП АЛУДЫ РАСТАҢЫЗ",
   "summerRushRaceNotEnoughGas": "ЖАРЫСКА ҚАТЫСУҒА\nОТЫН ЖЕТПЕЙДІ.",
   "summerRushRaceRefillPrompt": "ҚОРДЫ ТОЛТЫРҒЫҢЫЗ КЕЛЕ МЕ?",
@@ -3141,12 +2901,7 @@
   "halloweenBankFullOf": "ТОЛТЫРЫЛДЫ",
   "halloweenBoosterActive": "БУСТЕР БЕЛСЕНДІ",
   "halloweenBooster": "БУСТЕР",
-  "halloweenBoosterInAction": "Белсенді",
-  "@halloweenBoosterInAction": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ӘРЕКЕТТЕ"
-  },
+  "halloweenBoosterInAction": "ӘРЕКЕТТЕ",
   "halloweenBoosterNotActive": "БЕЛСЕНСІЗ",
   "halloweenStagesCompleted": "ӨТІЛГЕН КЕЗЕҢДЕР",
   "halloweenStage0Title": "ҚАСҚЫР АДАМДАР\nҚАЛАСЫ",
@@ -3208,20 +2963,10 @@
   "birthday_title": "Туған күн",
   "birthday_bank_desc": "Ойында белсенді бол,\nжинақ жәшігін толтыр,\nоны жарып, сыйлықтарды ал!",
   "birthday_bank_balance": "Ағымдағы баланс:",
-  "birthday_bank_drop": "СЫНДЫРУ",
-  "@birthday_bank_drop": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Жару"
-  },
+  "birthday_bank_drop": "Жару",
   "birthday_bank_ends_in": "Аяқталуға дейін\n{time}",
   "birthday_campaigns": "Кампаниялар",
-  "birthday_challenge_day": "{day} (күн)",
-  "@birthday_challenge_day": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{day} күн"
-  },
+  "birthday_challenge_day": "{day} күн",
   "birthday_tab_main": "Басты",
   "birthday_tab_team": "Команда",
   "birthday_tab_campaigns": "Кампаниялар",
@@ -3241,12 +2986,7 @@
   "birthday_info_camp_two": "Барлығы Хайпқа",
   "birthday_info_camp_three": "Вайбты тап",
   "birthday_info_camp_desc1": "Көбірек сәйкес келсе —\nхайп көбірек",
-  "birthday_info_camp_desc2": "«Плюс Вайб» — жүлде,\n«Фейк» — нөл,\n«Минус Вайб» — айып",
-  "@birthday_info_camp_desc2": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "«Плюс Вайб» — сыйақы,\n«Фейк» — нөл,\n«Минус Вайб» — айып"
-  },
+  "birthday_info_camp_desc2": "«Плюс Вайб» — сыйақы,\n«Фейк» — нөл,\n«Минус Вайб» — айып",
   "birthday_info_camp_desc3": "Диапазонды таңда да\nставка жаса,\nдәл тапсаң — сыйақыға көбейткіш аласың",
   "birthday_info_store": "Жаңа кейстер,\nжақсарту карталары\nжәне бустерлер",
   "birthday_info_quests_desc1": "Бүгінгі жедел мақсаттар",
@@ -3358,12 +3098,7 @@
   "halloweenBossHealth": "ҚҰЛПЫРЫҚ ДЕНСАУЛЫҒЫ",
   "halloweenEnergyChallenge": "ЭНЕРГЕТИКАЛЫҚ\nШАҚЫРУ",
   "halloweenHuntersKit": "АУ АЛУШЫ\nЖИНАҒЫ",
-  "halloweenCityReward": "ТАЗАЛАНҒАН ҚАЛА ҮШІН\nЖҮЛДЕ",
-  "@halloweenCityReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "ТАЗАЛАНҒАН ҚАЛА ҮШІН\nСЫЙЛЫҚ"
-  },
+  "halloweenCityReward": "ТАЗАЛАНҒАН ҚАЛА ҮШІН\nСЫЙЛЫҚ",
   "halloweenPromo0": "Күн сайын кіріп, құнды сыйлықтар алыңыз",
   "halloweenPromo1": "Ең үздік бол — энергия жұмсау турниріне қатыс",
   "halloweenPromo2": "Энергия алсаңыз, ол қосымша жиналады. Жинақ толғанда жарып, энергияны алыңыз",
@@ -3373,12 +3108,7 @@
   "halloweenBankFullOf": "ТОЛТЫРЫЛДЫ",
   "halloweenBoosterActive": "БУСТЕР БЕЛСЕНДІ",
   "halloweenBooster": "БУСТЕР",
-  "halloweenBoosterInAction": "Белсенді",
-  "@halloweenBoosterInAction": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ӘРЕКЕТТЕ"
-  },
+  "halloweenBoosterInAction": "ӘРЕКЕТТЕ",
   "halloweenBoosterNotActive": "БЕЛСЕНСІЗ",
   "halloweenStagesCompleted": "ӨТІЛГЕН КЕЗЕҢДЕР",
   "halloweenStage0Title": "ҚАСҚЫР АДАМДАР\nҚАЛАСЫ",
@@ -3493,12 +3223,7 @@
   "summerRushDays": "күн",
   "summerRushDaily": "Күнделікті",
   "summerRushWillBeAvailableIn": "АРҚЫЛЫ ҚОЛЖЕТІМДІ БОЛАДЫ",
-  "summerRushRewardReceived": "Жүлде алынды",
-  "@summerRushRewardReceived": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сыйлық алынды"
-  },
+  "summerRushRewardReceived": "Сыйлық алынды",
   "summerRushClaim": "Алу",
   "summerRushIgrat": "ОЙЫН",
   "summerRushNet": "Жоқ",
@@ -3507,12 +3232,7 @@
   "summerRushReward": "жүлде",
   "summerRushRaceFinishCountdown": "аяқталғанға дейін",
   "summerRushPlayerLabel": "ойыншы",
-  "summerRushCongratsTitle": "ҚҰТТЫҚТАЙМЫЗ!",
-  "@summerRushCongratsTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сүйінші!"
-  },
+  "summerRushCongratsTitle": "Сүйінші!",
   "summerRushPlaceSuffix": "Орын",
   "summerRushRaceCancel": "БАСТАУ",
   "summerRushRaceMaxSpeedPrefix": "макс. Жылдамдық",
@@ -3807,12 +3527,7 @@
   "birthday_place": "Орын",
   "birthday_buy": "сатып алу",
   "birthday_get": "АЛУ",
-  "birthday_bank": "ЖИНАҚ САНДЫҒЫ",
-  "@birthday_bank": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Қоржын"
-  },
+  "birthday_bank": "Қоржын",
   "birthday_bank_play": "ОЙЫН",
   "birthday_campaign_upgrades": "жақсарту",
   "birthday_challenge_ends": "Аяқталуы:",
@@ -3844,36 +3559,16 @@
   "newYearToPointP1": "ҚАЙТУ",
   "newYearToPointP2": "ЧЕКПОИНТКЕ",
   "newYearConsumables": "ШЫҒЫН МАТЕРИАЛДАРЫ",
-  "newYearResultPlace": "{place} орында",
-  "@newYearResultPlace": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{place} ОРЫН"
-  },
+  "newYearResultPlace": "{place} ОРЫН",
   "newYearCollect": "АЛУ",
   "newYearConfirmPurchase": "САТЫП АЛУДЫ РАСТАҢЫЗ",
-  "newYearCancel": "БАСТАУ",
-  "@newYearCancel": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "БАС ТАРТУ"
-  },
+  "newYearCancel": "БАС ТАРТУ",
   "newYearBuy": "САТЫП АЛУ",
   "newYearPossibleRewards": "Мүмкін Сыйлықтар",
   "newYearPlaceRewards": "ОРЫНДАР ҮШІН СЫЙЛЫҚТАР",
   "newYearCongrats": "ҚҰТТЫҚТАЙМЫЗ!",
-  "newYearRewardPlace": "{place} орында",
-  "@newYearRewardPlace": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{place} ОРЫН"
-  },
-  "newYearYourDayReward": "{place} орында ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
-  "@newYearYourDayReward": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{place}-КҮН ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!"
-  },
+  "newYearRewardPlace": "{place} ОРЫН",
+  "newYearYourDayReward": "{place}-КҮН ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
   "newYearThanksForBuy": "САТЫП АЛҒАНЫҢЫЗҒА РАҚМЕТ!",
   "newYearStocks": "ҚОРЛАРЫҢЫЗ ТОЛЫҚТЫРЫЛДЫ!",
   "newYearContinue": "ЖАЛҒАСТЫРУ",
@@ -3881,18 +3576,8 @@
   "newYearEnergyBuyDesc": "Ойын ойнау үшін қорларыңызды толықтырыңыз!",
   "newYearBenefit": "Пайда",
   "newYearPass": "МЕЗГІЛДІК ПАСС ЖИНАҒЫ",
-  "newYearPassRewards": "жүлделер",
-  "@newYearPassRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сыйлықтар"
-  },
-  "newYearPassAvailable": "СЕЗОНДЫҚ ПАСС ҚОЛЖЕТІМДІ",
-  "@newYearPassAvailable": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "МЕЗГІЛДІК ПАСС ҚОЛЖЕТІМДІ"
-  },
+  "newYearPassRewards": "Сыйлықтар",
+  "newYearPassAvailable": "МЕЗГІЛДІК ПАСС ҚОЛЖЕТІМДІ",
   "newYearPassIncludes": "ЖИНАҚҚА КІРЕДІ:",
   "newYearPassSkipActs": "Барлық актілерді өткізіп жіберу",
   "newYearPassSkipLevels": "5 деңгейді өткізіп жіберу",
@@ -3914,27 +3599,12 @@
   "newYearTop100": "ТОП-100 ҚАТЫСУШЫ",
   "newYearUnlockRewards": "СЫЙЛЫҚТАРДЫ АШЫҢЫЗ",
   "newYearActive": "БЕЛСЕНДІ",
-  "newYearBuyPass": "СЕЗОНДЫҚ ПАСС САТЫП АЛУ",
-  "@newYearBuyPass": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "МЕЗГІЛДІК ПАСС САТЫП АЛУ"
-  },
+  "newYearBuyPass": "МЕЗГІЛДІК ПАСС САТЫП АЛУ",
   "newYearPromotions": "АКЦИЯЛАР",
   "newYearItemCommon": "ҚАРАПАЙЫМ",
   "newYearItemUncommon": "СИРЕК",
-  "newYearItemRare": "сирек кездесетін",
-  "@newYearItemRare": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ӨТЕ СИРЕК"
-  },
-  "newYearItemEpic": "аңыз",
-  "@newYearItemEpic": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "АҢЫЗДЫҚ"
-  },
+  "newYearItemRare": "ӨТЕ СИРЕК",
+  "newYearItemEpic": "АҢЫЗДЫҚ",
   "newYearPiggiBank": "ЖАҢА ЖЫЛДЫҚ КОПИЛКА",
   "newYearPiggyDesc": "Ойынға белсенді қатысыңыз,\nКопилканы толтырыңыз,\nОны сындырып, сыйлықтар алыңыз!",
   "newYearCurrentBalance": "Ағымдағы Баланс:",
@@ -3944,12 +3614,7 @@
   "newYearQuestsWeekly": "Кезеңдік",
   "newYearQuestsActivities": "Белсенділіктер",
   "newYearSeasonQuests": "Мезгілдик тапсырмалар",
-  "newYearSeasonQuestsDesc": "Сезондық пасс қажет",
-  "@newYearSeasonQuestsDesc": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Мезгілдік пасс қажет"
-  },
+  "newYearSeasonQuestsDesc": "Мезгілдік пасс қажет",
   "newYearBeforeUpdate": "ТАПСЫРМАЛАР ТІЗІМІ ЖАҢАРТЫЛҒАНҒА ДЕЙІН: {taskResetTime}",
   "newYearCases": "Кейстер",
   "newYearChallenge": "ЖАРЫС",
@@ -3962,36 +3627,16 @@
   "newYearDailyCompleted": "ТАПСЫРМА ОРЫНДАЛДЫ",
   "newYearPoster": "ЖАҢА ЖЫЛ",
   "newYearTake": "АЛУ",
-  "newYearToStore": "дүкенге",
-  "@newYearToStore": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ДҮКЕНГЕ ӨТУ туралы толық ақпарат алу үшін"
-  },
-  "newYearChapter": "{competition} (ға) АКТІ",
-  "@newYearChapter": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{competition}-ға АКТІ"
-  },
+  "newYearToStore": "ДҮКЕНГЕ ӨТУ туралы толық ақпарат алу үшін",
+  "newYearChapter": "{competition}-ға АКТІ",
   "newYearCompleted": "АЯҚТАЛДЫ",
   "newYearUntilEnd": "Аяқталуына дейін: {endsin}",
   "newYearUntilStart": "Басталуына дейін: {startsin}",
-  "newYearYourResult": "Сіздің нәтижеңіз: {place} орында",
-  "@newYearYourResult": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "Сіздің нәтижеңіз: {place} ОРЫН"
-  },
+  "newYearYourResult": "Сіздің нәтижеңіз: {place} ОРЫН",
   "newYearMainUntilEnd": "АЯҚТАЛУЫНА {time}",
   "newYearMainStartsIn": "{time} ІШІНДЕ БАСТАЛАДЫ",
   "newYearPassLevel": "{level} ДЕҢГЕЙ",
-  "newYearRewardTaken": "ЖҮЛДЕ АЛЫНДЫ",
-  "@newYearRewardTaken": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "СЫЙЛЫҚ АЛЫНДЫ"
-  },
+  "newYearRewardTaken": "СЫЙЛЫҚ АЛЫНДЫ",
   "newYearFree": "ТЕГІН",
   "newYearStart": "БАСТАУ",
   "newYearPlaceTitle": "ЖАҢА ЖЫЛЫҢЫЗБЕН!",
@@ -4001,12 +3646,7 @@
   "newYearAllRewards": "БАРЛЫҚ СЫЙЛЫҚТАР",
   "newYearOpensIn": "Ашылады:",
   "newYearThreeActsSkip": "ҮШ АКТІ ӨТКІЗУ",
-  "newYearMainReward": "НЕГІЗГІ ЖҮЛДЕ",
-  "@newYearMainReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "НЕГІЗГІ СЫЙЛЫҚ"
-  },
+  "newYearMainReward": "НЕГІЗГІ СЫЙЛЫҚ",
   "newYearActSkip": "{act} АКТІ ӨТКІЗУ",
   "newYearInfoTitle0": "СЕЗОНДЫҚ ПАСС",
   "@newYearInfoTitle0": {
@@ -4055,18 +3695,8 @@
   "shopNewToMail": "Поштаға",
   "shopNewOpenFast": "Жылдам ашу",
   "shopNewStoreTitle": "ДҮКЕН",
-  "shopNewYourReward": "СІЗДІҢ ЖҮЛДЕҢІЗ",
-  "@shopNewYourReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ"
-  },
-  "shopNewYourRewards": "СІЗДІҢ СЫЙЛЫҚТАРЫҢЫЗ",
-  "@shopNewYourRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "СЫЙЛЫҚТАРЫҢЫЗ"
-  },
+  "shopNewYourReward": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ",
+  "shopNewYourRewards": "СЫЙЛЫҚТАРЫҢЫЗ",
   "shopNewTakeReward": "Сыйлықты алу",
   "shopNewTakeAll": "Барлығын алу",
   "shopNewDismantle": "Бөлшектеу",
@@ -4138,12 +3768,7 @@
   "lnyMerchant": "САУДАГЕР",
   "lnyChineeseShop": "ҚЫТАЙ\nДҮКЕНІ",
   "lnyTasksUpdateIn": "ТАПСЫРМАЛАР ЖАҢАРТЫЛАДЫ:",
-  "lnySummaryReward": "БАРЛЫҚ ТАПСЫРМАЛАР\nҮШІН ЖАЛПЫ ЖҮЛДЕ",
-  "@lnySummaryReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "БАРЛЫҚ ТАПСЫРМАЛАР\nҮШІН ЖАЛПЫ СЫЙЛЫҚ"
-  },
+  "lnySummaryReward": "БАРЛЫҚ ТАПСЫРМАЛАР\nҮШІН ЖАЛПЫ СЫЙЛЫҚ",
   "lnyTaskImprove": "Тапсырмаларды жақсартып, көбірек сыйлық ал!",
   "lnyNextTask": "КЕЛЕСІ ТАПСЫРМА\nҚОЛЖЕТІМДІ БОЛАДЫ:",
   "lnyCompletePrevTask": "Алдыңғы тапсырманы орындаңыз",
@@ -4173,18 +3798,8 @@
   "lnyEducationTasksFieryHorseTitle": "Отты жылқы жолы",
   "lnyEducationTasksFieryHorseDescription": "Бұл тапсырмалар сізді ивент белсенділіктерімен таныстырады. Әрқайсысын орындап, өзіңізге ұнайтынын таңдауға кеңес береміз",
   "lnyEducationTasksEventTitle": "Ивент тапсырмалары",
-  "lnyEducationTasksEventDescription": "Ивент тапсырмалары қиынырақ, бірақ жүлдесі жоғары. Барлығын аяқтаған соң, қайта бастауға мүмкіндік болады!",
-  "@lnyEducationTasksEventDescription": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Ивент тапсырмалары қиынырақ, бірақ сыйақысы жоғары. Барлығын аяқтаған соң, қайта бастауға мүмкіндік болады!"
-  },
-  "lnyEducationTasksDailyTitle": "Күнделікті",
-  "@lnyEducationTasksDailyTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Күнделікті тапсырмалар"
-  },
+  "lnyEducationTasksEventDescription": "Ивент тапсырмалары қиынырақ, бірақ сыйақысы жоғары. Барлығын аяқтаған соң, қайта бастауға мүмкіндік болады!",
+  "lnyEducationTasksDailyTitle": "Күнделікті тапсырмалар",
   "lnyEducationTasksDailyDescription": "Күн сайын тек 5 тапсырма қолжетімді болады. Олар жеңіл, сондықтан алдымен орындауға кеңес береміз!",
   "lnyEducationShopTitle": "Дүкен",
   "lnyEducationShopDescription": "Дүкен үш бөлімге бөлінген",
@@ -4216,35 +3831,15 @@
   "goldenTicketGotIt": "Түсінікті",
   "goldenTicketLocked": "Құлыпталған",
   "goldenTicketTakeReward": "Сыйлықты алу",
-  "goldenTicketActivatePass": "Белсендіру",
-  "@goldenTicketActivatePass": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Рұқсатнаманы белсендіру"
-  },
+  "goldenTicketActivatePass": "Рұқсатнаманы белсендіру",
 
   "@@comment": "Black list (car theft)",
   "blackListShopCases": "Кейстер",
   "blackListShopBoosters": "Бустерлер",
-  "blackListShopConsumables": "ШЫҒЫН МАТЕРИАЛДАРЫ",
-  "@blackListShopConsumables": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Тұтыну заттары"
-  },
+  "blackListShopConsumables": "Тұтыну заттары",
   "blackListShopShowcase": "Витрина",
-  "blackListShopShowcaseAuto": "Автомобильдер",
-  "@blackListShopShowcaseAuto": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Көліктер"
-  },
-  "blackListShopShowcaseSkins": "Терілер",
-  "@blackListShopShowcaseSkins": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Скиндер"
-  },
+  "blackListShopShowcaseAuto": "Көліктер",
+  "blackListShopShowcaseSkins": "Скиндер",
   "blackListShopShowcaseAccessories": "Аксессуарлар",
   "blackListOpen": "Ашу",
   "blackListWatchAllPrizes": "Барлық жүлделерді көру",
@@ -4264,12 +3859,7 @@
   "bigCatchAllPrizes": "Барлық жүлделер",
   "blackListPossiblePrizes": "Мүмкін жүлделер",
   "bigCatchOpenCase": "Кейсті ашу",
-  "blackListYourReward": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ",
-  "@blackListYourReward": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сіздің жүлдеңіз"
-  },
+  "blackListYourReward": "Сіздің жүлдеңіз",
   "blackListRewards": "Жүлделер",
   "blackListRankRewards": "Ранг жүлделері",
   "blackListShowcaseAutoError": "Алдымен осы көлікпен келісімшартты аяқтаңыз",
@@ -4337,24 +3927,14 @@
   "blackListinfoTitle": "Black List іс-қимасына қош келдіңіз!",
   "blackListinfoTitlePost": "Black List қош келдіңіз!",
   "blackListinfoSubTitlePost": "Келісімшарттарды орындап, жарыстарға қатысыңыз",
-  "blackListinfoSubTitle": "Келісімдерді орындаңыз, рангыңызды көтеріңіз, токендарын табыңыз\nжәнесе ерекше сыйлықтарды ашыңыз.",
-  "@blackListinfoSubTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Келісімдерді орындаңыз, рейтингіңізді көтеріңіз, токендарын табыңыз\nжәнесе ерекше сыйлықтарды ашыңыз."
-  },
+  "blackListinfoSubTitle": "Келісімдерді орындаңыз, рейтингіңізді көтеріңіз, токендарын табыңыз\nжәнесе ерекше сыйлықтарды ашыңыз.",
   "blackListinfoHowToPlayTitle": "Іс-қимасына қалай қатысады?",
   "blackListinfoHowToPlayTitlePost": "Black List-ке қалай қатысуға болады?",
   "blackListinfoHowToPlayStep1": "Келісімді таңдаңыз — машинаны ұрлау тапсырмасын алыңыз.",
   "blackListinfoHowToPlayStep2": "Машинаны бұзыңыз — мини-ойынды өтіңіз.",
   "blackListinfoHowToPlayStep3": "Машинаны ұрлап, жеткізіңіз — есеп аймалдарын сақтаңыз, машинаны жақсы күйде ұстаңыз.",
   "blackListinfoHowToPlayStep4": "Сыйлық алыңыз — Токендар, Беделі және машинаға ысырамалар.",
-  "blackListinfoHowToPlayStep5": "Рангыңыз көтеріңіз — және күрделі және пайдалы келісімдерді ашыңыз.",
-  "@blackListinfoHowToPlayStep5": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Рейтингіңіз көтеріңіз — және күрделі және пайдалы келісімдерді ашыңыз."
-  },
+  "blackListinfoHowToPlayStep5": "Рейтингіңіз көтеріңіз — және күрделі және пайдалы келісімдерді ашыңыз.",
   "blackListinfoHowToPlayStep6": "Жарысында беделі табыңыз — жарыстарға қатысыңыз, ұпайлар табыңыз.",
   "blackListinfoHowToPlayPostStep1": "Келісімді таңдаңыз — машинаны ұрлау тапсырмасын алыңыз.",
   "blackListinfoHowToPlayPostStep2": "Машинаны бұзыңыз — мини-ойынды өтіңіз.",
@@ -4362,27 +3942,12 @@
   "blackListinfoHowToPlayPostStep4": "Сыйлық алыңыз — .",
   "blackListinfoProfitInfoTitle": "Сіз не табасыз?",
   "blackListinfoProfitInfoStep1": "Токендар — іс-қимасының негізгі валютасы. Тұтындыру және жақсартуларына жұмсаңыз.",
-  "blackListinfoProfitInfoStep2": "Беділі — сіздің рангыңыз көтеріп және жаңа келісімдерді ашып береді.",
-  "@blackListinfoProfitInfoStep2": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Беділі — сіздің рейтингіңіз көтеріп және жаңа келісімдерді ашып береді."
-  },
+  "blackListinfoProfitInfoStep2": "Беділі — сіздің рейтингіңіз көтеріп және жаңа келісімдерді ашып береді.",
   "blackListinfoProfitInfoStep3": "Отын — келісімдер және жарыстар үшін қажет. Уақыт өте ресторацияланады.",
   "blackListinfoProfitInfoPostStep1": "Отын — келісімдер және жарыстар үшін қажет. Уақыт өте ресторацияланады.",
   "blackListinfoProfitInfoPostStep2": "Жарыстарда және келісімшарттардан  табыңыз",
-  "blackListinfoIncreaseRankTitle": "Рангыңызды көтеріңіз - ең жақсысын ашыңыз",
-  "@blackListinfoIncreaseRankTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Рейтингіңізді көтеріңіз - ең жақсысын ашыңыз"
-  },
-  "blackListinfoIncreaseRankDescription": "Келісімдерді орындаңыз және жарыстарға қатысыңыз беділі табу үшін. Жаңа ранг — жаңа келісімдер, премиум сыйлықтар және косметика ашса болады",
-  "@blackListinfoIncreaseRankDescription": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Келісімдерді орындаңыз және жарыстарға қатысыңыз беділі табу үшін. Жаңа рейтинг — жаңа келісімдер, премиум сыйлықтар және косметика ашса болады"
-  },
+  "blackListinfoIncreaseRankTitle": "Рейтингіңізді көтеріңіз - ең жақсысын ашыңыз",
+  "blackListinfoIncreaseRankDescription": "Келісімдерді орындаңыз және жарыстарға қатысыңыз беділі табу үшін. Жаңа рейтинг — жаңа келісімдер, премиум сыйлықтар және косметика ашса болады",
   "blackListinfoRank0": "Жаңадан келген",
   "blackListinfoRank1": "Шәкірт",
   "blackListinfoRank2": "Про",
@@ -4426,12 +3991,7 @@
   "blackListContractsYour": "СЕНІҢ КЕЛІСІМШАРТТАРЫҢ",
   "blackListContractsOpposition": "ҚАРСЫЛЫҚ",
   "blackListContractReq0": "Келісімшартты орындау үшін,",
-  "blackListContractReq1": "Ранг қажет",
-  "@blackListContractReq1": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Дәреже қажет"
-  },
+  "blackListContractReq1": "Дәреже қажет",
   "blackListContractFarm0": "Жина",
   "blackListContractFarm1": "Жарыстарда!",
   "blackListContractRep0": "Келісімшартты орындау үшін,",
@@ -4451,12 +4011,7 @@
   "lackListContractClose": "Жақын",
   "lackListContractMedium": "Орташа",
   "lackListContractFar": "Алыс",
-  "blackListContractRequirements": "Шарттар",
-  "@blackListContractRequirements": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Талаптар"
-  },
+  "blackListContractRequirements": "Талаптар",
   "blackListContractStart": "БАСТАУ",
   "blackListContractFastCooldown": "ЖЕДЕЛДЕТУ",
   "blackListContractRestartAction": "ҚАЙТА БАСТАУ",
@@ -4464,21 +4019,11 @@
   "blackListContractNext": "Келесі келісімшарт",
   "blackListContractTake": "Келісімшартты алу",
   "blackListHomeDaily": "Күнделікті\nКіру",
-  "blackListHomeLeaderboard": "КӨШБАСШЫЛАР ТІЗІМІ",
-  "@blackListHomeLeaderboard": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Көшбасшылар кестесі"
-  },
+  "blackListHomeLeaderboard": "Көшбасшылар кестесі",
   "blackListHomeLeaderboardPlay": "Орын алу үшін ойна!",
   "blackListHomeLeaderboardNoPlace": "Сенде орын жоқ",
   "blackListHomeLeaderboardMy": "Менің Рейтингім",
-  "blackListHomeLeaderboardGlobal": "ЖАҺАНДЫҚ",
-  "@blackListHomeLeaderboardGlobal": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Жалпы"
-  },
+  "blackListHomeLeaderboardGlobal": "Жалпы",
   "blackListHomeStoreNew": "Дүкендегі Жаңалықтар!",
   "blackListHomeStartRace": "Жарыстарға қатыс!",
   "blackListHomeMainRewards": "Іс-шараның Негізгі Сыйлықтары!",
@@ -4587,19 +4132,9 @@
   "bigCatchRelease": "Жіберу",
   "bigCatchPremium": "Премиум",
   "bigCatchConditions": "Шарттар",
-  "bigCatchRewards": "жүлделер",
-  "@bigCatchRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сыйақылар"
-  },
+  "bigCatchRewards": "Сыйақылар",
   "bigCatchInStock": "Қоймада бар",
-  "bigCatchDurability": "Төзімділік",
-  "@bigCatchDurability": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Беріктік"
-  },
+  "bigCatchDurability": "Беріктік",
   "bigCatchOrdersDaily": "Күнделікті",
   "bigCatchOrdersWeekly": "Апталық",
   "bigCatchOrdersLockPremiumEnd": "Премиум тапсырыстар жоғалғанға дейін",
@@ -4626,19 +4161,9 @@
   "bigCatchInventoryTrashCapacity": "Қоқыс сыйымдылығы",
   "bigCatchStoryLineTask": "Тапсырма",
   "bigCatchStoryLineCompleteTaskNumber": "№ тапсырманы орында",
-  "bigCatchStoryLineTaskNecessaryRank": "Тапсырманы орындау үшін қажетті ранг:",
-  "@bigCatchStoryLineTaskNecessaryRank": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Тапсырманы орындау үшін қажетті дәреже:"
-  },
+  "bigCatchStoryLineTaskNecessaryRank": "Тапсырманы орындау үшін қажетті дәреже:",
   "bigCatchStoryLineNextTaskAvailable": "Тапсырма келесі уақытта қолжетімді болады",
-  "bigCatchStoryLineInProcess": "үрдісте",
-  "@bigCatchStoryLineInProcess": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Орындалу үстінде"
-  },
+  "bigCatchStoryLineInProcess": "Орындалу үстінде",
   "bigCatchStoryLineSkipWaiting": "Күтуді өткізу?",
   "bigCatchTutorialTitleInPlace": "Біз орнымыздамыз.",
   "bigCatchTutorialTextInPlace": "Бастау үшін кез келген айлаққа бар.\nСу жиегіне тұрған соң —\nқармақты дайындап,\nлақтыра аласың.",
@@ -4647,12 +4172,7 @@
   "bigCatchTutorialTextFishShop": "Тапқан қаражатты іске салған жөн.\nЖаңа жабдықтар сенің дәрежең өскен\nсайын ашылады.\n\nБалық аулау дүкеніне қайта барып,\nкелесі шығу үшін жем сатып ал",
   "bigCatchAchievements": "Жетістіктер",
   "bigCatchAllPrizes": "Барлық сыйлықтар",
-  "bigCatchAllRewards": "БАРЛЫҚ СЫЙЛЫҚТАР",
-  "@bigCatchAllRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Барлық марапаттар"
-  },
+  "bigCatchAllRewards": "Барлық марапаттар",
   "bigCatchBoosters": "БУСТЕРЛЕР",
   "bigCatchBuyBoosterQuestion": "Сіз шынымен\nбустер сатып алғыңыз келе ме ",
   "bigCatchBuyerInStock": "Қолда бар:",
@@ -4672,12 +4192,7 @@
   "bigCatchFishActivityBad": "Нашар",
   "bigCatchFishActivityGood": "Жақсы",
   "bigCatchFishActivityInfoAccent": "балық белсенділігі ",
-  "bigCatchFishActivityInfoPrefix": "Показатель ",
-  "@bigCatchFishActivityInfoPrefix": {
-    "reviewed_by_human": false,
-    "issue_type": "untranslated",
-    "previous_value": ""
-  },
+  "bigCatchFishActivityInfoPrefix": "",
   "bigCatchFishActivityInfoSuffix": "көрсеткіші — айлақтағы\nбалықтың қапу жылдамдығы. ",
   "bigCatchFishActivityNormal": "Қалыпты",
   "bigCatchFishActivityTypes": "Балық белсенділігінің түрлері:",
@@ -4714,12 +4229,7 @@
   "bigCatchRaritySimple": "Қарапайым ",
   "bigCatchRecipientGameNameHint": "СЫЙЛАҒЫҢЫЗ КЕЛЕТІН ОЙЫНШЫНЫҢ ОЙЫНДАҒЫ АТЫ",
   "bigCatchRecipientGameNameTitle": "АЛУШЫНЫҢ ОЙЫН АТЫН ЕНГІЗУ",
-  "bigCatchRewardReceived": "Жүлде алынды!",
-  "@bigCatchRewardReceived": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Марапат алынды!"
-  },
+  "bigCatchRewardReceived": "Марапат алынды!",
   "bigCatchSell": "Сату",
   "bigCatchSellConfirmTitle": "САТУДЫ РАСТАУ",
   "bigCatchSellPrice": "Сату құны:",
@@ -4814,12 +4324,7 @@
   "inventoryMailDeleteForeverQuestion": "Шынымен мәңгілікке жойғыңыз келе ме",
   "inventoryMailTake": "Алу",
   "inventoryMailPut": "Салу",
-  "inventoryMailDelete": "ӨШІРУ",
-  "@inventoryMailDelete": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Жою"
-  },
+  "inventoryMailDelete": "Жою",
   "inventoryMailSubsectionSkin": "Скин",
   "inventoryMailSubsectionTop": "Үсті бөліміне өту үшін басыңыз",
   "inventoryMailSubsectionBottom": "Асты",
@@ -4846,20 +4351,10 @@
   "tradePlatformTransportLabel": "КӨЛІК:",
   "tradePlatformPurchaseCostLabel": "САТЫП АЛУ ҚҰНЫ:",
   "tradePlatformPaymentTypeLabel": "ТӨЛЕМ ТҮРІ:",
-  "tradePlatformCash": "қолма-қол ақша",
-  "@tradePlatformCash": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ҚОЛМА-ҚОЛ"
-  },
+  "tradePlatformCash": "ҚОЛМА-ҚОЛ",
   "tradePlatformCard": "КАРТА",
   "tradePlatformRemoveLotQuestionPrefix": "Сатылымнан алып тастағыңыз келе ме\n",
-  "tradePlatformWithdraw": "АЛУ",
-  "@tradePlatformWithdraw": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Алып тастау"
-  },
+  "tradePlatformWithdraw": "Алып тастау",
   "tradePlatformSelectedItem": "Таңдалған зат:",
   "tradePlatformInStock": "Қолда бар:",
   "tradePlatformQuantityForSale": "Сатуға саны:",
@@ -4912,18 +4407,8 @@
   "containersDoYouWantToMakeBet": "Сіз шынымен\nставка жасағыңыз келе ме ?",
   "containersShowRewards": "Сыйлықтарды қарау",
   "containersWillBeAvailable": "Қолжетімді болады",
-  "containersDatetime": "в",
-  "@containersDatetime": {
-    "reviewed_by_human": false,
-    "issue_type": "untranslated",
-    "previous_value": ""
-  },
-  "containersYourReward": "Сіздің Жүлдеңіз",
-  "@containersYourReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сіздің Сыйлығыңыз"
-  },
+  "containersDatetime": "",
+  "containersYourReward": "Сіздің Сыйлығыңыз",
   "containersAuctionsEndTitle": "Аукциондар аяқталды!",
   "containersAuctionsEndDesc": "Қазіргі уақытта барлық аукциондар аяқталды.\nЖаңа ұсыныстар ертең пайда болады.",
 
@@ -4978,12 +4463,7 @@
   "dragRacingDifficultyMedium": "Орташа",
   "dragRacingDifficultyHard": "Қиын",
   "dragRacingStart": "Бастау",
-  "dragRacingRewards": "жүлделер",
-  "@dragRacingRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сыйлықтар"
-  },
+  "dragRacingRewards": "Сыйлықтар",
   "dragRacingPreviousWin": "Жарысқа қатысу үшін,\nалдыңғы жарысты жеңіңіз",
   "dragRacingRematchTitle": "Жарыс ұтылды! Қайта байқап көр!",
   "dragRacingRematchTitleUnavailable": "Жарыс ұтылды!",
@@ -5011,12 +4491,7 @@
   "dragRacingLeagueInfo": "Ақпарат",
   "dragRacingLeagueYourLeague": "Сіздің лигаңыз",
   "dragRacingLeagueYourRating": "Сіздің рейтингіңіз",
-  "dragRacingLeagueRewardForRace": "Жарыс жүлдесі",
-  "@dragRacingLeagueRewardForRace": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Жарыс сыйлығы"
-  },
+  "dragRacingLeagueRewardForRace": "Жарыс сыйлығы",
   "dragRacingNoCars": "Көліктер жоқ!",
   "dragRacingBanChangeCar": "Акт жүріп жатқанда таңдауды растағаннан кейін көлікті өзгертуге болмайды",
   "dragRacingBannerTitle": "Ивент басталды",
@@ -5039,24 +4514,14 @@
   "dragRacingV2Grip": "Ұстамдылық",
   "dragRacingConfirmUpgradeConfirm": "Сіз шынымен {upgradeTitle} жақсартқыңыз келе ме?",
   "dragRacingLevelUpgradeTitle0": "ДЕҢГЕЙГЕ ДЕЙІН ЖАҚСАРТУ ",
-  "dragRacingLevelUpgradeTitle1": "УРОВНЯ",
-  "@dragRacingLevelUpgradeTitle1": {
-    "reviewed_by_human": false,
-    "issue_type": "untranslated",
-    "previous_value": ""
-  },
+  "dragRacingLevelUpgradeTitle1": "",
   "dragRacingV2BuyParts": "Бөлшектер сатып алу",
   "dragRacingV2BigUpgrade": "Сызбаларды жинау арқылы\nкөлікті қатты жақсарта аласыз:",
   "dragRacingV2MaxUpgradeAchieved": "Сіз көлікті\nең жоғарғы деңгейге дейін жақсарттыңыз!",
   "dragRacingV2MaxLevel": "Максималды деңгей",
   "dragRacingV2Level": "Деңгей",
   "dragRacingV2ToRaces": "Жарыстарға өту",
-  "dragRacingV2YourReward": "СІЗДІҢ ЖҮЛДЕҢІЗ:",
-  "@dragRacingV2YourReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ:"
-  },
+  "dragRacingV2YourReward": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ:",
   "dragRacingV2LeaveRaceTitle": "ЖАРЫСТАН ШЫҒУ?",
   "dragRacingV2LeaveRaceDescr": "Сіз қарсылас табу үшін энергия жұмсадыңыз,\nшынымен шығғыңыз келе ме?",
   "dragRacingV2Stay": "Қалу",
@@ -5083,12 +4548,7 @@
   "dragRacingV2UpdateShowcase": "Витринаны жаңарту",
   "dragRacingV2UpdateCShowcase": "Компоненттер витринасын жаңартқыңыз келетініне сенімдісіз бе?",
   "dragRacingV2UpdateBShowcase": "Сызбалар витринасын жаңартқыңыз келетініне сенімдісіз бе?",
-  "dragRacingV2PiggyBank": "ЖИНАҚ САНДЫҒЫ",
-  "@dragRacingV2PiggyBank": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ЖИНАҚША"
-  },
+  "dragRacingV2PiggyBank": "ЖИНАҚША",
   "dragRacingV2BankBreakDesc": "Жинақшаны бұзғыңыз келетініне сенімдісіз бе?",
   "dragRacingV2BankDescr": "Жарыстарда жеңу арқылы\nDC жинай аласыз!",
   "dragRacingV2BankBalance": "Ағымдағы баланс:",
@@ -5191,24 +4651,14 @@
   "userMenuReportsUnreviewed": "ҚАРАЛМАҒАН",
   "userMenuReportsCommentReceived": "ПІКІР АЛЫНДЫ",
   "userMenuReportsReviewed": "ҚАРАЛДЫ",
-  "userMenuReportsAgainstMe": "маған",
-  "@userMenuReportsAgainstMe": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "МАҒАН ҚАРСЫ"
-  },
+  "userMenuReportsAgainstMe": "МАҒАН ҚАРСЫ",
   "userMenuReportsFromMe": "МЕНЕН",
   "userMenuReportsViolatedRules": "Бұзылған ережелер тармақтары:",
   "userMenuReportsDescriptionHint": "Жағдайды қысқаша сипаттаңыз.\nТаңбалардың ең көп саны - 350",
   "userMenuReportsSuspectHint": "Аты_Тегі",
   "userMenuReportsStatusUnreviewed": "Қаралмаған",
   "userMenuReportsStatusReviewed": "Қаралды",
-  "userMenuReportsFromTo": "{fromUser} ойыншысынан {toUser} ойыншысына қарсы",
-  "@userMenuReportsFromTo": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{fromUser}-дан {toUser}-ға қарсы"
-  },
+  "userMenuReportsFromTo": "{fromUser}-дан {toUser}-ға қарсы",
   "userMenuReportsDescription": "Сипаттама:",
   "userMenuReportsAdminConclusionReviewed": "Заключение: адм.{adminName} (Рассмотрено)",
   "userMenuReportsAttachedFiles": "Тіркелген файлдар:",
@@ -5244,12 +4694,7 @@
   "userMenuArenaConfirmAction": "ӘРЕКЕТТІ РАСТАҢЫЗ",
   "userMenuArenaTakeItemQuestion": "Затты алғыңыз келе ме",
   "userMenuArenaClaim": "Алу",
-  "userMenuArenaCancel": "БАСТАУ",
-  "@userMenuArenaCancel": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Болдырмау"
-  },
+  "userMenuArenaCancel": "Болдырмау",
   "userMenuArenaActive": "Белсенді",
   "userMenuArenaInactive": "Белсенді емес",
   "userMenuArenaFastSearchDescription": "ЕҢ КӨП ОЙЫНШЫСЫ БАР\nРЕЖИМДІ КЕЗДЕЙСОҚ\nТАҢДАУ",
@@ -5420,12 +4865,7 @@
   "predictionsTabBets": "Тігістер",
   "predictionsTabTournamentBracket": "Турнирлік\nТор",
   "predictionsTabTasks": "Тапсырмалар",
-  "predictionsTabLeaderboard": "КӨШБАСШЫЛАР ТІЗІМІ",
-  "@predictionsTabLeaderboard": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Көшбасшылар"
-  },
+  "predictionsTabLeaderboard": "Көшбасшылар",
   "predictionsTabShop": "Дүкен",
   "predictionsTier": "Тир",
   "predictionsNoTier": "Тирсіз",
@@ -5453,12 +4893,7 @@
     "issue_type": "placeholder_mismatch",
     "previous_value": "min-нан аз сатып алуға болмайды"
   },
-  "predictionsBuyCoinsMaxError": "{max} санынан көп сатып алуға болмайды",
-  "@predictionsBuyCoinsMaxError": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{max}-нан көп сатып алуға болмайды"
-  },
+  "predictionsBuyCoinsMaxError": "{max}-нан көп сатып алуға болмайды",
   "predictionsLeaderboardUsername": "Ойыншы аты",
   "predictionsLeaderboardAccuracy": "Дәлдік",
   "predictionsLeaderboardRating": "Рейтинг",
@@ -5492,12 +4927,7 @@
   "predictionsBracketToChoiceTeam": "Команданы таңдау",
   "predictionsBracketHintText": "Командалардың турнир жолын болжа.\nТор неғұрлым дәл болса, соғұрлым көп қосымша сыйлық аласың",
   "predictionsBracketRewardForCorrectBet": "Дұрыс болжанған әр жеңімпаз үшін сыйақы:",
-  "predictionsBracketRewardForUnavailableMatch": "Бұл матч үшін жүлде қолжетімсіз\n— алдыңғы матч қазірдің өзінде өтіп жатыр",
-  "@predictionsBracketRewardForUnavailableMatch": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бұл матч үшін сыйақы қолжетімсіз\n— алдыңғы матч қазірдің өзінде өтіп жатыр"
-  },
+  "predictionsBracketRewardForUnavailableMatch": "Бұл матч үшін сыйақы қолжетімсіз\n— алдыңғы матч қазірдің өзінде өтіп жатыр",
   "predictionsBracketTeam": "Команда",
   "predictionsBracketPair": "Жұп",
   "predictionsBracketError": "Алдыңғы кезеңді толтырыңыз",
@@ -5547,23 +4977,13 @@
   "footballEndDescr": "Іс-шара аяқталды. Сізге ұнады деп үміттенеміз\nжәне көп гол соқтыңыз!",
   "footballEndLeftRewards": "Қалған сыйлықтар:",
   "footballEndInfo0": "Барлық фан-коиндар мен билеттер жойылады.",
-  "footballStartTitle": "Ивент Басталды",
-  "@footballStartTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "ІС-ШАРА БАСТАЛДЫ"
-  },
+  "footballStartTitle": "ІС-ШАРА БАСТАЛДЫ",
   "footballStartDesc0": "Көлік футболына қатысыңыз, гол соғыңыз\nжәне өз қақпаңызды қорғаңыз!",
   "footballStartDesc1": "Тапсырмаларды орындаңыз, сервер рейтингін\nкөтеріңіз және сыйлықтар алыңыз!",
   "footballRewardSet": "СЫЙЛЫҚ ЖИЫНТЫҚТАРЫ",
   "footballRewardDistribution": "СЫЙЛЫҚТАРДЫ БӨЛУ",
   "footballRatingGlobalRewards": "Сервердің жаһандық рейтингтегі орны ортақ сыйлық жиынтығының құнын анықтайды.\nСіздің үлесіңіз команда ішіндегі орныңызға байланысты",
-  "footballRatingServerRewards": "Командадағы орныңыз неғұрлым жоғары болса, ортақ жиынтықтан алатын жүлдеңіз соғұрлым құнды болады.",
-  "@footballRatingServerRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Командадағы орныңыз неғұрлым жоғары болса, ортақ жиынтықтан алатын сыйлығыңыз соғұрлым құнды болады."
-  },
+  "footballRatingServerRewards": "Командадағы орныңыз неғұрлым жоғары болса, ортақ жиынтықтан алатын сыйлығыңыз соғұрлым құнды болады.",
   "footballGlobalRating": "ЖАҺАНДЫҚ РЕЙТИНГ",
   "footballServerRating": "КОМАНДА РЕЙТИНГІ",
   "footballBuyTickets": "Билеттер сатып алу",
@@ -5575,12 +4995,7 @@
   "footballGamePlayers": "Ойыншылар\nсаны",
   "footballGameLength": "Матч\nұзақтығы:",
   "footballGameRounds": "Ең көп\nраунд саны:",
-  "footballGameReward": "Жеңіс үшін жүлде:",
-  "@footballGameReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Жеңіс үшін сыйақы:"
-  },
+  "footballGameReward": "Жеңіс үшін сыйақы:",
   "footballProfileAttack": "Шабуыл профилі",
   "footballProfileDefence": "Қорғаныс профилі",
   "footballProfileBalance": "Теңгерімді профиль",
@@ -5607,12 +5022,7 @@
   "footballRatingGlobal": "Жаһандық\nрейтинг",
   "footballToLeaderboard": "ЛИДЕРБОРДҚА",
   "footballBestEventRewards": "ІС-ШАРАНЫҢ ҮЗДІК СЫЙЛЫҚТАРЫ",
-  "footballMainRewardTitle": "НЕГІЗГІ\nЖҮЛДЕ №",
-  "@footballMainRewardTitle": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "НЕГІЗГІ\nСЫЙЛЫҚ №"
-  },
+  "footballMainRewardTitle": "НЕГІЗГІ\nСЫЙЛЫҚ №",
   "footballAllTasks": "БАРЛЫҚ ТАПСЫРМАЛАР",
   "footballEventEndsIn": "Іс-шараның аяқталуына дейін",
   "footballPremiumTasksDesc": "Премиум тапсырмаларды\nашқыңыз келе ме?",
@@ -5664,19 +5074,9 @@
   "footballTutorTitle71": "Лидерборд",
   "footballTutorDesc71": "Кестедегі орындарды тексеріңіз!",
   "footballTutorTitle80": "Жаһандық рейтинг",
-  "footballTutorDesc80": "Бұл — серверлердің жаһандық рейтингі.\nМұнда командалар қорытынды жүлделер үшін\nбір-бірімен жарысады: сервер орны неғұрлым жоғары болса,\nкоманда сыйлығы соғұрлым жақсы болады.",
-  "@footballTutorDesc80": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бұл — серверлердің жаһандық рейтингі.\nМұнда командалар қорытынды сыйлықтар үшін\nбір-бірімен жарысады: сервер орны неғұрлым жоғары болса,\nкоманда сыйлығы соғұрлым жақсы болады."
-  },
+  "footballTutorDesc80": "Бұл — серверлердің жаһандық рейтингі.\nМұнда командалар қорытынды сыйлықтар үшін\nбір-бірімен жарысады: сервер орны неғұрлым жоғары болса,\nкоманда сыйлығы соғұрлым жақсы болады.",
   "footballTutorTitle81": "Командалық рейтинг",
-  "footballTutorDesc81": "Сервер ішіндегі орныңыз неғұрлым жоғары болса,\nкоманда қатысушылары арасындағы жеке жүлдеңіз\nсоғұрлым жақсы болады.",
-  "@footballTutorDesc81": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сервер ішіндегі орныңыз неғұрлым жоғары болса,\nкоманда қатысушылары арасындағы жеке сыйлығыңыз\nсоғұрлым жақсы болады."
-  },
+  "footballTutorDesc81": "Сервер ішіндегі орныңыз неғұрлым жоғары болса,\nкоманда қатысушылары арасындағы жеке сыйлығыңыз\nсоғұрлым жақсы болады.",
   "footballHudTitle": "CARBALL LEAGUE",
 
   "@@comment": "integration_bubble",
@@ -5708,18 +5108,8 @@
   "bingoHeistTabMain": "Басты",
   "bingoHeistTabTasks": "Тапсырмалар",
   "bingoHeistTabShop": "Дүкен",
-  "bingoHeistTabRewards": "жүлделер",
-  "@bingoHeistTabRewards": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сыйақылар"
-  },
-  "bingoHeistTabAbout": "акция туралы",
-  "@bingoHeistTabAbout": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Акция\nтуралы"
-  },
+  "bingoHeistTabRewards": "Сыйақылар",
+  "bingoHeistTabAbout": "Акция\nтуралы",
   "bingoHeistAboutStep1Title": "Тапсырмаларды орындаңыз",
   "bingoHeistAboutStep1Description": "Күнделікті\nтапсырмаларды орындап,\nсейфтерді ашуға кілт алыңыз",
   "bingoHeistAboutStep2Title": "Мақсаттарды жабыңыз",
@@ -5731,22 +5121,12 @@
   "bingoHeistAboutStoreButton": "Дүкенде толығырақ",
   "bingoHeistPopupYourPrize": "Сіздің жүлдеңіз!",
   "bingoHeistPopupScanning": "Сканерлеу...",
-  "bingoHeistPopupGoalReward": "Мақсатты орындағаны үшін жүлде",
-  "@bingoHeistPopupGoalReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Мақсатты орындағаны үшін сыйлық"
-  },
+  "bingoHeistPopupGoalReward": "Мақсатты орындағаны үшін сыйлық",
   "bingoHeistTasksCompletedTitle": "Құттықтаймыз! Барлық тапсырма орындалды!",
   "bingoHeistTasksCompletedDescription": "Тапсырмаларды қайта бастап, көбірек сыйлық алғыңыз келе ме?",
   "bingoHeistRestartTasksTitle": "Тапсырмаларды қайта бастау",
   "bingoHeistRestartTasksConfirmation": "Тапсырмаларды қайта бастағыңыз келетініне сенімдісіз бе?",
-  "bingoHeistConfirmPurchasePrefix": "Сіз шынымен сатып алғыңыз келеді",
-  "@bingoHeistConfirmPurchasePrefix": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сатып алғыңыз келетіні рас па"
-  },
+  "bingoHeistConfirmPurchasePrefix": "Сатып алғыңыз келетіні рас па",
   "bingoHeistHackFor": "Бұзу - {cost}",
   "@bingoHeistHackFor": [
     [
@@ -5808,12 +5188,7 @@
     "issue_type": "glossary_violation",
     "previous_value": "Сыйақы"
   },
-  "bingoHeistRewardReceived": "Жүлде алынды!",
-  "@bingoHeistRewardReceived": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сыйақы алынды!"
-  },
+  "bingoHeistRewardReceived": "Сыйақы алынды!",
   "bingoHeistUnlock": "Ашу",
   "bingoHeistUnlockDescription": "Жабылған тапсырмаларды\nмарапаттары көбейтілген\nкүйде ашыңыз!",
   "bingoHeistAllCellsOpened": "Барлық ұяшықтар ашық!",
@@ -5823,12 +5198,7 @@
   "bingoHeistRewardsForGoals": "Мақсаттарды орындау сыйақылары",
   "bingoHeistClaim": "Алу",
   "bingoHeistGotIt": "Түсінікті",
-  "bingoHeistClaimReward": "Сыйлықты алу",
-  "@bingoHeistClaimReward": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сыйақыны алу"
-  },
+  "bingoHeistClaimReward": "Сыйақыны алу",
   "bingoHeistScanPopupDescription": "Бұл сейфте мына сыйлық бар:",
   "bingoHeistNotEnoughKeys": "Кілттер жеткіліксіз",
   "bingoHeistNotEnoughScanners": "Сканерлер жеткіліксіз",
@@ -6129,26 +5499,11 @@
   "slotMachineWin": "ҰТЫС",
 
   "@@comment": "summerRushV2",
-  "srv2yourPlace": "СІЗ {playerPlace} орында АЛДЫҢЫЗ",
-  "@srv2yourPlace": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "СІЗ {playerPlace}-ОРЫН АЛДЫҢЫЗ"
-  },
-  "srv2playerFinishPlace": "Ойыншы <g>{playerName}</g> {playerPlace} орында мәреге жетті!",
-  "@srv2playerFinishPlace": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "Ойыншы <g>{playerName}</g> {playerPlace}-орында мәреге жетті!"
-  },
+  "srv2yourPlace": "СІЗ {playerPlace}-ОРЫН АЛДЫҢЫЗ",
+  "srv2playerFinishPlace": "Ойыншы <g>{playerName}</g> {playerPlace}-орында мәреге жетті!",
   "srv2endsIn": "EVENT TUGASHIGA QOLDI:",
   "srv2newTransport": "ЖАҢА КӨЛІК",
-  "srv2questsNeedPass": "ТАПСЫРМАЛАРҒА ҚОЛ ЖЕТКІЗУ ҮШІН\nСЕЗОНДЫҚ ПАСС САТЫП АЛУ ҚАЖЕТ",
-  "@srv2questsNeedPass": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "ТАПСЫРМАЛАРҒА ҚОЛ ЖЕТКІЗУ ҮШІН\nМАУСЫМДЫҚ ПРОПУСК САТЫП АЛУ ҚАЖЕТ"
-  },
+  "srv2questsNeedPass": "ТАПСЫРМАЛАРҒА ҚОЛ ЖЕТКІЗУ ҮШІН\nМАУСЫМДЫҚ ПРОПУСК САТЫП АЛУ ҚАЖЕТ",
   "srv2needFuel": "ЖАРЫСҚА ҚАТЫСУ ҮШІН ЖАНАРМАЙЫҢЫЗ ЖЕТКІЛІКСІЗ.",
   "srv2opensIn": "АШЫЛУЫНА ҚАЛДЫ",
   "srv2needSelectVehicle": "Көлік таңдалмаған",
@@ -6158,21 +5513,11 @@
   "srv2lb2": "ТУРБО-ЖАРЫС (ТОП - 50 ҚАТЫСУШЫ)",
   "srv2lb3": "КАСКАДЕРЛІК ФИНАЛ (ТОП - 50 ҚАТЫСУШЫ)",
   "srv2rewardsCount": "Сыйлықтар саны",
-  "srv2yourReward": "СІЗДІҢ ЖҮЛДЕҢІЗ!",
-  "@srv2yourReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!"
-  },
+  "srv2yourReward": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
   "srv2showReward": "СЫЙЛЫҚТЫ ҚАРАУ ҮШІН\nОНЫ БАСЫҢЫЗ",
   "srv2needPremiumPass": "Необходим Premium Pass",
   "srv2actNotStarted": "Акт әлі басталған жоқ",
-  "srv2needPassLevel": "Пропусктың\n{id} деңгейіне деңгейі қажет",
-  "@srv2needPassLevel": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "Пропусктың\n{id}-ға деңгейі қажет"
-  },
+  "srv2needPassLevel": "Пропусктың\n{id}-ға деңгейі қажет",
   "srv2passBestRewards": "ПРОПУСКТЫҢ ЕҢ ЖАҚСЫ СЫЙЛЫҚТАРЫ",
   "srv2buyPremium": "Премиум сатып алу",
   "srv2premiumGot": "Премиум алынды",
@@ -6211,30 +5556,15 @@
   "srv2Step5Part0Text": "Ивентте тәжірибе жина, пропуск\nдеңгейін көтер және сыйлықтарды ал.",
   "srv2Step5Part0LevelLabel": "ДЕҢГЕЙ",
   "srv2Step5Part1Title": "Премиум сыйлықтар",
-  "srv2Step5Part1Text": "Пропусктың премиум сыйлықтарына\nқолжетімділікті ашу үшін сезондық пасс сатып ал.",
-  "@srv2Step5Part1Text": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Пропусктың премиум сыйлықтарына\nқолжетімділікті ашу үшін маусымдық пропуск сатып ал."
-  },
+  "srv2Step5Part1Text": "Пропусктың премиум сыйлықтарына\nқолжетімділікті ашу үшін маусымдық пропуск сатып ал.",
   "srv2Step6Part0Title": "Тапсырмалар",
   "srv2Step6Part0Text": "Тапсырмаларды орында, пропуск үшін\nтәжірибе жина және сыйлықтарды аш.",
   "srv2Step6Part1Title": "Премиум тапсырмалар",
   "srv2Step6Part1Text": "Маусымдық пропускпен актілер үшін\nқосымша тапсырмалар қолжетімді.",
   "srv2Step6Part1ChallengesHeader": "СЫНАҚТАР",
-  "srv2Step6Part1SeasonPassRequirementText": "СЕЗОНДЫҚ ПАСС ҚАЖЕТ",
-  "@srv2Step6Part1SeasonPassRequirementText": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "МАУСЫМДЫҚ ПРОПУСК ҚАЖЕТ"
-  },
+  "srv2Step6Part1SeasonPassRequirementText": "МАУСЫМДЫҚ ПРОПУСК ҚАЖЕТ",
   "srv2Step7Part0Title": "Жалпы рейтинг",
-  "srv2Step7Part0Text": "Жарыстарға қатысып, Summer Rush жалпы рейтингі үшін\nұпай жина. Ивент соңында орның неғұрлым жоғары болса,\nжүлдесі соғұрлым жақсы болады.",
-  "@srv2Step7Part0Text": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Жарыстарға қатысып, Summer Rush жалпы рейтингі үшін\nұпай жина. Ивент соңында орның неғұрлым жоғары болса,\nсыйлығың соғұрлым жақсы болады."
-  },
+  "srv2Step7Part0Text": "Жарыстарға қатысып, Summer Rush жалпы рейтингі үшін\nұпай жина. Ивент соңында орның неғұрлым жоғары болса,\nсыйлығың соғұрлым жақсы болады.",
   "srv2Step7Part1Title": "Акт жарыстары",
   "srv2Step7Part1Text": "Әр актіде жеке жарыс бар.\nАпта аяқталғанға дейін жоғары орындарға ие болып,\nакт сыйлықтарын ал.",
   "summerRushV2Guarded": "Қорғаныс белсендірілген",
@@ -6250,12 +5580,7 @@
   "rouletteWin": "Сіз алдыңыз",
   "rouletteWait": "Келесі ойынға дейін",
   "rouletteConfirmTitle": "СТАВКАНЫ РАСТАУ",
-  "rouletteBetText": "Сіз шынымен <g>{x}X</g> мәніне\n<g>{bet} сомасына GC</g> ставка жасағыңыз келе ме?",
-  "@rouletteBetText": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "Сіз шынымен <g>{x}X</g> мәніне\n<g>{bet}-ға GC</g> ставка жасағыңыз келе ме?"
-  },
+  "rouletteBetText": "Сіз шынымен <g>{x}X</g> мәніне\n<g>{bet}-ға GC</g> ставка жасағыңыз келе ме?",
   "rouletteGameStarted": "Ойын басталды",
   "rouletteGameWin": "Жеңді!",
 
@@ -6316,12 +5641,7 @@
   "mesRequiredVehicle": "Қажетті көлік",
   "mesRequiredGear": "Қажетті жабдық",
   "mesSelectContract": "Келісімшартты таңдаңыз",
-  "mesContractDetailsPlaceholder": "Оқиға туралы мәліметтер, бағыт\nжәне жүлде осында көрсетіледі.",
-  "@mesContractDetailsPlaceholder": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Оқиға туралы мәліметтер, бағыт\nжәне сыйақы осында көрсетіледі."
-  },
+  "mesContractDetailsPlaceholder": "Оқиға туралы мәліметтер, бағыт\nжәне сыйақы осында көрсетіледі.",
   "mesGearSelectTitle": "Жабдықты таңдау",
   "mesGearSelectDesc": "Жолға шығар алдында қолжетімді жабдықты алыңыз.\nЖаңа жабдық ТЖМ деңгейі артқан сайын ашылады.",
   "mesReplenishGear": "Жабдықты толықтыру",
@@ -6363,21 +5683,11 @@
   "festivalCardsChoose": "Картаны басыңыз",
   "festivalGamesRequired": "Әр {count} ойын сайын",
   "festivalRewardsList": "Сыйлықтар тізімі",
-  "festivalReceived": "Алынған",
-  "@festivalReceived": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Алынды"
-  },
+  "festivalReceived": "Алынды",
   "festivalMainPrize": "Басты сыйлық",
   "festivalPurchaseConfirmation": "Сатып алуды растау",
   "festivalGameConfirmPrefix": "Шынымен сатып алғыңыз келе ме\n",
-  "festivalGameConfirmTargetPrefix": "Игру в ",
-  "@festivalGameConfirmTargetPrefix": {
-    "reviewed_by_human": false,
-    "issue_type": "untranslated",
-    "previous_value": ""
-  },
+  "festivalGameConfirmTargetPrefix": "",
   "festivalGameConfirmTargetSuffix": " ойынын?",
   "festivalGameLottery": "Лотерея",
   "festivalGameCards": "Колода",
@@ -6387,24 +5697,14 @@
   "festivalTopUpAmount": "Толықтыру сомасы:",
   "festivalDropChance": "Түсу ықтималдығы",
   "festivalDropChanceDescription": "Заттардың сиректігіне қарай түсу ықтималдығы:",
-  "festivalYouWon": "сіз жеңдіңіз!",
-  "@festivalYouWon": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Сіз ұттыңыз!"
-  },
+  "festivalYouWon": "Сіз ұттыңыз!",
   "festivalPurchaseQuestion": "Шынымен сатып алғыңыз келе ме",
   "festivalStoreBanner": "Дүкенге кіріп,\nкеремет заттарды сатып алыңыз!",
   "festivalGoToShop": "Дүкенге өту",
 
   "@@comment": "SCHOOL EVENT (sch)",
   "schGotIt": "Түсінікті",
-  "schNext": "Келесі",
-  "@schNext": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Әрі қарай"
-  },
+  "schNext": "Әрі қарай",
   "schConfirmPurchase": "Сатып алуды растау",
   "schConfirmBuyQuestion": "Сіз шынымен сатып алғыңыз келе ме",
   "schBuyPrice": "Сатып алу {price} ",
@@ -6416,12 +5716,7 @@
   "schTeamNerds": "ҮЗДІК ОҚУШЫЛАР",
   "schTeamBullies": "БҰЗАҚЫЛАР",
   "schYourTeam": "Сіздің командаңыз",
-  "schRewardReceived": "Жүлде алынды",
-  "@schRewardReceived": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сыйлық алынды"
-  },
+  "schRewardReceived": "Сыйлық алынды",
   "schBestPassRewards": "Пасстың үздік сыйлықтары",
   "schPremiumActive": "Премиум белсенді",
   "schPremiumInactive": "Премиум белсенді емес",
@@ -6434,12 +5729,7 @@
   "schTabMain": "Басты",
   "schTabSeasonPass": "Season Pass",
   "schTabDuels": "Дуэльдер",
-  "schTabLeaderboard": "КӨШБАСШЫЛАР ТІЗІМІ",
-  "@schTabLeaderboard": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Рейтинг"
-  },
+  "schTabLeaderboard": "Рейтинг",
   "schTabQuests": "Тапсырмалар",
   "schTabStore": "Дүкен",
   "schTabGoals": "Мақсаттар",
@@ -6449,12 +5739,7 @@
   "schTabCases": "Кейстер",
   "schTabBoosters": "Бустерлер",
   "schAssignmentBiologyTeacher": "Биология мұғалімі",
-  "schAssignmentBiologyIntro": "Сәлем! Сен жақсы оқушы екенсің! Маған көмектесе аласың ба?\nАртқы аулада <g>ағаштар</g> өсіп тұр, ал менің оларды суаруға\nмүлде уақытым жоқ. Егер <g>оларды суарып</g>, маған қайта келсең, сені жүлде күтіп тұрады!",
-  "@schAssignmentBiologyIntro": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сәлем! Сен жақсы оқушы екенсің! Маған көмектесе аласың ба?\nАртқы аулада <g>ағаштар</g> өсіп тұр, ал менің оларды суаруға\nмүлде уақытым жоқ. Егер <g>оларды суарып</g>, маған қайта келсең, сені сыйлық күтіп тұрады!"
-  },
+  "schAssignmentBiologyIntro": "Сәлем! Сен жақсы оқушы екенсің! Маған көмектесе аласың ба?\nАртқы аулада <g>ағаштар</g> өсіп тұр, ал менің оларды суаруға\nмүлде уақытым жоқ. Егер <g>оларды суарып</g>, маған қайта келсең, сені сыйлық күтіп тұрады!",
   "schAssignmentPeTeacher": "Дене шынықтыру мұғалімі",
   "schAssignmentTrainerIntro": "Бәрінен үздік болғың келе ме? Онда үздік бол!\n<g>Әр сағат сайын</g> бүкіл картада шамамен <g>{books} кітап</g> пайда болады!\nОларды жинау үшін бәрінен жылдам әрі епті болуың керек!\nКітаптарды жинап, маған әкелсең – сыйлық аласың.",
   "@schAssignmentTrainerIntro": {
@@ -6490,20 +5775,10 @@
   "schDuelsInfluencePointsLabel": "Ықпал ұпайлары",
   "schEventInfoTitle": "Мектеп ивентінің сыйлықтары",
   "schEventInfoDailyTitle": "Күнделікті қатысу үшін",
-  "schEventInfoDailyDesc": "Бүкіл ивент бойы\nкүн сайын кемінде\nбір сабақтан өтіңіз. Жүлде\nивенттің соңғы күнінде\nсабақты өткеннен кейін\nавтоматты түрде беріледі.",
-  "@schEventInfoDailyDesc": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бүкіл ивент бойы\nкүн сайын кемінде\nбір сабақтан өтіңіз. Сыйлық\nивенттің соңғы күнінде\nсабақты өткеннен кейін\nавтоматты түрде беріледі."
-  },
+  "schEventInfoDailyDesc": "Бүкіл ивент бойы\nкүн сайын кемінде\nбір сабақтан өтіңіз. Сыйлық\nивенттің соңғы күнінде\nсабақты өткеннен кейін\nавтоматты түрде беріледі.",
   "schEventInfoDailyFailed": "Сіз бір күнді өткізіп алдыңыз,\nмақсат орындалмады",
   "schEventInfoFullTitle": "Оқудағы жетістіктер үшін",
-  "schEventInfoFullDesc": "Барлық сабақтан өтіп,\nивентті орташа\n4,5-тен жоғары бағамен аяқтаңыз.\nЖүлде соңғы\nсабақтан өткеннен кейін\nбірден беріледі.",
-  "@schEventInfoFullDesc": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Барлық сабақтан өтіп,\nивентті орташа\n4,5-тен жоғары бағамен аяқтаңыз.\nСыйлық соңғы\nсабақтан өткеннен кейін\nбірден беріледі."
-  },
+  "schEventInfoFullDesc": "Барлық сабақтан өтіп,\nивентті орташа\n4,5-тен жоғары бағамен аяқтаңыз.\nСыйлық соңғы\nсабақтан өткеннен кейін\nбірден беріледі.",
   "schEventInfoFullFailed": "Орташа бағаңыз 4.5-тен төмен\nмақсат орындалмады",
   "schStartQuizTitle": "Әрекетті растаңыз",
   "schStartQuizDesc": "Үй тапсырмасын шынымен орындағыңыз келе ме?\n\nБұл қорытынды бағаңызға\nжақсы да, жаман да әсер етуі мүмкін!",
@@ -6512,12 +5787,7 @@
   "schMainAvgScore": "Орташа\nбаға:",
   "schPiggyCurrentBalance": "Ағымдағы баланс",
   "schInfoWidgetText": "Ивентке күн сайын\nқатысып, керемет\nскин ал",
-  "schAboutEvent": "Оқиға туралы",
-  "@schAboutEvent": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Ивент туралы"
-  },
+  "schAboutEvent": "Ивент туралы",
   "schPromoNerdKit": "ҮЗДІК ОҚУШЫНЫҢ МЕКТЕП ЖИНАҒЫ",
   "schPromoNerdKitMultiline": "ҮЗДІК ОҚУШЫНЫҢ\nМЕКТЕП ЖИНАҒЫ",
   "schPromoBullyKit": "БҰЗАҚЫНЫҢ МЕКТЕП ЖИНАҒЫ",
@@ -6568,12 +5838,7 @@
   "schPackConfirmBullyKit": "Бұзақы жинағы",
   "schPackLimitedOffer": "ШЕКТЕУЛІ ҰСЫНЫС!",
   "schPackLeft": "ҚАЛДЫ: ",
-  "schPassBuyPassQuestion": "Сіз сезондық пасс сатып алып жатырсыз",
-  "@schPassBuyPassQuestion": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сіз маусымдық пасс сатып алып жатырсыз"
-  },
+  "schPassBuyPassQuestion": "Сіз маусымдық пасс сатып алып жатырсыз",
   "schPassBuyPremiumTitle": "Премиум сатып алу",
   "schPassBuyPremiumPassMultiline": "Сатып алу\nPREMIUM PASS",
   "schPassBuyGoldPassMultiline": "Сатып алу\nGOLD PREMIUM PASS",
@@ -6618,12 +5883,7 @@
   "schQuestsAllDone": "Барлық тапсырмалар орындалды!",
   "schQuestsAllRewardsCollected": "Сіз Season Pass-тағы барлық қолжетімді сыйлықтарды жинадыңыз.",
   "schQuestsUpdatePriceButton": "Тапсырмаларды жаңарту  {price} ",
-  "schQuestsNextReward": "Келесі жүлде: ",
-  "@schQuestsNextReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Келесі сыйлық: "
-  },
+  "schQuestsNextReward": "Келесі сыйлық: ",
   "schQuestLabel": "Тапсырма:",
   "schQuestStart": "Бастау",
   "schQuestRoute": "Бағыт",
@@ -6681,12 +5941,7 @@
     "previous_value": "Жолақты бақыла: playerTeamText.\nҰпайлар фракцияның барлық мүшелерінің әрекеттерінен жиналады.\nДуэльдердің ережелері мен қатысу шарттарын білу үшін\n<g>Шайқас ақпараты</g> түймесін бас!"
   },
   "schTutorialT2S2": "Жоғарғы оң жақ бұрышта сенің <g>Ықпал ұпайларың</g> көрсетіледі.\nБұл — командаға қосқан жеке үлесің. Сабақтан жалтармай,\nкомандаңды шыңға жеткізу үшін ойынға кіріп тұр!",
-  "schTutorialT2S3": "Ал міне, басты ынталандыру!\nШайқаста жеңіп, таймер аяқталғанда мол жүлде аласың:\n<g>Қоңыраулар</g> және <g>Grand Coins</g>! Жеңімпаз\nбәрін алады! Сыйлықтың команда жеңісіне қосқан\nүлесіңе байланысты екенін ұмытпа.",
-  "@schTutorialT2S3": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Ал міне, басты ынталандыру!\nШайқаста жеңіп, таймер аяқталғанда мол сыйлық аласың:\n<g>Қоңыраулар</g> және <g>Grand Coins</g>! Жеңімпаз\nбәрін алады! Сыйлықтың команда жеңісіне қосқан\nүлесіңе байланысты екенін ұмытпа."
-  },
+  "schTutorialT2S3": "Ал міне, басты ынталандыру!\nШайқаста жеңіп, таймер аяқталғанда мол сыйлық аласың:\n<g>Қоңыраулар</g> және <g>Grand Coins</g>! Жеңімпаз\nбәрін алады! Сыйлықтың команда жеңісіне қосқан\nүлесіңе байланысты екенін ұмытпа.",
   "schTutorialT2S4": "Сондықтан фракцияңды жерге қаратпа!\nЫқпал ұпайларын жинап, командаңды жеңіске жеткіз!",
   "schTutorialT3S0": "Алдыңда мектептің <g>Құрмет тақтасы</g>! Мұнда кімнің ұпай бойынша\nүздік оқушы екенін, ал кімнің артта қалып қойғанын\nбірден көресің. Кімнің мықты екенін көрсететін уақыт келді!",
   "schTutorialT3S1": "Қойындылар арасында ауысып отыр! <g>Командалық</g> бөлімде өз\nфракцияңдағы сыныптастарыңмен жарысасың,\nал <g>Жаһандық</g> бөлімде сервердегі барлық\nойыншылар арасында бірінші орын үшін күресесің!",
@@ -6724,28 +5979,13 @@
   "tripleJackpotSubscriptionActive": "Жазылым белсенді",
   "tripleJackpotLogInAfter": "Кейінірек кір",
   "tripleJackpotAndClaimReward": "және сыйлықты ал",
-  "tripleJackpotMissedDayNoReward": "Бір күнді өткізіп алсаң, жүлде берілмейді",
-  "@tripleJackpotMissedDayNoReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Бір күнді өткізіп алсаң, сыйлық берілмейді"
-  },
+  "tripleJackpotMissedDayNoReward": "Бір күнді өткізіп алсаң, сыйлық берілмейді",
   "tripleJackpotDayMissed": "Күн өткізіп алынды",
   "tripleJackpotSubscriptionPaymentConfirmation": "Жазылымды шынымен төлегіңіз келе ме?",
   "tripleJackpotRewardForThreeDays": "3 күнде сіз мынаны аласыз",
   "tripleJackpotPromotionEndingSoon": "Акцияның аяқталуына 3 күннен аз уақыт қалды, бірақ уайымдама!\nАкция аяқталған жағдайда, оның шарттарына сәйкес сыйлықтарды ала аласың.",
-  "tripleJackpotRewardAvailable": "Сізге жүлде колжетімді",
-  "@tripleJackpotRewardAvailable": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сізге сыйлық колжетімді"
-  },
-  "tripleJackpotYourReward": "Сенің жүлдесі",
-  "@tripleJackpotYourReward": {
-    "reviewed_by_human": false,
-    "issue_type": "glossary_violation",
-    "previous_value": "Сенің сыйлығың"
-  },
+  "tripleJackpotRewardAvailable": "Сізге сыйлық колжетімді",
+  "tripleJackpotYourReward": "Сенің сыйлығың",
 
   "@@comment": "VEHICLE_MARKER",
   "vehicleMarkerMentorName": "Влад",
@@ -6762,12 +6002,7 @@
   "partsRaceFirstSpin": "Алғашқы айналдыру!",
   "partsRaceCollect": "Жинаңыз",
   "partsRaceAndClaim": " және алыңыз",
-  "partsRaceMainPrize": "бас жүлде!",
-  "@partsRaceMainPrize": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": " Бас жүлдені!"
-  },
+  "partsRaceMainPrize": " Бас жүлдені!",
   "partsRaceFragmentsCollected": "Жиналған фрагменттер:",
   "partsRaceBuySpinPacks": "Айналдыру\nжинақтарын сатып алу",
   "partsRaceSpinForFree": "Тегін айналдыру",
@@ -6780,12 +6015,7 @@
   "partsRaceSpinPacksTitle": "Айналдыру жинақтары",
 
   "@@comment": "WHEEL OF FORTUNE",
-  "wheelOfFortuneBuyFor": "{price} сомасына сатып алу",
-  "@wheelOfFortuneBuyFor": {
-    "reviewed_by_human": false,
-    "issue_type": "suffix_harmony",
-    "previous_value": "{price}-ге сатып алу"
-  },
+  "wheelOfFortuneBuyFor": "{price}-ге сатып алу",
   "wheelOfFortuneRarityCommon": "Қарапайым",
   "wheelOfFortuneRarityRare": "Сирек",
   "wheelOfFortuneRarityEpic": "Эпикалық",
@@ -6794,12 +6024,7 @@
   "wheelOfFortuneCongratulations": "Құттықтаймыз!",
   "wheelOfFortuneYouWon": "Сіз ұтып алдыңыз:",
   "wheelOfFortuneTitle": "Сәттілік дөңгелегі",
-  "wheelOfFortuneEndsIn": "Соңы:",
-  "@wheelOfFortuneEndsIn": {
-    "reviewed_by_human": false,
-    "issue_type": "inconsistent_term",
-    "previous_value": "Аяқталуына:"
-  },
+  "wheelOfFortuneEndsIn": "Аяқталуына:",
   "wheelOfFortuneGuaranteedPrizes": "Кепілдендірілген жүлделер",
   "wheelOfFortuneWheelRewards": "Дөңгелек жүлделері",
 

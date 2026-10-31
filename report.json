@@ -6,7 +6,7 @@
     "source": "Здесь будет отображаться статистика\nваших персонажей",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 427 в исходнике)",
-    "suggestion": "Здесь будет отображаться статистика\nваших персонажей",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -17,7 +17,7 @@
     "source": "Вам необходимо привязать данную социальную сеть к аккаунту",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 476 в исходнике)",
-    "suggestion": "Вам необходимо привязать данную социальную сеть к аккаунту",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -28,7 +28,7 @@
     "source": "Инвентарь",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 1655 в исходнике)",
-    "suggestion": "Инвентарь",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -39,7 +39,7 @@
     "source": "РАЗОБРАТЬ",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 1658 в исходнике)",
-    "suggestion": "РАЗОБРАТЬ",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -50,7 +50,7 @@
     "source": "Всего ваших ставок",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 1703 в исходнике)",
-    "suggestion": "Всего ваших ставок",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -61,7 +61,7 @@
     "source": "Вы действительно хотите оплатить недвижимость: Квартира\nна сумму",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 2657 в исходнике)",
-    "suggestion": "Вы действительно хотите оплатить недвижимость: Квартира\nна сумму",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -72,7 +72,7 @@
     "source": "Снять за",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 2994 в исходнике)",
-    "suggestion": "Снять за",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -83,7 +83,7 @@
     "source": "За задания можно получить опыт для Сезонного Пропуска и Леденцы.\n\nЕжедневные задания обновляются каждый день, а также их можно обновить через специальный бустер.\n\nТакже при приобретении Сезонного пропуска открывается доступ к специальным заданиям.",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 3557 в исходнике)",
-    "suggestion": "За задания можно получить опыт для Сезонного Пропуска и Леденцы.\n\nЕжедневные задания обновляются каждый день, а также их можно обновить через специальный бустер.\n\nТакже при приобретении Сезонного пропуска открывается доступ к специальным заданиям.",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -94,7 +94,7 @@
     "source": "Побед в турнирах",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 4045 в исходнике)",
-    "suggestion": "Побед в турнирах",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -105,7 +105,7 @@
     "source": "Пропуск таймера",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 4078 в исходнике)",
-    "suggestion": "Пропуск таймера",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -116,7 +116,7 @@
     "source": "Показатель ",
     "target": "",
     "evidence": "Перевод пустой при непустом исходнике (строка 4201)",
-    "suggestion": "Показатель ",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -127,7 +127,7 @@
     "source": "Лев. рука",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 4246 в исходнике)",
-    "suggestion": "Лев. рука",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -138,7 +138,7 @@
     "source": "в",
     "target": "",
     "evidence": "Перевод пустой при непустом исходнике (строка 4413)",
-    "suggestion": "в",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -149,7 +149,7 @@
     "source": "УРОВНЯ",
     "target": "",
     "evidence": "Перевод пустой при непустом исходнике (строка 4519)",
-    "suggestion": "УРОВНЯ",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -160,7 +160,7 @@
     "source": "Возможный выигрыш",
     "target": "",
     "evidence": "Ключ отсутствует в целевом файле локализации (строка 4814 в исходнике)",
-    "suggestion": "Возможный выигрыш",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -171,7 +171,7 @@
     "source": "Игру в ",
     "target": "",
     "evidence": "Перевод пустой при непустом исходнике (строка 5620)",
-    "suggestion": "Игру в ",
+    "suggestion": null,
     "confidence": 1.0,
     "reviewed_by_human": false
   },
@@ -418,182 +418,6 @@
     "reviewed_by_human": false
   },
   {
-    "key": "laBillingRetrying",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Не удаётся подключиться к {provider}. Повторная попытка…",
-    "target": "{provider}-ға қосылу мәселесі. Қайталау…",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{provider}-ға'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{provider} арқылы қосылу мәселесі. Қайталау…",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laBillingUnavailable",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Оплата через {provider} недоступна на этом устройстве.",
-    "target": "Бұл құрылғыда {provider}-ға төлемі қолжетімді емес.",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{provider}-ға'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "Бұл құрылғыда {provider} арқылы төлемі қолжетімді емес.",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "jungleTreasuresTimeDaysHours",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "{days} дн. {hours} ч.",
-    "target": "{days} күн {hours} сағ.",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{days}күн'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{days} (күн) {hours} сағ.",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "birthday_challenge_day",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "День {day}",
-    "target": "{day} күн",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{day}күн'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{day} (күн)",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearResultPlace",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "{place} МЕСТО",
-    "target": "{place} ОРЫН",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{place}ОРЫН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{place} орында",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearRewardPlace",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "{place} МЕСТО",
-    "target": "{place} ОРЫН",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{place}ОРЫН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{place} орында",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearYourDayReward",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "ВАША НАГРАДА ЗА {place} ДЕНЬ!",
-    "target": "{place}-КҮН ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{place}-КҮН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{place} орында ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearChapter",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "АКТ {competition}",
-    "target": "{competition}-ға АКТІ",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{competition}-ға'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{competition} (ға) АКТІ",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "newYearYourResult",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Ваш результат: {place} Место",
-    "target": "Сіздің нәтижеңіз: {place} ОРЫН",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{place}ОРЫН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "Сіздің нәтижеңіз: {place} орында",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuReportsFromTo",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "От {fromUser} на {toUser}",
-    "target": "{fromUser}-дан {toUser}-ға қарсы",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{fromUser}-дан', '{toUser}-ға'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{fromUser} ойыншысынан {toUser} ойыншысына қарсы",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "predictionsBuyCoinsMaxError",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Нельзя купить больше {max}",
-    "target": "{max}-нан көп сатып алуға болмайды",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{max}-нан'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{max} санынан көп сатып алуға болмайды",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "srv2yourPlace",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "ВЫ ЗАНЯЛИ {playerPlace} МЕСТО",
-    "target": "СІЗ {playerPlace}-ОРЫН АЛДЫҢЫЗ",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{playerPlace}-ОРЫН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "СІЗ {playerPlace} орында АЛДЫҢЫЗ",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "srv2playerFinishPlace",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Игрок <g>{playerName}</g> финишировал {playerPlace}-ым!",
-    "target": "Ойыншы <g>{playerName}</g> {playerPlace}-орында мәреге жетті!",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{playerPlace}-орында'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "Ойыншы <g>{playerName}</g> {playerPlace} орында мәреге жетті!",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "srv2needPassLevel",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Требуется\n{id} уровень пропуска",
-    "target": "Пропусктың\n{id}-ға деңгейі қажет",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{id}-ға'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "Пропусктың\n{id} деңгейіне деңгейі қажет",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "rouletteBetText",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Вы действительно хотите сделать\nставку <g>{bet} GC</g> на <g>{x}X</g>?",
-    "target": "Сіз шынымен <g>{x}X</g> мәніне\n<g>{bet}-ға GC</g> ставка жасағыңыз келе ме?",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{bet}-ға'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "Сіз шынымен <g>{x}X</g> мәніне\n<g>{bet} сомасына GC</g> ставка жасағыңыз келе ме?",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "wheelOfFortuneBuyFor",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Купить за {price}",
-    "target": "{price}-ге сатып алу",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{price}-ге'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": "{price} сомасына сатып алу",
-    "confidence": 0.96,
-    "reviewed_by_human": false
-  },
-  {
     "key": "accessories_type_other",
     "issue_type": "length_overflow",
     "severity": "high",
@@ -726,28 +550,6 @@
     "reviewed_by_human": false
   },
   {
-    "key": "battlepass_premium_plus",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "BATTLE PASS PREMIUM + 30 LVLS",
-    "target": "BATTLE PASS PREMIUM + 30 LVLS",
-    "evidence": "Текст содержит служебные слова английского языка: 'BATTLE PASS PREMIUM + 30 LVLS'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "battlepass_premium_plus_button",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "BATTLE PASS\nPREMIUM + 30 LVLS",
-    "target": "BATTLE PASS\nPREMIUM + 30 LVLS",
-    "evidence": "Текст содержит служебные слова английского языка: 'BATTLE PASS\nPREMIUM + 30 LVLS'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
     "key": "pauseSettingsSocialMedia",
     "issue_type": "wrong_language",
     "severity": "high",
@@ -759,23 +561,23 @@
     "reviewed_by_human": false
   },
   {
+    "key": "settingsGameShowHud",
+    "issue_type": "wrong_language",
+    "severity": "high",
+    "source": "Отображение худа",
+    "target": "HUD’ni ko‘rsatish",
+    "evidence": "Обнаружена узбекская латиница с характерными апострофами (o'/g'): 'HUD’ni ko‘rsatish'",
+    "suggestion": null,
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
     "key": "donate_to_mail",
     "issue_type": "wrong_language",
     "severity": "high",
     "source": "На почту",
     "target": "Pochta bo‘limiga",
     "evidence": "Обнаружена узбекская латиница с характерными апострофами (o'/g'): 'Pochta bo‘limiga'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "carNameWohooooooo",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "Car name wohooooooo",
-    "target": "Car name wohooooooo",
-    "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'Car name wohooooooo'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -798,39 +600,6 @@
     "source": "Для удаления игрового профиля\nприложение будет закрыто.\nПожалуйста, запустите его снова.",
     "target": "Para excluir o perfil do jogo,\no aplicativo será fechado.\nPor favor, abra-o novamente.",
     "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'Para excluir o perfil do jogo,\no aplicativo será fechado.\nPor favor, abra-o novamente.'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackListPacksTitle",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "Black list Pack",
-    "target": "Black list Pack",
-    "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'Black list Pack'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "inventoryEquipped@description",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "Метка, означающая, что предмет надет/экипирован",
-    "target": "Label indicating that an item is equipped",
-    "evidence": "Текст содержит служебные слова английского языка: 'Label indicating that an item is equipped'",
-    "suggestion": null,
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "getAppsOfferUniqueCase",
-    "issue_type": "wrong_language",
-    "severity": "high",
-    "source": "BMW M5 F90 GTA",
-    "target": "BMW M5 F90 GTA",
-    "evidence": "Строка полностью на латинице в казахской кириллической локализации: 'BMW M5 F90 GTA'",
     "suggestion": null,
     "confidence": 0.95,
     "reviewed_by_human": false
@@ -957,6 +726,127 @@
     "reviewed_by_human": false
   },
   {
+    "key": "laBillingRetrying",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Не удаётся подключиться к {provider}. Повторная попытка…",
+    "target": "{provider}-ға қосылу мәселесі. Қайталау…",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{provider}-ға'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "laBillingUnavailable",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Оплата через {provider} недоступна на этом устройстве.",
+    "target": "Бұл құрылғыда {provider}-ға төлемі қолжетімді емес.",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{provider}-ға'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "newYearYourDayReward",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "ВАША НАГРАДА ЗА {place} ДЕНЬ!",
+    "target": "{place}-КҮН ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{place}-КҮН'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "newYearChapter",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "АКТ {competition}",
+    "target": "{competition}-ға АКТІ",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{competition}-ға'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "userMenuReportsFromTo",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "От {fromUser} на {toUser}",
+    "target": "{fromUser}-дан {toUser}-ға қарсы",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{fromUser}-дан', '{toUser}-ға'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "predictionsBuyCoinsMaxError",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Нельзя купить больше {max}",
+    "target": "{max}-нан көп сатып алуға болмайды",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{max}-нан'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "srv2yourPlace",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "ВЫ ЗАНЯЛИ {playerPlace} МЕСТО",
+    "target": "СІЗ {playerPlace}-ОРЫН АЛДЫҢЫЗ",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{playerPlace}-ОРЫН'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "srv2playerFinishPlace",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Игрок <g>{playerName}</g> финишировал {playerPlace}-ым!",
+    "target": "Ойыншы <g>{playerName}</g> {playerPlace}-орында мәреге жетті!",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{playerPlace}-орында'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "srv2needPassLevel",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Требуется\n{id} уровень пропуска",
+    "target": "Пропусктың\n{id}-ға деңгейі қажет",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{id}-ға'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "rouletteBetText",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Вы действительно хотите сделать\nставку <g>{bet} GC</g> на <g>{x}X</g>?",
+    "target": "Сіз шынымен <g>{x}X</g> мәніне\n<g>{bet}-ға GC</g> ставка жасағыңыз келе ме?",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{bet}-ға'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "wheelOfFortuneBuyFor",
+    "issue_type": "suffix_harmony",
+    "severity": "high",
+    "source": "Купить за {price}",
+    "target": "{price}-ге сатып алу",
+    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{price}-ге'. Нарушает закон сингармонизма при динамической подстановке",
+    "suggestion": null,
+    "confidence": 0.9,
+    "reviewed_by_human": false
+  },
+  {
     "key": "dq_donate",
     "issue_type": "glossary_violation",
     "severity": "high",
@@ -1062,7 +952,7 @@
     "source": "СЕЗОННЫЙ ПРОПУСК ДОСТУПЕН",
     "target": "МЕЗГІЛДІК ПАСС ҚОЛЖЕТІМДІ",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "СЕЗОНДЫҚ ПАСС ҚОЛЖЕТІМДІ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1073,7 +963,7 @@
     "source": "КУПИТЬ СЕЗОННЫЙ ПРОПУСК",
     "target": "МЕЗГІЛДІК ПАСС САТЫП АЛУ",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "СЕЗОНДЫҚ ПАСС САТЫП АЛУ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1084,7 +974,7 @@
     "source": "Требуется сезонный пропуск",
     "target": "Мезгілдік пасс қажет",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "Сезондық пасс қажет",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1095,7 +985,7 @@
     "source": "ДЛЯ ДОСТУПА К ЗАДАНИЯМ НЕОБХОДИМО\nПРИОБРЕСТИ СЕЗОННЫЙ ПРОПУСК",
     "target": "ТАПСЫРМАЛАРҒА ҚОЛ ЖЕТКІЗУ ҮШІН\nМАУСЫМДЫҚ ПРОПУСК САТЫП АЛУ ҚАЖЕТ",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "ТАПСЫРМАЛАРҒА ҚОЛ ЖЕТКІЗУ ҮШІН\nСЕЗОНДЫҚ ПАСС САТЫП АЛУ ҚАЖЕТ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1106,7 +996,7 @@
     "source": "Купи сезонный пропуск, чтобы открыть\nдоступ к премиальным наградам пропуска.",
     "target": "Пропусктың премиум сыйлықтарына\nқолжетімділікті ашу үшін маусымдық пропуск сатып ал.",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "Пропусктың премиум сыйлықтарына\nқолжетімділікті ашу үшін сезондық пасс сатып ал.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1117,7 +1007,7 @@
     "source": "ТРЕБУЕТСЯ СЕЗОННЫЙ ПРОПУСК",
     "target": "МАУСЫМДЫҚ ПРОПУСК ҚАЖЕТ",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "СЕЗОНДЫҚ ПАСС ҚАЖЕТ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1128,7 +1018,7 @@
     "source": "Вы покупаете сезонный пропуск",
     "target": "Сіз маусымдық пасс сатып алып жатырсыз",
     "evidence": "Термин 'Сезонный пропуск' должен переводиться как 'Сезондық пасс' (согласно глоссарию), но в целевом тексте отсутствует 'Сезондық пасс' [Контекст: Season Pass / боевой пропуск]",
-    "suggestion": "Сіз сезондық пасс сатып алып жатырсыз",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1139,7 +1029,7 @@
     "source": "Данный Google аккаунт занят другим пользователем",
     "target": "Бұл Google тіркелгісі басқа пайдаланушымен толтырылған",
     "evidence": "Термин 'аккаунт' должен переводиться как 'аккаунт' (согласно глоссарию), но в целевом тексте отсутствует 'аккаунт' [Контекст: Учетная запись игрока]",
-    "suggestion": "Бұл Google аккаунты басқа пайдаланушымен толтырылған",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1150,7 +1040,7 @@
     "source": "Данный Apple аккаунт занят другим пользователем",
     "target": "Бұл Apple тіркелгісі басқа пайдаланушымен толтырылған",
     "evidence": "Термин 'аккаунт' должен переводиться как 'аккаунт' (согласно глоссарию), но в целевом тексте отсутствует 'аккаунт' [Контекст: Учетная запись игрока]",
-    "suggestion": "Бұл Apple аккаунты басқа пайдаланушымен толтырылған",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1161,7 +1051,7 @@
     "source": "Данный Discord аккаунт занят другим пользователем",
     "target": "Бұл Discord тіркелгісі басқа пайдаланушымен толтырылған",
     "evidence": "Термин 'аккаунт' должен переводиться как 'аккаунт' (согласно глоссарию), но в целевом тексте отсутствует 'аккаунт' [Контекст: Учетная запись игрока]",
-    "suggestion": "Бұл Discord аккаунты басқа пайдаланушымен толтырылған",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1172,7 +1062,7 @@
     "source": "Данный VK аккаунт занят другим пользователем",
     "target": "Бұл VK тіркелгісін басқа пайдаланушы қолдануда",
     "evidence": "Термин 'аккаунт' должен переводиться как 'аккаунт' (согласно глоссарию), но в целевом тексте отсутствует 'аккаунт' [Контекст: Учетная запись игрока]",
-    "suggestion": "Бұл VK аккаунтын басқа пайдаланушы қолдануда",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1183,7 +1073,7 @@
     "source": "ВЫ ДЕЙСТВИТЕЛЬНО ХОТИТЕ\nУДАЛИТЬ АККАУНТ?",
     "target": "СІЗ ШЫНЫМЕН ДЕ ЕСЕПТІ\nӨШІРГІҢІЗ КЕЛЕ МЕ?",
     "evidence": "Термин 'аккаунт' должен переводиться как 'аккаунт' (согласно глоссарию), но в целевом тексте отсутствует 'аккаунт' [Контекст: Учетная запись игрока]",
-    "suggestion": "СІЗ ШЫНЫМЕН ДЕ АККАУНТТЫ\nӨШІРГІҢІЗ КЕЛЕ МЕ?",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1194,7 +1084,7 @@
     "source": "Ваш ранг",
     "target": "сіздің дәрежеңіз",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "сіздің рангыңыз",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1205,7 +1095,7 @@
     "source": "Введите ник, ранг или ID игрока",
     "target": "Ойыншының нигін, дәрежесін немесе идентификаторын енгізіңіз",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Ойыншының нигін, рангын немесе идентификаторын енгізіңіз",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1216,7 +1106,7 @@
     "source": "Имя и ранг",
     "target": "Аты және дәрежесі",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Аты және рангы",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1227,7 +1117,7 @@
     "source": "Выполняй контракты, повышай ранг, зарабатывай токены\nи открывай уникальные награды.",
     "target": "Келісімдерді орындаңыз, рейтингіңізді көтеріңіз, токендарын табыңыз\nжәнесе ерекше сыйлықтарды ашыңыз.",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Келісімдерді орындаңыз, рангыңызды көтеріңіз, токендарын табыңыз\nжәнесе ерекше сыйлықтарды ашыңыз.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1238,7 +1128,7 @@
     "source": "Повышай ранг — открой более сложные и прибыльные контракты.",
     "target": "Рейтингіңіз көтеріңіз — және күрделі және пайдалы келісімдерді ашыңыз.",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Рангыңыз көтеріңіз — және күрделі және пайдалы келісімдерді ашыңыз.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1249,7 +1139,7 @@
     "source": "Репутация — повышает твой ранг и открывает новые контракты.",
     "target": "Беділі — сіздің рейтингіңіз көтеріп және жаңа келісімдерді ашып береді.",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Беділі — сіздің рангыңыз көтеріп және жаңа келісімдерді ашып береді.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1260,7 +1150,7 @@
     "source": "Повышай ранг - открывай лучшее",
     "target": "Рейтингіңізді көтеріңіз - ең жақсысын ашыңыз",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Рангыңызды көтеріңіз - ең жақсысын ашыңыз",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1271,7 +1161,7 @@
     "source": "Выполняй контракты и участвуй в гонках, чтобы зарабатывать Репутацию. Новый ранг — это доступ к новым контрактам, премиум-наградам и косметике",
     "target": "Келісімдерді орындаңыз және жарыстарға қатысыңыз беділі табу үшін. Жаңа рейтинг — жаңа келісімдер, премиум сыйлықтар және косметика ашса болады",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Келісімдерді орындаңыз және жарыстарға қатысыңыз беділі табу үшін. Жаңа ранг — жаңа келісімдер, премиум сыйлықтар және косметика ашса болады",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1282,7 +1172,7 @@
     "source": "Необходим Ранг",
     "target": "Дәреже қажет",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Ранг қажет",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1293,7 +1183,7 @@
     "source": "Для выполнения задания необходим Ранг:",
     "target": "Тапсырманы орындау үшін қажетті дәреже:",
     "evidence": "Термин 'ранг' должен переводиться как 'ранг' (согласно глоссарию), но в целевом тексте отсутствует 'ранг' [Контекст: Уровень во фракции или рейтинге]",
-    "suggestion": "Тапсырманы орындау үшін қажетті ранг:",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1304,7 +1194,7 @@
     "source": "Текущая награда",
     "target": "Ағымдағы сыйақы",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Ағымдағы жүлде",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1315,7 +1205,7 @@
     "source": "Награда за подписку",
     "target": "жазылым сыйлығы",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "жазылым жүлдесі",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1326,7 +1216,7 @@
     "source": "Награда за победу",
     "target": "ЖЕҢІС ҮШІН СЫЙЛЫҚ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "ЖЕҢІС ҮШІН ЖҮЛДЕ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1337,7 +1227,7 @@
     "source": "награда за выполнение",
     "target": "орындалғаны үшін марапат",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "орындалғаны үшін жүлде",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1348,7 +1238,7 @@
     "source": "Награда получена",
     "target": "Сыйлық алынды",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жүлде алынды",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1359,7 +1249,7 @@
     "source": "награда\nза день",
     "target": "күніне\nсыйлық",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "күніне\nжүлде",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1370,7 +1260,7 @@
     "source": "Награда за",
     "target": "Сыйлық үшін",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жүлде үшін",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1381,7 +1271,7 @@
     "source": "Награда за выполнение",
     "target": "орындалғаны үшін марапат",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "орындалғаны үшін жүлде",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1392,7 +1282,7 @@
     "source": "Награда получена",
     "target": "Сыйлық алынды",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жүлде алынды",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1403,7 +1293,7 @@
     "source": "Следующая награда",
     "target": "Келесі сый",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Келесі жүлде",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1414,7 +1304,7 @@
     "source": "Ваша награда",
     "target": "Сіздің сыйыңыз",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Сіздің жүлдеңіз",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1425,7 +1315,7 @@
     "source": "НАГРАДА ЗА\nОЧИЩЕННЫЙ ГОРОД",
     "target": "ТАЗАЛАНҒАН ҚАЛА ҮШІН\nСЫЙЛЫҚ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "ТАЗАЛАНҒАН ҚАЛА ҮШІН\nЖҮЛДЕ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1436,7 +1326,7 @@
     "source": "“Плюс Вайб” - награда, \nфейк” - ноль, \n“Минус Вайб” - штраф",
     "target": "«Плюс Вайб» — сыйақы,\n«Фейк» — нөл,\n«Минус Вайб» — айып",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "«Плюс Вайб» — жүлде,\n«Фейк» — нөл,\n«Минус Вайб» — айып",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1447,7 +1337,7 @@
     "source": "ВАША НАГРАДА ЗА {place} ДЕНЬ!",
     "target": "{place}-КҮН ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "{place}-КҮН ҮШІН СІЗДІҢ ЖҮЛДЕҢІЗ!",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1458,7 +1348,7 @@
     "source": "НАГРАДА ПОЛУЧЕНА",
     "target": "СЫЙЛЫҚ АЛЫНДЫ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "ЖҮЛДЕ АЛЫНДЫ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1469,7 +1359,7 @@
     "source": "ГЛАВНАЯ НАГРАДА",
     "target": "НЕГІЗГІ СЫЙЛЫҚ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "НЕГІЗГІ ЖҮЛДЕ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1480,7 +1370,7 @@
     "source": "ВАША НАГРАДА",
     "target": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "СІЗДІҢ ЖҮЛДЕҢІЗ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1491,7 +1381,7 @@
     "source": "СУММАРНАЯ НАГРАДА\nЗА ВСЕ ЗАДАНИЯ",
     "target": "БАРЛЫҚ ТАПСЫРМАЛАР\nҮШІН ЖАЛПЫ СЫЙЛЫҚ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "БАРЛЫҚ ТАПСЫРМАЛАР\nҮШІН ЖАЛПЫ ЖҮЛДЕ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1502,7 +1392,7 @@
     "source": "Ивентовые задания сложнее, но и награда за них куда больше. Также по окончании всех заданий у тебя будет возможность перезапуска заданий!",
     "target": "Ивент тапсырмалары қиынырақ, бірақ сыйақысы жоғары. Барлығын аяқтаған соң, қайта бастауға мүмкіндік болады!",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Ивент тапсырмалары қиынырақ, бірақ жүлдесі жоғары. Барлығын аяқтаған соң, қайта бастауға мүмкіндік болады!",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1513,7 +1403,7 @@
     "source": "Награда получена!",
     "target": "Марапат алынды!",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жүлде алынды!",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1524,7 +1414,7 @@
     "source": "Ваша Награда",
     "target": "Сіздің Сыйлығыңыз",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Сіздің Жүлдеңіз",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1535,7 +1425,7 @@
     "source": "Награда за гонку",
     "target": "Жарыс сыйлығы",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жарыс жүлдесі",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1546,7 +1436,7 @@
     "source": "ВАША НАГРАДА:",
     "target": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ:",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "СІЗДІҢ ЖҮЛДЕҢІЗ:",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1557,7 +1447,7 @@
     "source": "Награда за этот матч недоступна - предыдущий\nматч уже в процессе",
     "target": "Бұл матч үшін сыйақы қолжетімсіз\n— алдыңғы матч қазірдің өзінде өтіп жатыр",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Бұл матч үшін жүлде қолжетімсіз\n— алдыңғы матч қазірдің өзінде өтіп жатыр",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1568,7 +1458,7 @@
     "source": "Чем выше твоё место в команде, тем ценнее награда из общего набора.",
     "target": "Командадағы орныңыз неғұрлым жоғары болса, ортақ жиынтықтан алатын сыйлығыңыз соғұрлым құнды болады.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Командадағы орныңыз неғұрлым жоғары болса, ортақ жиынтықтан алатын жүлдеңіз соғұрлым құнды болады.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1579,7 +1469,7 @@
     "source": "Награда за победу:",
     "target": "Жеңіс үшін сыйақы:",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жеңіс үшін жүлде:",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1590,7 +1480,7 @@
     "source": "ГЛАВНАЯ\nНАГРАДА №",
     "target": "НЕГІЗГІ\nСЫЙЛЫҚ №",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "НЕГІЗГІ\nЖҮЛДЕ №",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1601,7 +1491,7 @@
     "source": "Это глобальный рейтинг серверов.\nЗдесь команды соревнуются друг с другом за \nитоговые награды: чем выше место сервера, тем\nлучше награда для команды.",
     "target": "Бұл — серверлердің жаһандық рейтингі.\nМұнда командалар қорытынды сыйлықтар үшін\nбір-бірімен жарысады: сервер орны неғұрлым жоғары болса,\nкоманда сыйлығы соғұрлым жақсы болады.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Бұл — серверлердің жаһандық рейтингі.\nМұнда командалар қорытынды жүлделер үшін\nбір-бірімен жарысады: сервер орны неғұрлым жоғары болса,\nкоманда сыйлығы соғұрлым жақсы болады.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1612,7 +1502,7 @@
     "source": "Чем выше твое место внутри сервера, тем лучше\nбудет личная награда среди участников команды.",
     "target": "Сервер ішіндегі орныңыз неғұрлым жоғары болса,\nкоманда қатысушылары арасындағы жеке сыйлығыңыз\nсоғұрлым жақсы болады.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Сервер ішіндегі орныңыз неғұрлым жоғары болса,\nкоманда қатысушылары арасындағы жеке жүлдеңіз\nсоғұрлым жақсы болады.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1623,7 +1513,7 @@
     "source": "Награда за выполнение цели",
     "target": "Мақсатты орындағаны үшін сыйлық",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Мақсатты орындағаны үшін жүлде",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1634,7 +1524,7 @@
     "source": "Награда получена!",
     "target": "Сыйақы алынды!",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жүлде алынды!",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1645,7 +1535,7 @@
     "source": "ВАША НАГРАДА!",
     "target": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "СІЗДІҢ ЖҮЛДЕҢІЗ!",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1656,7 +1546,7 @@
     "source": "Участвуй в гонках и зарабатывай очки для общего\nрейтинга Summer Rush. Чем выше место в конце\nивента, тем лучше награда.",
     "target": "Жарыстарға қатысып, Summer Rush жалпы рейтингі үшін\nұпай жина. Ивент соңында орның неғұрлым жоғары болса,\nсыйлығың соғұрлым жақсы болады.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жарыстарға қатысып, Summer Rush жалпы рейтингі үшін\nұпай жина. Ивент соңында орның неғұрлым жоғары болса,\nжүлдесі соғұрлым жақсы болады.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1667,7 +1557,7 @@
     "source": "Данные о происшествии, маршрут\nи награда появятся здесь.",
     "target": "Оқиға туралы мәліметтер, бағыт\nжәне сыйақы осында көрсетіледі.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Оқиға туралы мәліметтер, бағыт\nжәне жүлде осында көрсетіледі.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1678,7 +1568,7 @@
     "source": "Награда получена",
     "target": "Сыйлық алынды",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Жүлде алынды",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1689,7 +1579,7 @@
     "source": "Привет! Вижу, ты хороший ученик! Можешь помочь мне?\nУ нас на заднем дворе растут <g>деревья</g>, а у меня совсем\nнет времени их поливать. Если <g>польёшь их</g> и вернёшься ко мне, тебя будет ждать награда!",
     "target": "Сәлем! Сен жақсы оқушы екенсің! Маған көмектесе аласың ба?\nАртқы аулада <g>ағаштар</g> өсіп тұр, ал менің оларды суаруға\nмүлде уақытым жоқ. Егер <g>оларды суарып</g>, маған қайта келсең, сені сыйлық күтіп тұрады!",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Сәлем! Сен жақсы оқушы екенсің! Маған көмектесе аласың ба?\nАртқы аулада <g>ағаштар</g> өсіп тұр, ал менің оларды суаруға\nмүлде уақытым жоқ. Егер <g>оларды суарып</g>, маған қайта келсең, сені жүлде күтіп тұрады!",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1700,7 +1590,7 @@
     "source": "Проходите хотя бы один урок\nкаждый день на протяжении\nвсего ивента. Награда будет\nавтоматически выдана после\nпрохождения урока в\nпоследний день события.",
     "target": "Бүкіл ивент бойы\nкүн сайын кемінде\nбір сабақтан өтіңіз. Сыйлық\nивенттің соңғы күнінде\nсабақты өткеннен кейін\nавтоматты түрде беріледі.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Бүкіл ивент бойы\nкүн сайын кемінде\nбір сабақтан өтіңіз. Жүлде\nивенттің соңғы күнінде\nсабақты өткеннен кейін\nавтоматты түрде беріледі.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1711,7 +1601,7 @@
     "source": "Пройдите все уроки и\nзавершите ивент со средним\nбаллом выше 4,5. Награда\nбудет выдана сразу после\nпрохождения последнего\nурока.",
     "target": "Барлық сабақтан өтіп,\nивентті орташа\n4,5-тен жоғары бағамен аяқтаңыз.\nСыйлық соңғы\nсабақтан өткеннен кейін\nбірден беріледі.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Барлық сабақтан өтіп,\nивентті орташа\n4,5-тен жоғары бағамен аяқтаңыз.\nЖүлде соңғы\nсабақтан өткеннен кейін\nбірден беріледі.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1722,7 +1612,7 @@
     "source": "Следующая награда: ",
     "target": "Келесі сыйлық: ",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Келесі жүлде: ",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1733,7 +1623,7 @@
     "source": "А вот и главный стимул!\nЗатащите битву и по окончании таймера ты получишь\nжирный куш: <g>Колокольчики</g> и <g>Grand Coins</g>! Победитель\nзабирает всё! Не забывай, награда зависит от твоего\nвклада в победу команды.",
     "target": "Ал міне, басты ынталандыру!\nШайқаста жеңіп, таймер аяқталғанда мол сыйлық аласың:\n<g>Қоңыраулар</g> және <g>Grand Coins</g>! Жеңімпаз\nбәрін алады! Сыйлықтың команда жеңісіне қосқан\nүлесіңе байланысты екенін ұмытпа.",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Ал міне, басты ынталандыру!\nШайқаста жеңіп, таймер аяқталғанда мол жүлде аласың:\n<g>Қоңыраулар</g> және <g>Grand Coins</g>! Жеңімпаз\nбәрін алады! Сыйлықтың команда жеңісіне қосқан\nүлесіңе байланысты екенін ұмытпа.",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1744,7 +1634,7 @@
     "source": "При пропуске дня награда не выдается",
     "target": "Бір күнді өткізіп алсаң, сыйлық берілмейді",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Бір күнді өткізіп алсаң, жүлде берілмейді",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1755,7 +1645,7 @@
     "source": "Вам доступна награда",
     "target": "Сізге сыйлық колжетімді",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Сізге жүлде колжетімді",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1766,7 +1656,7 @@
     "source": "Твоя награда",
     "target": "Сенің сыйлығың",
     "evidence": "Термин 'награда' должен переводиться как 'жүлде' (согласно глоссарию), но в целевом тексте отсутствует 'жүлде' [Контекст: Приз за задание или достижение]",
-    "suggestion": "Сенің жүлдесі",
+    "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
   },
@@ -1777,7 +1667,7 @@
     "source": "Отмена",
     "target": "Болдырмау",
     "evidence": "Термин 'Отмена' переведен как 'Болдырмау', тогда как в большинстве других мест (5 ключей) используется 'БАСТАУ'",
-    "suggestion": "БАСТАУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1788,7 +1678,7 @@
     "source": "Отмена",
     "target": "Болдырмау",
     "evidence": "Термин 'Отмена' переведен как 'Болдырмау', тогда как в большинстве других мест (5 ключей) используется 'БАСТАУ'",
-    "suggestion": "БАСТАУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1799,7 +1689,7 @@
     "source": "ОТМЕНА",
     "target": "БАС ТАРТУ",
     "evidence": "Термин 'ОТМЕНА' переведен как 'БАС ТАРТУ', тогда как в большинстве других мест (5 ключей) используется 'БАСТАУ'",
-    "suggestion": "БАСТАУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1810,7 +1700,7 @@
     "source": "НАЛИЧНЫЕ",
     "target": "ҚОЛМА-ҚОЛ",
     "evidence": "Термин 'НАЛИЧНЫЕ' переведен как 'ҚОЛМА-ҚОЛ', тогда как в большинстве других мест (2 ключей) используется 'қолма-қол ақша'",
-    "suggestion": "қолма-қол ақша",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1821,7 +1711,7 @@
     "source": "Вы выиграли!",
     "target": "Сіз ұттыңыз!",
     "evidence": "Термин 'Вы выиграли!' переведен как 'Сіз ұттыңыз!', тогда как в большинстве других мест (2 ключей) используется 'сіз жеңдіңіз!'",
-    "suggestion": "сіз жеңдіңіз!",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1832,7 +1722,7 @@
     "source": "Выбрать",
     "target": "Таңдау",
     "evidence": "Термин 'Выбрать' переведен как 'Таңдау', тогда как в большинстве других мест (3 ключей) используется 'Аймақты таңдаңыз'",
-    "suggestion": "Аймақты таңдаңыз",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1843,7 +1733,7 @@
     "source": "ВЫБРАНО",
     "target": "таңдалған",
     "evidence": "Термин 'ВЫБРАНО' переведен как 'таңдалған', тогда как в большинстве других мест (2 ключей) используется 'Таңдалды'",
-    "suggestion": "Таңдалды",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1854,7 +1744,7 @@
     "source": "ОЧКИ",
     "target": "КӨЗІЛДІРІК",
     "evidence": "Термин 'ОЧКИ' переведен как 'КӨЗІЛДІРІК', тогда как в большинстве других мест (2 ключей) используется 'Ұпай'",
-    "suggestion": "Ұпай",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1865,7 +1755,7 @@
     "source": "баланс",
     "target": "Баланс",
     "evidence": "Термин 'баланс' переведен как 'Баланс', тогда как в большинстве других мест (3 ключей) используется 'қолма-қол ақша'",
-    "suggestion": "қолма-қол ақша",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1876,7 +1766,7 @@
     "source": "Вы действительно хотите купить",
     "target": "Сатып алғыңыз келетіні рас па",
     "evidence": "Термин 'Вы действительно хотите купить' переведен как 'Сатып алғыңыз келетіні рас па', тогда как в большинстве других мест (4 ключей) используется 'Сіз шынымен сатып алғыңыз келеді'",
-    "suggestion": "Сіз шынымен сатып алғыңыз келеді",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1887,7 +1777,7 @@
     "source": "СУММА ПОПОЛНЕНИЯ",
     "target": "ТОЛТЫРУ СОМАСЫ",
     "evidence": "Термин 'СУММА ПОПОЛНЕНИЯ' переведен как 'ТОЛТЫРУ СОМАСЫ', тогда как в большинстве других мест (2 ключей) используется 'ТОЛЫҚТЫРУ СОМАСЫ'",
-    "suggestion": "ТОЛЫҚТЫРУ СОМАСЫ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1898,7 +1788,7 @@
     "source": "ПОЗДРАВЛЯЕМ!",
     "target": "Сүйінші!",
     "evidence": "Термин 'ПОЗДРАВЛЯЕМ!' переведен как 'Сүйінші!', тогда как в большинстве других мест (4 ключей) используется 'ҚҰТТЫҚТАЙМЫЗ!'",
-    "suggestion": "ҚҰТТЫҚТАЙМЫЗ!",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1909,7 +1799,7 @@
     "source": "Поздравляем!",
     "target": "Сүйінші!",
     "evidence": "Термин 'Поздравляем!' переведен как 'Сүйінші!', тогда как в большинстве других мест (4 ключей) используется 'ҚҰТТЫҚТАЙМЫЗ!'",
-    "suggestion": "ҚҰТТЫҚТАЙМЫЗ!",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1920,7 +1810,7 @@
     "source": "Скины",
     "target": "Скиндер",
     "evidence": "Термин 'Скины' переведен как 'Скиндер', тогда как в большинстве других мест (2 ключей) используется 'Терілер'",
-    "suggestion": "Терілер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1931,7 +1821,7 @@
     "source": "Удалить",
     "target": "Жою",
     "evidence": "Термин 'Удалить' переведен как 'Жою', тогда как в большинстве других мест (3 ключей) используется 'ӨШІРУ'",
-    "suggestion": "ӨШІРУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1942,7 +1832,7 @@
     "source": "НА МЕНЯ",
     "target": "МАҒАН ҚАРСЫ",
     "evidence": "Термин 'НА МЕНЯ' переведен как 'МАҒАН ҚАРСЫ', тогда как в большинстве других мест (2 ключей) используется 'маған'",
-    "suggestion": "маған",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1953,7 +1843,7 @@
     "source": "Получен комментарий",
     "target": "Пікир алынды",
     "evidence": "Термин 'Получен комментарий' переведен как 'Пікир алынды', тогда как в большинстве других мест (2 ключей) используется 'Пікір алынды'",
-    "suggestion": "Пікір алынды",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1964,7 +1854,7 @@
     "source": "Далее",
     "target": "Әрі қарай",
     "evidence": "Термин 'Далее' переведен как 'Әрі қарай', тогда как в большинстве других мест (2 ключей) используется 'Келесі'",
-    "suggestion": "Келесі",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1975,7 +1865,7 @@
     "source": "АВТОМОБИЛИ",
     "target": "АВТОКӨЛІКТЕР",
     "evidence": "Термин 'АВТОМОБИЛИ' переведен как 'АВТОКӨЛІКТЕР', тогда как в большинстве других мест (3 ключей) используется 'Автомобильдер'",
-    "suggestion": "Автомобильдер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1986,7 +1876,7 @@
     "source": "Автомобили",
     "target": "Көліктер",
     "evidence": "Термин 'Автомобили' переведен как 'Көліктер', тогда как в большинстве других мест (3 ключей) используется 'Автомобильдер'",
-    "suggestion": "Автомобильдер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -1997,7 +1887,7 @@
     "source": "Цвет фар",
     "target": "Бағдаршамның түсі",
     "evidence": "Термин 'Цвет фар' переведен как 'Бағдаршамның түсі', тогда как в большинстве других мест (3 ключей) используется 'ФАР ТҮСІ'",
-    "suggestion": "ФАР ТҮСІ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2008,7 +1898,7 @@
     "source": "ПОДВЕСКА",
     "target": "ІЛГІШ",
     "evidence": "Термин 'ПОДВЕСКА' переведен как 'ІЛГІШ', тогда как в большинстве других мест (2 ключей) используется 'аспа'",
-    "suggestion": "аспа",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2019,7 +1909,7 @@
     "source": "ТУРБОНАДДУВ",
     "target": "ТУРБОНАДДУВ",
     "evidence": "Термин 'ТУРБОНАДДУВ' переведен как 'ТУРБОНАДДУВ', тогда как в большинстве других мест (2 ключей) используется 'турбоүрлеу'",
-    "suggestion": "турбоүрлеу",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2030,7 +1920,7 @@
     "source": "ТОРМОЗА",
     "target": "ТЕЖЕУ",
     "evidence": "Термин 'ТОРМОЗА' переведен как 'ТЕЖЕУ', тогда как в большинстве других мест (2 ключей) используется 'тежегіш'",
-    "suggestion": "тежегіш",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2041,7 +1931,7 @@
     "source": "Снять",
     "target": "Алып тастау",
     "evidence": "Термин 'Снять' переведен как 'Алып тастау', тогда как в большинстве других мест (2 ключей) используется 'АЛУ'",
-    "suggestion": "АЛУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2052,7 +1942,7 @@
     "source": "Об ивенте",
     "target": "Ивент туралы",
     "evidence": "Термин 'Об ивенте' переведен как 'Ивент туралы', тогда как в большинстве других мест (2 ключей) используется 'Оқиға туралы'",
-    "suggestion": "Оқиға туралы",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2063,7 +1953,7 @@
     "source": "КАК ПОЛУЧИТЬ ПРИЗ",
     "target": "ҚАЛАЙ ЖҮЛДЕ АЛУҒА",
     "evidence": "Термин 'КАК ПОЛУЧИТЬ ПРИЗ' переведен как 'ҚАЛАЙ ЖҮЛДЕ АЛУҒА', тогда как в большинстве других мест (4 ключей) используется 'ҚАЛАЙ ЖҮЛДЕ АЛУҒА БОЛАДЫ'",
-    "suggestion": "ҚАЛАЙ ЖҮЛДЕ АЛУҒА БОЛАДЫ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2074,7 +1964,7 @@
     "source": "Награды",
     "target": "Сыйлықтар",
     "evidence": "Термин 'Награды' переведен как 'Сыйлықтар', тогда как в большинстве других мест (6 ключей) используется 'жүлделер'",
-    "suggestion": "жүлделер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2085,7 +1975,7 @@
     "source": "Награды",
     "target": "Сыйлықтар",
     "evidence": "Термин 'Награды' переведен как 'Сыйлықтар', тогда как в большинстве других мест (6 ключей) используется 'жүлделер'",
-    "suggestion": "жүлделер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2096,7 +1986,7 @@
     "source": "Награды",
     "target": "Сыйақылар",
     "evidence": "Термин 'Награды' переведен как 'Сыйақылар', тогда как в большинстве других мест (6 ключей) используется 'жүлделер'",
-    "suggestion": "жүлделер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2107,7 +1997,7 @@
     "source": "Награды",
     "target": "Сыйақылар",
     "evidence": "Термин 'Награды' переведен как 'Сыйақылар', тогда как в большинстве других мест (6 ключей) используется 'жүлделер'",
-    "suggestion": "жүлделер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2118,7 +2008,7 @@
     "source": "Об акции",
     "target": "Акция\nтуралы",
     "evidence": "Термин 'Об акции' переведен как 'Акция\nтуралы', тогда как в большинстве других мест (2 ключей) используется 'акция туралы'",
-    "suggestion": "акция туралы",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2129,7 +2019,7 @@
     "source": "В процессе",
     "target": "Орындалу үстінде",
     "evidence": "Термин 'В процессе' переведен как 'Орындалу үстінде', тогда как в большинстве других мест (2 ключей) используется 'үрдісте'",
-    "suggestion": "үрдісте",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2140,7 +2030,7 @@
     "source": "старт",
     "target": "start",
     "evidence": "Термин 'старт' переведен как 'start', тогда как в большинстве других мест (3 ключей) используется 'Бастау'",
-    "suggestion": "Бастау",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2151,7 +2041,7 @@
     "source": "приобретено",
     "target": "сатып алынған",
     "evidence": "Термин 'приобретено' переведен как 'сатып алынған', тогда как в большинстве других мест (2 ключей) используется 'Сатып алынды'",
-    "suggestion": "Сатып алынды",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2162,7 +2052,7 @@
     "source": "Получено",
     "target": "Алынды",
     "evidence": "Термин 'Получено' переведен как 'Алынды', тогда как в большинстве других мест (2 ключей) используется 'Алынған'",
-    "suggestion": "Алынған",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2173,7 +2063,7 @@
     "source": "Поражение",
     "target": "Ұтылды",
     "evidence": "Термин 'Поражение' переведен как 'Ұтылды', тогда как в большинстве других мест (2 ключей) используется 'Жеңіліс'",
-    "suggestion": "Жеңіліс",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2184,7 +2074,7 @@
     "source": "Копилка",
     "target": "Қойма",
     "evidence": "Термин 'Копилка' переведен как 'Қойма', тогда как в большинстве других мест (2 ключей) используется 'ЖИНАҚ САНДЫҒЫ'",
-    "suggestion": "ЖИНАҚ САНДЫҒЫ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2195,7 +2085,7 @@
     "source": "Копилка",
     "target": "Қоржын",
     "evidence": "Термин 'Копилка' переведен как 'Қоржын', тогда как в большинстве других мест (2 ключей) используется 'ЖИНАҚ САНДЫҒЫ'",
-    "suggestion": "ЖИНАҚ САНДЫҒЫ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2206,7 +2096,7 @@
     "source": "КОПИЛКА",
     "target": "ЖИНАҚША",
     "evidence": "Термин 'КОПИЛКА' переведен как 'ЖИНАҚША', тогда как в большинстве других мест (2 ключей) используется 'ЖИНАҚ САНДЫҒЫ'",
-    "suggestion": "ЖИНАҚ САНДЫҒЫ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2217,7 +2107,7 @@
     "source": "ВЛАДЕЛЕЦ",
     "target": "Иеленуші",
     "evidence": "Термин 'ВЛАДЕЛЕЦ' переведен как 'Иеленуші', тогда как в большинстве других мест (2 ключей) используется 'ИЕСІ'",
-    "suggestion": "ИЕСІ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2228,7 +2118,7 @@
     "source": "До конца:",
     "target": "Аяқталуына:",
     "evidence": "Термин 'До конца:' переведен как 'Аяқталуына:', тогда как в большинстве других мест (2 ключей) используется 'Соңы:'",
-    "suggestion": "Соңы:",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2239,7 +2129,7 @@
     "source": "Выбрать автомобиль",
     "target": "Автомобильди таңдау",
     "evidence": "Термин 'Выбрать автомобиль' переведен как 'Автомобильди таңдау', тогда как в большинстве других мест (2 ключей) используется 'КӨЛІКТІ ТАҢДАУ'",
-    "suggestion": "КӨЛІКТІ ТАҢДАУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2250,7 +2140,7 @@
     "source": "ДУЭЛИ",
     "target": "ДУЭЛЬ",
     "evidence": "Термин 'ДУЭЛИ' переведен как 'ДУЭЛЬ', тогда как в большинстве других мест (3 ключей) используется 'дуэльдер'",
-    "suggestion": "дуэльдер",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2261,7 +2151,7 @@
     "source": "Активировать",
     "target": "Рұқсатнаманы белсендіру",
     "evidence": "Термин 'Активировать' переведен как 'Рұқсатнаманы белсендіру', тогда как в большинстве других мест (2 ключей) используется 'Белсендіру'",
-    "suggestion": "Белсендіру",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2272,7 +2162,7 @@
     "source": "РЕДКИЙ",
     "target": "ӨТЕ СИРЕК",
     "evidence": "Термин 'РЕДКИЙ' переведен как 'ӨТЕ СИРЕК', тогда как в большинстве других мест (2 ключей) используется 'сирек кездесетін'",
-    "suggestion": "сирек кездесетін",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2283,7 +2173,7 @@
     "source": "ЛЕГЕНДАРНЫЙ",
     "target": "АҢЫЗДЫҚ",
     "evidence": "Термин 'ЛЕГЕНДАРНЫЙ' переведен как 'АҢЫЗДЫҚ', тогда как в большинстве других мест (3 ключей) используется 'аңыз'",
-    "suggestion": "аңыз",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2294,7 +2184,7 @@
     "source": "Обмен",
     "target": "Айырбас",
     "evidence": "Термин 'Обмен' переведен как 'Айырбас', тогда как в большинстве других мест (2 ключей) используется 'Айырбастау'",
-    "suggestion": "Айырбастау",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2305,7 +2195,7 @@
     "source": "Ресурсы",
     "target": "ҚОРЛАР",
     "evidence": "Термин 'Ресурсы' переведен как 'ҚОРЛАР', тогда как в большинстве других мест (2 ключей) используется 'Ресурстар'",
-    "suggestion": "Ресурстар",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2316,7 +2206,7 @@
     "source": "Пропустить ожидание?",
     "target": "Күтуді өткізу керек пе?",
     "evidence": "Термин 'Пропустить ожидание?' переведен как 'Күтуді өткізу керек пе?', тогда как в большинстве других мест (2 ключей) используется 'Күтуді өткізу?'",
-    "suggestion": "Күтуді өткізу?",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2327,7 +2217,7 @@
     "source": "Ваши награды",
     "target": "Сіздің сыйақыларыңыз",
     "evidence": "Термин 'Ваши награды' переведен как 'Сіздің сыйақыларыңыз', тогда как в большинстве других мест (2 ключей) используется 'СІЗДІҢ СЫЙЛЫҚТАРЫҢЫЗ'",
-    "suggestion": "СІЗДІҢ СЫЙЛЫҚТАРЫҢЫЗ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2338,7 +2228,7 @@
     "source": "ВАШИ НАГРАДЫ",
     "target": "СЫЙЛЫҚТАРЫҢЫЗ",
     "evidence": "Термин 'ВАШИ НАГРАДЫ' переведен как 'СЫЙЛЫҚТАРЫҢЫЗ', тогда как в большинстве других мест (2 ключей) используется 'СІЗДІҢ СЫЙЛЫҚТАРЫҢЫЗ'",
-    "suggestion": "СІЗДІҢ СЫЙЛЫҚТАРЫҢЫЗ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2349,7 +2239,7 @@
     "source": "Забрать награду",
     "target": "Сыйақыны алу",
     "evidence": "Термин 'Забрать награду' переведен как 'Сыйақыны алу', тогда как в большинстве других мест (4 ключей) используется 'Сыйлықты алу'",
-    "suggestion": "Сыйлықты алу",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2360,7 +2250,7 @@
     "source": "ЛЕТНИЙ РАЗГОН",
     "target": "SUMMER RUSH",
     "evidence": "Термин 'ЛЕТНИЙ РАЗГОН' переведен как 'SUMMER RUSH', тогда как в большинстве других мест (2 ключей) используется 'Жазғы екпін'",
-    "suggestion": "Жазғы екпін",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2371,7 +2261,7 @@
     "source": "В МАГАЗИН",
     "target": "ДҮКЕНГЕ ӨТУ туралы толық ақпарат алу үшін",
     "evidence": "Термин 'В МАГАЗИН' переведен как 'ДҮКЕНГЕ ӨТУ туралы толық ақпарат алу үшін', тогда как в большинстве других мест (3 ключей) используется 'дүкенге'",
-    "suggestion": "дүкенге",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2382,7 +2272,7 @@
     "source": "Ежедневные",
     "target": "Күнделікті тапсырмалар",
     "evidence": "Термин 'Ежедневные' переведен как 'Күнделікті тапсырмалар', тогда как в большинстве других мест (6 ключей) используется 'Күнделікті'",
-    "suggestion": "Күнделікті",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2393,7 +2283,7 @@
     "source": "Ваша награда",
     "target": "Сіздің жүлдеңіз",
     "evidence": "Термин 'Ваша награда' переведен как 'Сіздің жүлдеңіз', тогда как в большинстве других мест (2 ключей) используется 'СІЗДІҢ СЫЙЛЫҒЫҢЫЗ'",
-    "suggestion": "СІЗДІҢ СЫЙЛЫҒЫҢЫЗ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2404,7 +2294,7 @@
     "source": "ДЕЙСТВУЕТ",
     "target": "ӘРЕКЕТТЕ",
     "evidence": "Термин 'ДЕЙСТВУЕТ' переведен как 'ӘРЕКЕТТЕ', тогда как в большинстве других мест (2 ключей) используется 'Белсенді'",
-    "suggestion": "Белсенді",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2415,7 +2305,7 @@
     "source": "Разбить",
     "target": "Жару",
     "evidence": "Термин 'Разбить' переведен как 'Жару', тогда как в большинстве других мест (2 ключей) используется 'СЫНДЫРУ'",
-    "suggestion": "СЫНДЫРУ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2426,7 +2316,7 @@
     "source": "Расходники",
     "target": "Тұтыну заттары",
     "evidence": "Термин 'Расходники' переведен как 'Тұтыну заттары', тогда как в большинстве других мест (2 ключей) используется 'ШЫҒЫН МАТЕРИАЛДАРЫ'",
-    "suggestion": "ШЫҒЫН МАТЕРИАЛДАРЫ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2437,7 +2327,7 @@
     "source": "Лидерборд",
     "target": "Көшбасшылар кестесі",
     "evidence": "Термин 'Лидерборд' переведен как 'Көшбасшылар кестесі', тогда как в большинстве других мест (2 ключей) используется 'КӨШБАСШЫЛАР ТІЗІМІ'",
-    "suggestion": "КӨШБАСШЫЛАР ТІЗІМІ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2448,7 +2338,7 @@
     "source": "Лидерборд",
     "target": "Көшбасшылар",
     "evidence": "Термин 'Лидерборд' переведен как 'Көшбасшылар', тогда как в большинстве других мест (2 ключей) используется 'КӨШБАСШЫЛАР ТІЗІМІ'",
-    "suggestion": "КӨШБАСШЫЛАР ТІЗІМІ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2459,7 +2349,7 @@
     "source": "Лидерборд",
     "target": "Рейтинг",
     "evidence": "Термин 'Лидерборд' переведен как 'Рейтинг', тогда как в большинстве других мест (2 ключей) используется 'КӨШБАСШЫЛАР ТІЗІМІ'",
-    "suggestion": "КӨШБАСШЫЛАР ТІЗІМІ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2470,7 +2360,7 @@
     "source": "Глобальный",
     "target": "Жалпы",
     "evidence": "Термин 'Глобальный' переведен как 'Жалпы', тогда как в большинстве других мест (2 ключей) используется 'ЖАҺАНДЫҚ'",
-    "suggestion": "ЖАҺАНДЫҚ",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2481,7 +2371,7 @@
     "source": "Все награды",
     "target": "Барлық марапаттар",
     "evidence": "Термин 'Все награды' переведен как 'Барлық марапаттар', тогда как в большинстве других мест (5 ключей) используется 'БАРЛЫҚ СЫЙЛЫҚТАР'",
-    "suggestion": "БАРЛЫҚ СЫЙЛЫҚТАР",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2492,7 +2382,7 @@
     "source": "СТАРТОВАЛ ИВЕНТ",
     "target": "ІС-ШАРА БАСТАЛДЫ",
     "evidence": "Термин 'СТАРТОВАЛ ИВЕНТ' переведен как 'ІС-ШАРА БАСТАЛДЫ', тогда как в большинстве других мест (2 ключей) используется 'Ивент Басталды'",
-    "suggestion": "Ивент Басталды",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2503,7 +2393,7 @@
     "source": "Условия",
     "target": "Талаптар",
     "evidence": "Термин 'Условия' переведен как 'Талаптар', тогда как в большинстве других мест (2 ключей) используется 'Шарттар'",
-    "suggestion": "Шарттар",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2514,7 +2404,7 @@
     "source": "Прочность",
     "target": "Беріктік",
     "evidence": "Термин 'Прочность' переведен как 'Беріктік', тогда как в большинстве других мест (2 ключей) используется 'Төзімділік'",
-    "suggestion": "Төзімділік",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
@@ -2525,7 +2415,7 @@
     "source": "Главный Приз!",
     "target": "Бас жүлдені!",
     "evidence": "Термин 'Главный Приз!' переведен как 'Бас жүлдені!', тогда как в большинстве других мест (2 ключей) используется 'бас жүлде!'",
-    "suggestion": "бас жүлде!",
+    "suggestion": null,
     "confidence": 0.88,
     "reviewed_by_human": false
   },
