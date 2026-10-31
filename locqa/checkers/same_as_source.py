@@ -1,16 +1,30 @@
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Set
+from collections import defaultdict
+from typing import Any, DefaultDict, Dict, List, Set
 
 from locqa.checkers.base import BaseChecker
 from locqa.models import ArbFile, Finding, IssueType, Severity
-from locqa.translator import Translator
 
 
 class SameAsSourceChecker(BaseChecker):
     """Detects strings in target that are identical to source,
     intelligently filtering legitimate matches (brands, IDs, numbers, formulas, technical tags).
+
+    Uses cross-ARB translation evidence to distinguish genuinely untranslated strings
+    (where the Russian word is translated elsewhere in the file) from legitimate same-string
+    cases: game item names, international borrowings, or proper nouns that stay identical in KK.
+
+    Algorithm:
+    1. Build an internal 'translation evidence' index by scanning all source→target pairs
+       where the strings actually DIFFER. Count how many times each Russian word root (3+ chars)
+       appears in a genuine translation context.
+    2. For each same_as_source hit, extract Russian words from the source string and check
+       if any of them have translation evidence (i.e. are translated differently elsewhere):
+         - HAS evidence  → word is translatable; this is a real bug → keep original severity.
+         - NO  evidence  → word only appears identical across the ARB (proper name / borrowing)
+                           → downgrade to LOW severity and reduce confidence.
     """
 
     # Common brand / technical entities that legitimately stay identical across locales
@@ -45,98 +59,11 @@ class SameAsSourceChecker(BaseChecker):
         "gc",
         "latin",
         "spain",
-        "1xbet",
-        "silverstar",
-        "гранд",
-        "ростикс",
-        "баскет",
     }
-
-    # Common geographic / country names that legitimately stay identical in Cyrillic
-    COMMON_GEOGRAPHIC: Set[str] = {
-        "бразилия", "беларусь", "украина", "қазақстан", "казахстан",
-        "россия", "германия", "франция", "италия", "испания",
-        "китай", "жапония", "япония", "ақш", "сша",
-    }
-
-    # International metric & time unit abbreviations that are identical across Russian and Kazakh
-    COMMON_UNITS: Set[str] = {
-        "сек", "мин", "сағ", "с", "м", "см", "мм", "км", "кг", "г",
-        "шт", "ур", "макс", "бонус", "лига", "секунд", "секунды", "минут",
-        "х", "x", "lvl", "exp", "fps", "hp",
-    }
-
-    # Russian grammatical inflections and markers that do not exist in Kazakh morphology
-    RU_ADJ = re.compile(
-        r"\b\w{2,}("
-        r"[ыи]е|[ое]е|[ая]я|[ыио]й|[ое]го|[ое]му|[ыи]х|[ыи]м|[ыи]ми|[уе]ю|[ое]й"
-        r")\b",
-        re.IGNORECASE,
-    )
-
-    RU_VERB = re.compile(
-        r"\b\w{2,}("
-        r"[аеиоуыэюя]ть|[аеиоуыэюя]ться|[аеиоуыэюя]тся|[аеиоуыэюя]ти|[аеиоуыэюя]тись"
-        r")\b",
-        re.IGNORECASE,
-    )
-
-    RU_PARTICIPLE = re.compile(
-        r"\b\w{2,}("
-        r"вш[аеиу]|енн[ыаое][йхм]?|анн[ыаое][йхм]?|ем[ыаое][йхм]?|им[ыаое][йхм]?"
-        r")\b",
-        re.IGNORECASE,
-    )
-
-    RU_FUNC_WORDS = re.compile(
-        r"\b("
-        r"для|в|во|на|из|изо|под|подо|над|надо|за|к|ко|по|о|об|обо|при|от|ото|до|без|безо|у|через|сквозь|"
-        r"чтобы|если|или|как|чем|тем|только|уже|еще|ещё|тоже|также|потому|поэтому"
-        r")\b",
-        re.IGNORECASE,
-    )
-
-    RU_NOUN_SUFFIX = re.compile(
-        r"\b\w{2,}("
-        r"ость|ости|остью|остей|ение|ения|ению|ением|ении|ений|ание|ания|анию|анием|ании|аний|ии"
-        r")\b",
-        re.IGNORECASE,
-    )
 
     @property
     def issue_type(self) -> IssueType:
         return IssueType.SAME_AS_SOURCE
-
-    @classmethod
-    def is_metric_unit_string(cls, text: str) -> bool:
-        """Checks if text (with or without placeholders and numbers)
-        consists entirely of recognized metric/time units or formatting symbols.
-        E.g. '{seconds} сек.', '{minutes} мин. {seconds} сек.', '%s км', 'сек.'
-        """
-        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|%[a-zA-Z0-9_]|<[^>]+>|[\d\s\W_]+", " ", text).strip().lower()
-        if not clean:
-            return True
-        tokens = clean.split()
-        return all(tok in cls.COMMON_UNITS for tok in tokens)
-
-    @classmethod
-    def find_russian_grammar_markers(cls, text: str) -> List[str]:
-        """Detects Russian grammatical inflections and function words
-        that do not exist in Kazakh morphology or syntax.
-        """
-        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", text)
-        markers: List[str] = []
-        if cls.RU_ADJ.search(clean):
-            markers.append("окончания прилагательных")
-        if cls.RU_VERB.search(clean):
-            markers.append("глагольные формы/инфинитивы")
-        if cls.RU_PARTICIPLE.search(clean):
-            markers.append("причастия")
-        if cls.RU_FUNC_WORDS.search(clean):
-            markers.append("русские предлоги/союзы")
-        if cls.RU_NOUN_SUFFIX.search(clean):
-            markers.append("русские суффиксы существительных")
-        return markers
 
     def is_legitimate_match(self, text: str, key: str, whitelist: Set[str]) -> bool:
         s = text.strip()
@@ -144,7 +71,7 @@ class SameAsSourceChecker(BaseChecker):
             return True
 
         # 1. Pure numbers, punctuation, currencies, special characters or placeholders
-        if re.fullmatch(r"[\d\s\W%_{}\\\/–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34]+", s):
+        if re.fullmatch(r"[\d\s\W%_{}\\\\/–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34]+", s):
             return True
 
         # 2. Pure ASCII / Latin technical acronyms, codes, brands, URLs
@@ -162,19 +89,28 @@ class SameAsSourceChecker(BaseChecker):
         if cleaned in whitelist:
             return True
 
-        # 5. Check if key denotes a character, NPC, mentor name, or brand product
-        key_low = key.lower()
-        if any(token in key_low for token in ("mentor", "charactername", "character_name", "npc", "principalname", "rostics", "1xbet")):
-            return True
-
-        # 5. International metric units and time abbreviation templates (e.g. '{seconds} сек.')
-        if self.is_metric_unit_string(s):
-            return True
-
         return False
 
-    def __init__(self, translator: Translator | None = None):
-        self.translator = translator or Translator()
+    @staticmethod
+    def _build_translation_evidence(source: ArbFile, target: ArbFile) -> DefaultDict[str, int]:
+        """Scan all source→target pairs where strings differ and build a frequency map
+        of how many times each Russian word root (3+ chars) appears in a genuinely
+        translated context. Used to distinguish untranslated strings from legitimate
+        same-script borrowings or game-specific names.
+        """
+        evidence: DefaultDict[str, int] = defaultdict(int)
+        for key, src_entry in source.entries.items():
+            tgt_entry = target.entries.get(key)
+            if tgt_entry is None:
+                continue
+            src_val = src_entry.value.strip()
+            tgt_val = tgt_entry.value.strip()
+            # Only count keys where a translation actually differs (genuine translations)
+            if not src_val or not tgt_val or src_val.lower() == tgt_val.lower():
+                continue
+            for word in re.findall(r"[а-яёА-ЯЁ]{3,}", src_val.lower()):
+                evidence[word] += 1
+        return evidence
 
     def check(
         self,
@@ -184,24 +120,11 @@ class SameAsSourceChecker(BaseChecker):
     ) -> List[Finding]:
         context = context or {}
         custom_whitelist: Set[str] = set(context.get("brand_whitelist", []))
+        active_whitelist = self.DEFAULT_BRAND_WHITELIST | {w.lower() for w in custom_whitelist}
 
-        glossary = context.get("glossary")
-        glossary_terms: Set[str] = set()
-        if glossary:
-            for entry in glossary.entries:
-                if entry.term_ru:
-                    glossary_terms.add(entry.term_ru.strip().lower())
-                if entry.term_kk:
-                    glossary_terms.add(entry.term_kk.strip().lower())
+        # Build translation evidence index from the full ARB corpus
+        translation_evidence = self._build_translation_evidence(source, target)
 
-        active_whitelist = (
-            self.DEFAULT_BRAND_WHITELIST
-            | self.COMMON_GEOGRAPHIC
-            | {w.lower() for w in custom_whitelist}
-            | glossary_terms
-        )
-
-        translator: Translator = context.get("translator") or self.translator
         findings: List[Finding] = []
 
         for key, src_entry in source.entries.items():
@@ -220,70 +143,69 @@ class SameAsSourceChecker(BaseChecker):
                 if self.is_legitimate_match(tgt_val, key, active_whitelist):
                     continue
 
-                # Morphological and syntactic analysis of the untranslated string
-                ru_markers = self.find_russian_grammar_markers(src_val)
-                words = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", src_val).split()
-                word_count = len(words)
+                # Extract meaningful Russian word roots from the source string
+                ru_words = re.findall(r"[а-яёА-ЯЁ]{3,}", src_val.lower())
+
+                # Does any Russian word in this string have cross-ARB translation evidence?
+                # i.e. is this word translated (differently) in at least one other key?
+                has_translation_evidence = any(
+                    translation_evidence.get(w, 0) > 0 for w in ru_words
+                )
+
+                # Measure base severity from length / word count
+                word_count = len(src_val.split())
                 char_count = len(src_val)
 
-                # If the string contains explicit Russian grammatical markers (e.g. 'Уличные Гонки',
-                # 'Неизвестная ошибка', 'До исключения за АФК', 'и получить предмет сразу')
-                # OR is a multi-word sentence (>= 4 words)
-                if ru_markers or word_count >= 4:
-                    severity = Severity.HIGH if word_count >= 2 or char_count >= 15 else Severity.MEDIUM
-                    confidence = 0.98
-                    details = f" ({', '.join(ru_markers)})" if ru_markers else ""
-                    evidence = (
-                        f"Непереведённый русский текст{details}: '{src_val}'"
-                    )
-                    suggestion = translator.translate_term(src_val, source=source, target=target)
-                    findings.append(
-                        Finding(
-                            key=key,
-                            issue_type=self.issue_type,
-                            severity=severity,
-                            source=src_entry.value,
-                            target=tgt_entry.value,
-                            evidence=evidence,
-                            suggestion=suggestion,
-                            confidence=confidence,
-                            reviewed_by_human=False,
+                if has_translation_evidence:
+                    # Word(s) ARE translated elsewhere → genuine untranslated string
+                    if word_count >= 3 or char_count >= 25:
+                        severity = Severity.HIGH
+                        confidence = 0.98
+                        evidence = (
+                            f"Строка ({char_count} симв., {word_count} слов) полностью оставлена "
+                            f"на языке оригинала без перевода"
                         )
-                    )
-                elif word_count == 1:
-                    # Single Cyrillic words left identical in target:
-                    # Check if a different, valid Kazakh translation exists via translator API / lexicon
-                    suggestion = translator.translate_term(src_val, source=source, target=target)
-                    if suggestion and suggestion.lower() != src_val.lower():
-                        findings.append(
-                            Finding(
-                                key=key,
-                                issue_type=self.issue_type,
-                                severity=Severity.MEDIUM,
-                                source=src_entry.value,
-                                target=tgt_entry.value,
-                                evidence=f"Слово '{src_val}' оставлено на русском языке без перевода (рекомендуемый перевод: '{suggestion}')",
-                                suggestion=suggestion,
-                                confidence=0.95,
-                                reviewed_by_human=False,
-                            )
+                    elif word_count >= 2 or char_count >= 10:
+                        severity = Severity.MEDIUM
+                        confidence = 0.85
+                        evidence = (
+                            f"Словосочетание дословно совпадает с оригиналом ({char_count} симв.)"
+                        )
+                    else:
+                        severity = Severity.MEDIUM
+                        confidence = 0.80
+                        evidence = (
+                            f"Слово '{src_val}' не переведено: в других строках оно переведено иначе"
                         )
                 else:
-                    # 2-3 words without Russian grammar markers:
-                    suggestion = translator.translate_term(src_val, source=source, target=target)
-                    if suggestion and suggestion.lower() != src_val.lower():
-                        findings.append(
-                            Finding(
-                                key=key,
-                                issue_type=self.issue_type,
-                                severity=Severity.MEDIUM,
-                                source=src_entry.value,
-                                target=tgt_entry.value,
-                                evidence=f"Фраза '{src_val}' оставлена на русском языке без перевода (рекомендуемый перевод: '{suggestion}')",
-                                suggestion=suggestion,
-                                confidence=0.92,
-                                reviewed_by_human=False,
-                            )
+                    # No cross-ARB evidence that this word is translatable
+                    # → likely a game-specific name, proper noun, or international borrowing
+                    # that the translators deliberately kept identical (e.g. Алхимия, Клоун as item names)
+                    severity = Severity.LOW
+                    confidence = 0.45
+                    if word_count >= 3 or char_count >= 25:
+                        evidence = (
+                            f"Строка совпадает с оригиналом, но ни одно из её слов не переводится "
+                            f"в других строках — возможно, это название или заимствование"
                         )
+                    else:
+                        evidence = (
+                            f"'{src_val}' совпадает с оригиналом; похоже на игровое название, "
+                            f"заимствование или международный термин"
+                        )
+
+                findings.append(
+                    Finding(
+                        key=key,
+                        issue_type=self.issue_type,
+                        severity=severity,
+                        source=src_entry.value,
+                        target=tgt_entry.value,
+                        evidence=evidence,
+                        suggestion=None,
+                        confidence=confidence,
+                        reviewed_by_human=False,
+                    )
+                )
 
         return findings
