@@ -31,30 +31,22 @@ class WrongLanguageChecker(BaseChecker):
         re.IGNORECASE,
     )
 
-    # Universal brand / acronym filter
-    GLOBAL_BRANDS: Set[str] = {
-        "BATTLE PASS", "GRAND", "GRAND MOBILE", "ROLE PLAY", "MOBILE",
-        "DISCORD", "TELEGRAM", "GOOGLE", "APPLE", "TWITTER", "VK", "VK PAY", "LATAM",
-        "SPAIN", "JACKPOT", "FPS", "HUD", "CDN", "API", "DEV", "ID", "VIP",
-        "LVL", "EXP", "GC", "ROSTICS", "CHICKEN", "CARBALL LEAGUE", "SUMMER RUSH",
-        "SEASON PASS", "1XBET", "SILVERSTAR",
-    }
-
     @property
     def issue_type(self) -> IssueType:
         return IssueType.WRONG_LANGUAGE
 
-    def is_brand_or_code(self, text: str) -> bool:
+    def is_brand_or_code(self, text: str, custom_brands: Optional[Set[str]] = None) -> bool:
         s = text.strip()
         if not s:
             return True
         if re.fullmatch(r"[\d\s\W%_{}\\\/–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34]+", s):
             return True
-        upper = s.upper()
-        if any(b in upper for b in self.GLOBAL_BRANDS) and len(s.split()) <= 4:
-            return True
         if s.startswith("http://") or s.startswith("https://"):
             return True
+        if custom_brands:
+            upper = s.upper()
+            if any(b.upper() in upper for b in custom_brands) and len(s.split()) <= 3:
+                return True
         return False
 
     def check(
@@ -64,6 +56,7 @@ class WrongLanguageChecker(BaseChecker):
         context: Dict[str, Any] | None = None,
     ) -> List[Finding]:
         context = context or {}
+        custom_brands: Set[str] = set(context.get("brand_whitelist", []))
         findings: List[Finding] = []
         target_locale = (target.locale or "").lower()
 
@@ -74,9 +67,13 @@ class WrongLanguageChecker(BaseChecker):
         for key, tgt_entry in target.entries.items():
             tgt_val = tgt_entry.value.strip()
             src_entry = source.entries.get(key)
-            src_val = src_entry.value.strip() if src_entry else ""
+            src_val = src_entry.value if src_entry else ""
 
-            if not tgt_val or self.is_brand_or_code(tgt_val):
+            if not tgt_val or self.is_brand_or_code(tgt_val, custom_brands):
+                continue
+
+            # Skip ARB metadata entries (e.g. key@description, @key)
+            if "@" in key:
                 continue
 
             clean_text = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", tgt_val).strip()
@@ -87,7 +84,7 @@ class WrongLanguageChecker(BaseChecker):
             # Universal Rule for Brands & Preserved English terms:
             # If the target text is identical to source, or all its Latin words were already
             # present in the Russian source, it is an approved English brand, car model,
-            # technical term, or phrase preserved from the source original.
+            # technical term, or phrase preserved directly from the source original.
             if clean_text.lower() == clean_src.lower():
                 continue
 

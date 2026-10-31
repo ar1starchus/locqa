@@ -15,39 +15,8 @@ class SameAsSourceChecker(BaseChecker):
 
     _KZ_DICT: Optional[Set[str]] = None
 
-    # Common brand / technical entities that legitimately stay identical across locales
-    DEFAULT_BRAND_WHITELIST: Set[str] = {
-        "grand mobile",
-        "grand rp",
-        "grand",
-        "role play",
-        "google",
-        "apple",
-        "discord",
-        "twitter",
-        "vk",
-        "vk id",
-        "vk pay",
-        "telegram",
-        "battle pass",
-        "grand pass",
-        "grand market",
-        "grand chicken",
-        "rostics",
-        "jackpot",
-        "fps",
-        "hud",
-        "cdn",
-        "api",
-        "dev",
-        "id",
-        "vip",
-        "lvl",
-        "exp",
-        "gc",
-        "latin",
-        "spain",
-    }
+    # Optional default brand whitelist (empty by default; configured dynamically via context)
+    DEFAULT_BRAND_WHITELIST: Set[str] = set()
 
     # Standard technical metric units, time formatting, and abbreviations
     METRIC_UNITS: Set[str] = {
@@ -190,7 +159,11 @@ class SameAsSourceChecker(BaseChecker):
         if len(s) <= 2:
             return True
 
-        # 4. Check brand / terms whitelist (case-insensitive)
+        # 4. Character names (proper entities / storyline NPC names)
+        if key.lower().endswith("charactername"):
+            return True
+
+        # 5. Check brand / terms whitelist (case-insensitive)
         cleaned = re.sub(r"[\W_]+", " ", s.lower()).strip()
         if cleaned in whitelist:
             return True

@@ -19,12 +19,12 @@ class MachineTranslationChecker(BaseChecker):
     2. Semantic LLM analysis via Gemini when API key is provided.
     """
 
-    # Kazakh postpositions that must FOLLOW the noun/pronoun, never precede it
-    # E.g. 'сіз үшін' is correct; 'үшін сіз' or 'үшін оны' is a direct Russian preposition calque!
+    # Kazakh postpositions used as prepositions at the start of a clause (Russian preposition calques)
+    # E.g. 'сіз үшін' is correct postposition; '*үшін сіз...' at clause start is a direct Russian 'для ...' calque.
     INVERTED_POSTPOSITION_PATTERNS = [
-        (r"\bүшін\s+(сіз|сен|ол|біз|олар|оны|мұны|бұны)\b", "Калька русской структуры 'для ...' (в казахском 'үшін' должно следовать после местоимения)"),
-        (r"\bбойынша\s+(сіз|ереже|заң|нұсқаулық)\b", "Калька предлога 'по ...' перед существительным"),
-        (r"\bарқылы\s+(сіз|қосымша|ойын)\b", "Калька предлога 'через ...' перед существительным"),
+        (r"(?:^|[.,!?;]|\n)\s*\bүшін\s+(сіз|сен|ол|біз|олар|оны|мұны|бұны)\b", "Калька русской структуры 'для ...' (в казахском 'үшін' должно следовать после местоимения)"),
+        (r"(?:^|[.,!?;]|\n)\s*\bбойынша\s+(сіз|ереже|заң|нұсқаулық)\b", "Калька предлога 'по ...' перед существительным"),
+        (r"(?:^|[.,!?;]|\n)\s*\bарқылы\s+(сіз|қосымша|ойын)\b", "Калька предлога 'через ...' перед существительным"),
         (r"\b(және\s+растайсыз,\s+дегенді)\b", "Буквальная калька русской канцелярской формулировки"),
     ]
 
