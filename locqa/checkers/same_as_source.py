@@ -1,8 +1,7 @@
 from __future__ import annotations
 
 import re
-from collections import defaultdict
-from typing import Any, DefaultDict, Dict, List, Set
+from typing import Any, Dict, List, Set
 
 from locqa.checkers.base import BaseChecker
 from locqa.models import ArbFile, Finding, IssueType, Severity
@@ -11,20 +10,6 @@ from locqa.models import ArbFile, Finding, IssueType, Severity
 class SameAsSourceChecker(BaseChecker):
     """Detects strings in target that are identical to source,
     intelligently filtering legitimate matches (brands, IDs, numbers, formulas, technical tags).
-
-    Uses cross-ARB translation evidence to distinguish genuinely untranslated strings
-    (where the Russian word is translated elsewhere in the file) from legitimate same-string
-    cases: game item names, international borrowings, or proper nouns that stay identical in KK.
-
-    Algorithm:
-    1. Build an internal 'translation evidence' index by scanning all source→target pairs
-       where the strings actually DIFFER. Count how many times each Russian word root (3+ chars)
-       appears in a genuine translation context.
-    2. For each same_as_source hit, extract Russian words from the source string and check
-       if any of them have translation evidence (i.e. are translated differently elsewhere):
-         - HAS evidence  → word is translatable; this is a real bug → keep original severity.
-         - NO  evidence  → word only appears identical across the ARB (proper name / borrowing)
-                           → downgrade to LOW severity and reduce confidence.
     """
 
     # Common brand / technical entities that legitimately stay identical across locales
@@ -61,9 +46,75 @@ class SameAsSourceChecker(BaseChecker):
         "spain",
     }
 
+    # Standard technical metric units, time formatting, and abbreviations
+    METRIC_UNITS: Set[str] = {
+        "мин", "сек", "с", "м", "ч", "сағ", "күн", "ай", "жыл",
+        "км", "км/ч", "км/сағ", "кг", "см", "мм", "г", "т",
+        "fps", "hp", "mp", "xp", "id", "lvl", "gc", "k", "к",
+        "шт", "ур", "ур.", "x", "х", "%", "№",
+    }
+
+    # Kazakh grammatical affixes (case, plural, possessive, adjectival, verbal noun)
+    KZ_AFFIX_REGEX = re.compile(
+        r"^(?:"
+        r"да|де|та|те|ға|ге|қа|ке|на|не|"
+        r"ның|нің|дың|дің|тың|тің|"
+        r"ны|ні|ды|ді|ты|ті|"
+        r"дан|ден|тан|тен|нан|нен|"
+        r"мен|пен|бен|"
+        r"лар|лер|дар|дер|тар|тер|"
+        r"ы|і|сы|сі|ым|ім|ың|ің|ыңыз|іңіз|ымыз|іміз|"
+        r"лық|лік|дық|дік|тық|тік|"
+        r"дағы|дегі|тағы|тегі|"
+        r"шы|ші|лау|леу|тау|теу|дау|деу"
+        r")(?:[а-яәғқңөұүһі]*)$"
+    )
+
     @property
     def issue_type(self) -> IssueType:
         return IssueType.SAME_AS_SOURCE
+
+    def is_metric_pattern(self, text: str) -> bool:
+        """Checks if text consists solely of technical units, time formats, or placeholders.
+        e.g. '{minutes} мин. {seconds} сек.', '%s км', '{count} шт.', 'СЕК', 'МИН'.
+        """
+        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", text)
+        clean = re.sub(r"%\d*(?:\$|\b)[a-zA-Z]?", " ", clean)
+        clean = re.sub(r"[\d\s\W_–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34\\\/%]+", " ", clean).strip().lower()
+        if not clean:
+            return True
+        tokens = clean.split()
+        return all(t in self.METRIC_UNITS for t in tokens)
+
+    def is_short_adapted_term(self, text: str, corpus_words: Set[str], whitelist: Set[str]) -> bool:
+        """In-game corpus affix mining:
+        If a short term (1-2 words, e.g. 'Гараж', 'Бизнес', 'Арена', 'Донат', 'Рулетка')
+        has derived or inflected forms with Kazakh grammatical suffixes in the target ARB,
+        it proves that the game corpus recognizes this root as a legitimate loanword.
+        """
+        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", text)
+        words = re.findall(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІa-zA-Z]+", clean)
+        if not words or len(words) > 2:
+            return False
+
+        for w in words:
+            if re.fullmatch(r"[a-zA-Z]+", w) or w.lower() in whitelist:
+                continue
+            if len(w) <= 2:
+                continue
+
+            w_lower = w.lower()
+            adapted = False
+            for cw in corpus_words:
+                if cw.startswith(w_lower) and len(cw) > len(w_lower):
+                    suffix = cw[len(w_lower):]
+                    if self.KZ_AFFIX_REGEX.match(suffix):
+                        adapted = True
+                        break
+            if not adapted:
+                return False
+
+        return True
 
     def is_legitimate_match(self, text: str, key: str, whitelist: Set[str]) -> bool:
         s = text.strip()
@@ -71,7 +122,7 @@ class SameAsSourceChecker(BaseChecker):
             return True
 
         # 1. Pure numbers, punctuation, currencies, special characters or placeholders
-        if re.fullmatch(r"[\d\s\W%_{}\\\\/–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34]+", s):
+        if re.fullmatch(r"[\d\s\W%_{}\\\/–—#@\$\+\*\:\;\,\.\?\!\(\)\[\]\uea34]+", s):
             return True
 
         # 2. Pure ASCII / Latin technical acronyms, codes, brands, URLs
@@ -91,27 +142,6 @@ class SameAsSourceChecker(BaseChecker):
 
         return False
 
-    @staticmethod
-    def _build_translation_evidence(source: ArbFile, target: ArbFile) -> DefaultDict[str, int]:
-        """Scan all source→target pairs where strings differ and build a frequency map
-        of how many times each Russian word root (3+ chars) appears in a genuinely
-        translated context. Used to distinguish untranslated strings from legitimate
-        same-script borrowings or game-specific names.
-        """
-        evidence: DefaultDict[str, int] = defaultdict(int)
-        for key, src_entry in source.entries.items():
-            tgt_entry = target.entries.get(key)
-            if tgt_entry is None:
-                continue
-            src_val = src_entry.value.strip()
-            tgt_val = tgt_entry.value.strip()
-            # Only count keys where a translation actually differs (genuine translations)
-            if not src_val or not tgt_val or src_val.lower() == tgt_val.lower():
-                continue
-            for word in re.findall(r"[а-яёА-ЯЁ]{3,}", src_val.lower()):
-                evidence[word] += 1
-        return evidence
-
     def check(
         self,
         source: ArbFile,
@@ -122,8 +152,12 @@ class SameAsSourceChecker(BaseChecker):
         custom_whitelist: Set[str] = set(context.get("brand_whitelist", []))
         active_whitelist = self.DEFAULT_BRAND_WHITELIST | {w.lower() for w in custom_whitelist}
 
-        # Build translation evidence index from the full ARB corpus
-        translation_evidence = self._build_translation_evidence(source, target)
+        # Build in-game target corpus of lowercased words for affix mining
+        corpus_words: Set[str] = set()
+        for entry in target.entries.values():
+            if isinstance(entry.value, str) and not entry.key.startswith("@"):
+                for w in re.findall(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІ]+", entry.value.lower()):
+                    corpus_words.add(w)
 
         findings: List[Finding] = []
 
@@ -140,59 +174,36 @@ class SameAsSourceChecker(BaseChecker):
 
             # Exact match check
             if src_val == tgt_val:
+                # 1. Technical units and metric patterns ({minutes} мин. {seconds} сек., %s км)
+                if self.is_metric_pattern(tgt_val):
+                    continue
+
+                # 2. Brands, numbers, pure Latin codes
                 if self.is_legitimate_match(tgt_val, key, active_whitelist):
                     continue
 
-                # Extract meaningful Russian word roots from the source string
-                ru_words = re.findall(r"[а-яёА-ЯЁ]{3,}", src_val.lower())
+                # 3. In-game corpus affix mining (adapted loanwords like 'Гараж', 'Бизнес', 'Арена')
+                if self.is_short_adapted_term(tgt_val, corpus_words, active_whitelist):
+                    continue
 
-                # Does any Russian word in this string have cross-ARB translation evidence?
-                # i.e. is this word translated (differently) in at least one other key?
-                has_translation_evidence = any(
-                    translation_evidence.get(w, 0) > 0 for w in ru_words
-                )
-
-                # Measure base severity from length / word count
+                # Measure severity: multi-word sentences or long strings are definitely untranslated Russian
                 word_count = len(src_val.split())
                 char_count = len(src_val)
 
-                if has_translation_evidence:
-                    # Word(s) ARE translated elsewhere → genuine untranslated string
-                    if word_count >= 3 or char_count >= 25:
-                        severity = Severity.HIGH
-                        confidence = 0.98
-                        evidence = (
-                            f"Строка ({char_count} симв., {word_count} слов) полностью оставлена "
-                            f"на языке оригинала без перевода"
-                        )
-                    elif word_count >= 2 or char_count >= 10:
-                        severity = Severity.MEDIUM
-                        confidence = 0.85
-                        evidence = (
-                            f"Словосочетание дословно совпадает с оригиналом ({char_count} симв.)"
-                        )
-                    else:
-                        severity = Severity.MEDIUM
-                        confidence = 0.80
-                        evidence = (
-                            f"Слово '{src_val}' не переведено: в других строках оно переведено иначе"
-                        )
+                if word_count >= 3 or char_count >= 25:
+                    severity = Severity.HIGH
+                    confidence = 0.98
+                    evidence = (
+                        f"Строка ({char_count} симв., {word_count} слов) полностью оставлена на языке оригинала без перевода"
+                    )
+                elif word_count >= 2 or char_count >= 10:
+                    severity = Severity.MEDIUM
+                    confidence = 0.85
+                    evidence = f"Словосочетание дословно совпадает с оригиналом ({char_count} симв.)"
                 else:
-                    # No cross-ARB evidence that this word is translatable
-                    # → likely a game-specific name, proper noun, or international borrowing
-                    # that the translators deliberately kept identical (e.g. Алхимия, Клоун as item names)
                     severity = Severity.LOW
-                    confidence = 0.45
-                    if word_count >= 3 or char_count >= 25:
-                        evidence = (
-                            f"Строка совпадает с оригиналом, но ни одно из её слов не переводится "
-                            f"в других строках — возможно, это название или заимствование"
-                        )
-                    else:
-                        evidence = (
-                            f"'{src_val}' совпадает с оригиналом; похоже на игровое название, "
-                            f"заимствование или международный термин"
-                        )
+                    confidence = 0.65
+                    evidence = f"Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование"
 
                 findings.append(
                     Finding(

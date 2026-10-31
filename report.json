@@ -308,17 +308,6 @@
     "reviewed_by_human": false
   },
   {
-    "key": "jungleTreasuresTimeMinutesSeconds",
-    "issue_type": "same_as_source",
-    "severity": "high",
-    "source": "{minutes} мин. {seconds} сек.",
-    "target": "{minutes} мин. {seconds} сек.",
-    "evidence": "Строка (29 симв., 4 слов) полностью оставлена на языке оригинала без перевода",
-    "suggestion": null,
-    "confidence": 0.98,
-    "reviewed_by_human": false
-  },
-  {
     "key": "jungleTreasuresRecieveImmediately",
     "issue_type": "same_as_source",
     "severity": "high",
@@ -336,6 +325,17 @@
     "source": "Вы действительно хотите оплатить недвижимость: Дом\nна сумму",
     "target": "Вы действительно хотите оплатить недвижимость: Дом\nна сумму",
     "evidence": "Строка (59 симв., 8 слов) полностью оставлена на языке оригинала без перевода",
+    "suggestion": null,
+    "confidence": 0.98,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "summerRushAfkKickCountdown",
+    "issue_type": "same_as_source",
+    "severity": "high",
+    "source": "До исключения за АФК",
+    "target": "До исключения за АФК",
+    "evidence": "Строка (20 симв., 4 слов) полностью оставлена на языке оригинала без перевода",
     "suggestion": null,
     "confidence": 0.98,
     "reviewed_by_human": false
@@ -2530,17 +2530,6 @@
     "reviewed_by_human": false
   },
   {
-    "key": "rosticsGameBasketName2",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Баскет 11+11",
-    "target": "Баскет 11+11",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (12 симв.)",
-    "suggestion": null,
-    "confidence": 0.85,
-    "reviewed_by_human": false
-  },
-  {
     "key": "collectors_title",
     "issue_type": "same_as_source",
     "severity": "medium",
@@ -2596,6 +2585,17 @@
     "reviewed_by_human": false
   },
   {
+    "key": "tune_modification",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "МОДИФИКАЦИЯ",
+    "target": "МОДИФИКАЦИЯ",
+    "evidence": "Словосочетание дословно совпадает с оригиналом (11 симв.)",
+    "suggestion": null,
+    "confidence": 0.85,
+    "reviewed_by_human": false
+  },
+  {
     "key": "drag_race_master_league",
     "issue_type": "same_as_source",
     "severity": "medium",
@@ -2607,12 +2607,12 @@
     "reviewed_by_human": false
   },
   {
-    "key": "tablet_taxi_business_class",
+    "key": "chat_department",
     "issue_type": "same_as_source",
     "severity": "medium",
-    "source": "Бизнес класс",
-    "target": "Бизнес класс",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (12 симв.)",
+    "source": "Департамент",
+    "target": "Департамент",
+    "evidence": "Словосочетание дословно совпадает с оригиналом (11 симв.)",
     "suggestion": null,
     "confidence": 0.85,
     "reviewed_by_human": false
@@ -2640,33 +2640,33 @@
     "reviewed_by_human": false
   },
   {
+    "key": "expedition_expedition",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Экспедиция",
+    "target": "Экспедиция",
+    "evidence": "Словосочетание дословно совпадает с оригиналом (10 симв.)",
+    "suggestion": null,
+    "confidence": 0.85,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "expeditionAboutHeader",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Экспедиция",
+    "target": "Экспедиция",
+    "evidence": "Словосочетание дословно совпадает с оригиналом (10 симв.)",
+    "suggestion": null,
+    "confidence": 0.85,
+    "reviewed_by_human": false
+  },
+  {
     "key": "sberMiniGameArzamas",
     "issue_type": "same_as_source",
     "severity": "medium",
     "source": "Локация: Арзамас",
     "target": "Локация: Арзамас",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (16 симв.)",
-    "suggestion": null,
-    "confidence": 0.85,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "edu_tablet_purchase_item_tablet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Телефон (Планшет)",
-    "target": "Телефон (Планшет)",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (17 симв.)",
-    "suggestion": null,
-    "confidence": 0.85,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "halloweenEnergyBankMax",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "МАКСИМУМ {count}",
-    "target": "МАКСИМУМ {count}",
     "evidence": "Словосочетание дословно совпадает с оригиналом (16 симв.)",
     "suggestion": null,
     "confidence": 0.85,
@@ -2684,17 +2684,6 @@
     "reviewed_by_human": false
   },
   {
-    "key": "birthday_camp_two_plus",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Плюс Вайб",
-    "target": "Плюс Вайб",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (9 симв.)",
-    "suggestion": null,
-    "confidence": 0.85,
-    "reviewed_by_human": false
-  },
-  {
     "key": "birthday_camp_two_sub",
     "issue_type": "same_as_source",
     "severity": "medium",
@@ -2706,34 +2695,12 @@
     "reviewed_by_human": false
   },
   {
-    "key": "birthday_main_league",
+    "key": "smugglingTitle",
     "issue_type": "same_as_source",
     "severity": "medium",
-    "source": "Лига {name}",
-    "target": "Лига {name}",
+    "source": "КОНТРАБАНДА",
+    "target": "КОНТРАБАНДА",
     "evidence": "Словосочетание дословно совпадает с оригиналом (11 симв.)",
-    "suggestion": null,
-    "confidence": 0.85,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackListUpgradesBonusWrongTracksTime",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "10 секунд!",
-    "target": "10 секунд!",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (10 симв.)",
-    "suggestion": null,
-    "confidence": 0.85,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuArenaRouletteTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "GRAND РУЛЕТКА",
-    "target": "GRAND РУЛЕТКА",
-    "evidence": "Словосочетание дословно совпадает с оригиналом (13 симв.)",
     "suggestion": null,
     "confidence": 0.85,
     "reviewed_by_human": false
@@ -2766,6 +2733,28 @@
     "severity": "medium",
     "source": "Доктор Хаос",
     "target": "Доктор Хаос",
+    "evidence": "Словосочетание дословно совпадает с оригиналом (11 симв.)",
+    "suggestion": null,
+    "confidence": 0.85,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "schSubjectMath",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Математика",
+    "target": "Математика",
+    "evidence": "Словосочетание дословно совпадает с оригиналом (10 симв.)",
+    "suggestion": null,
+    "confidence": 0.85,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "schSubjectInformatics",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Информатика",
+    "target": "Информатика",
     "evidence": "Словосочетание дословно совпадает с оригиналом (11 симв.)",
     "suggestion": null,
     "confidence": 0.85,
@@ -2981,1213 +2970,14 @@
     "reviewed_by_human": false
   },
   {
-    "key": "format_min",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "МИН",
-    "target": "МИН",
-    "evidence": "Слово 'МИН' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bonus",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "бонус",
-    "target": "бонус",
-    "evidence": "Слово 'бонус' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "commonPromoCode",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Промокод",
-    "target": "Промокод",
-    "evidence": "Слово 'Промокод' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
     "key": "profile",
     "issue_type": "same_as_source",
-    "severity": "medium",
+    "severity": "low",
     "source": "Профиль",
     "target": "Профиль",
-    "evidence": "Слово 'Профиль' не переведено: в других строках оно переведено иначе",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "rosticsGameOrderProductName0",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Баскет",
-    "target": "Баскет",
-    "evidence": "Слово 'Баскет' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackjack_start_min",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Мин.",
-    "target": "Мин.",
-    "evidence": "Слово 'Мин.' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackjack_start_max",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Макс.",
-    "target": "Макс.",
-    "evidence": "Слово 'Макс.' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackjack_dealer",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Дилер",
-    "target": "Дилер",
-    "evidence": "Слово 'Дилер' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laMainOnline",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "онлайн",
-    "target": "онлайн",
-    "evidence": "Слово 'онлайн' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laAccount",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "АККАУНТ",
-    "target": "АККАУНТ",
-    "evidence": "Слово 'АККАУНТ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laPersonalArea2",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "КАБИНЕТ",
-    "target": "КАБИНЕТ",
-    "evidence": "Слово 'КАБИНЕТ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laBusiness",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "БИЗНЕС",
-    "target": "БИЗНЕС",
-    "evidence": "Слово 'БИЗНЕС' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laFraction",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ФРАКЦИЯ",
-    "target": "ФРАКЦИЯ",
-    "evidence": "Слово 'ФРАКЦИЯ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "laLogin",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Логин",
-    "target": "Логин",
-    "evidence": "Слово 'Логин' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tesla_detail_bumper",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Бампер",
-    "target": "Бампер",
-    "evidence": "Слово 'Бампер' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "car_fuel",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "бак",
-    "target": "бак",
-    "evidence": "Слово 'бак' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "donate_menu_vehicle_1",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "авто",
-    "target": "авто",
-    "evidence": "Слово 'авто' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tune_detail_nitro",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "НИТРО",
-    "target": "НИТРО",
-    "evidence": "Слово 'НИТРО' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemic_airdrop",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Аирдроп",
-    "target": "Аирдроп",
-    "evidence": "Слово 'Аирдроп' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemy_lava",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лава",
-    "target": "Лава",
-    "evidence": "Слово 'Лава' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemy_energy",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Энергия",
-    "target": "Энергия",
-    "evidence": "Слово 'Энергия' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemy_diamond",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Алмаз",
-    "target": "Алмаз",
-    "evidence": "Слово 'Алмаз' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "championship",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Чемпионат",
-    "target": "Чемпионат",
-    "evidence": "Слово 'Чемпионат' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "rang",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ранг",
-    "target": "Ранг",
-    "evidence": "Слово 'Ранг' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "rank",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ранг",
-    "target": "Ранг",
-    "evidence": "Слово 'Ранг' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "accessory",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Аксессуар",
-    "target": "Аксессуар",
-    "evidence": "Слово 'Аксессуар' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "minute_2",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "минут",
-    "target": "минут",
-    "evidence": "Слово 'минут' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "maximum",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "максимум",
-    "target": "максимум",
-    "evidence": "Слово 'максимум' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "minimum",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "минимум",
-    "target": "минимум",
-    "evidence": "Слово 'минимум' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "progress",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Прогресс",
-    "target": "Прогресс",
-    "evidence": "Слово 'Прогресс' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chat_fraction",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Фракция",
-    "target": "Фракция",
-    "evidence": "Слово 'Фракция' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "onex_rating_title",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "РЕЙТИНГ",
-    "target": "РЕЙТИНГ",
-    "evidence": "Слово 'РЕЙТИНГ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "onex_profile_title",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "профиль",
-    "target": "профиль",
-    "evidence": "Слово 'профиль' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "onex_profile_bet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ставка",
-    "target": "Ставка",
-    "evidence": "Слово 'Ставка' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "onex_bet_draw_suffix",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "НИЧЬЯ",
-    "target": "НИЧЬЯ",
-    "evidence": "Слово 'НИЧЬЯ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tablet_auc_bet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ставка",
-    "target": "Ставка",
-    "evidence": "Слово 'Ставка' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tablet_app_phone",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Телефон",
-    "target": "Телефон",
-    "evidence": "Слово 'Телефон' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tablet_app_tow_truck",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Эвакуатор",
-    "target": "Эвакуатор",
-    "evidence": "Слово 'Эвакуатор' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tablet_taxi_class",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Класс",
-    "target": "Класс",
-    "evidence": "Слово 'Класс' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "entrance_garage",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Гараж",
-    "target": "Гараж",
-    "evidence": "Слово 'Гараж' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tp_timer",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "таймер",
-    "target": "таймер",
-    "evidence": "Слово 'таймер' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "diamond",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Алмаз",
-    "target": "Алмаз",
-    "evidence": "Слово 'Алмаз' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "pts",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ПТС",
-    "target": "ПТС",
-    "evidence": "Слово 'ПТС' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "passport",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Паспорт",
-    "target": "Паспорт",
-    "evidence": "Слово 'Паспорт' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "nitro",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Нитро",
-    "target": "Нитро",
-    "evidence": "Слово 'Нитро' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "expedition_event",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ивент",
-    "target": "Ивент",
-    "evidence": "Слово 'Ивент' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "expedition_airdrop",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Аирдроп",
-    "target": "Аирдроп",
-    "evidence": "Слово 'Аирдроп' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "sberQuestAutoTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Автоквест",
-    "target": "Автоквест",
-    "evidence": "Слово 'Автоквест' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "sberQuestWord",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Квест:",
-    "target": "Квест:",
-    "evidence": "Слово 'Квест:' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "edu_title_hud_user_menu_for_tablet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Планшет",
-    "target": "Планшет",
-    "evidence": "Слово 'Планшет' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "edu_title_um_tablet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Планшет",
-    "target": "Планшет",
-    "evidence": "Слово 'Планшет' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "launcherSettingsTabAccount",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Аккаунт",
-    "target": "Аккаунт",
-    "evidence": "Слово 'Аккаунт' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "halloweenBooster",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "БУСТЕР",
-    "target": "БУСТЕР",
-    "evidence": "Слово 'БУСТЕР' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemyItemLava",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лава",
-    "target": "Лава",
-    "evidence": "Слово 'Лава' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemyItemEnergy",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Энергия",
-    "target": "Энергия",
-    "evidence": "Слово 'Энергия' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemyItemDiamond",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Алмаз",
-    "target": "Алмаз",
-    "evidence": "Слово 'Алмаз' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemyBand",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лента",
-    "target": "Лента",
-    "evidence": "Слово 'Лента' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "birthday_camp_three_bet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ставка",
-    "target": "Ставка",
-    "evidence": "Слово 'Ставка' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "birthday_camp_two_fake",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Фейк",
-    "target": "Фейк",
-    "evidence": "Слово 'Фейк' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "birthday_tab_team",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Команда",
-    "target": "Команда",
-    "evidence": "Слово 'Команда' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "birthday_info_league",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лига",
-    "target": "Лига",
-    "evidence": "Слово 'Лига' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "smugglingRoute",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "МАРШРУТ",
-    "target": "МАРШРУТ",
-    "evidence": "Слово 'МАРШРУТ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "smugglingAuctionTab",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "АУКЦИОН",
-    "target": "АУКЦИОН",
-    "evidence": "Слово 'АУКЦИОН' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "lnyEducationMapEnergyTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Энергия",
-    "target": "Энергия",
-    "evidence": "Слово 'Энергия' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "lnyEducationCharacterName",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Мин-Чжу",
-    "target": "Мин-Чжу",
-    "evidence": "Слово 'Мин-Чжу' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackListShopShowcase",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Витрина",
-    "target": "Витрина",
-    "evidence": "Слово 'Витрина' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackListUpgradesBonus",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Бонус",
-    "target": "Бонус",
-    "evidence": "Слово 'Бонус' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "blackListContractPremium",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ПРЕМИУМ",
-    "target": "ПРЕМИУМ",
-    "evidence": "Слово 'ПРЕМИУМ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchInventory",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Инвентарь",
-    "target": "Инвентарь",
-    "evidence": "Слово 'Инвентарь' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchPremium",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Премиум",
-    "target": "Премиум",
-    "evidence": "Слово 'Премиум' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchBuyerLimit",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лимит:",
-    "target": "Лимит:",
-    "evidence": "Слово 'Лимит:' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchCard",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "КАРТА",
-    "target": "КАРТА",
-    "evidence": "Слово 'КАРТА' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchLocation",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Локация:",
-    "target": "Локация:",
-    "evidence": "Слово 'Локация:' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "inventorySafeTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "СЕЙФ",
-    "target": "СЕЙФ",
-    "evidence": "Слово 'СЕЙФ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tradePlatformCard",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "КАРТА",
-    "target": "КАРТА",
-    "evidence": "Слово 'КАРТА' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuArenaTabRating",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "РЕЙТИНГ",
-    "target": "РЕЙТИНГ",
-    "evidence": "Слово 'РЕЙТИНГ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuArenaTabInventory",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ИНВЕНТАРЬ",
-    "target": "ИНВЕНТАРЬ",
-    "evidence": "Слово 'ИНВЕНТАРЬ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuArenaDuelMap",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Карта:",
-    "target": "Карта:",
-    "evidence": "Слово 'Карта:' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuArenaServer",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Сервер",
-    "target": "Сервер",
-    "evidence": "Слово 'Сервер' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "containersAuction",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Аукцион",
-    "target": "Аукцион",
-    "evidence": "Слово 'Аукцион' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "containersName",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Контейнер",
-    "target": "Контейнер",
-    "evidence": "Слово 'Контейнер' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "containersBet",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Ставка",
-    "target": "Ставка",
-    "evidence": "Слово 'Ставка' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "arena_selected_map",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Карта:",
-    "target": "Карта:",
-    "evidence": "Слово 'Карта:' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "dragRacingGarage",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Гараж",
-    "target": "Гараж",
-    "evidence": "Слово 'Гараж' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "dragRacingV2Tuning",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ТЮНИНГ",
-    "target": "ТЮНИНГ",
-    "evidence": "Слово 'ТЮНИНГ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "dragRacingV2TutorialMentorRey",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Рэй",
-    "target": "Рэй",
-    "evidence": "Слово 'Рэй' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuTabletButton",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Планшет",
-    "target": "Планшет",
-    "evidence": "Слово 'Планшет' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "networkHackingGameTerminal",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Терминал",
-    "target": "Терминал",
-    "evidence": "Слово 'Терминал' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "questsV2RatingAboutGroupTaskTitle4",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лидерборд",
-    "target": "Лидерборд",
-    "evidence": "Слово 'Лидерборд' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bingo",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "бинго",
-    "target": "бинго",
-    "evidence": "Слово 'бинго' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "predictionsTier",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Тир",
-    "target": "Тир",
-    "evidence": "Слово 'Тир' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "predictionsLeaderboardRating",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Рейтинг",
-    "target": "Рейтинг",
-    "evidence": "Слово 'Рейтинг' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "predictionsBracketFinal",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Финал",
-    "target": "Финал",
-    "evidence": "Слово 'Финал' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "predictionsBracketTeam",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Команда",
-    "target": "Команда",
-    "evidence": "Слово 'Команда' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "footballStoreShowcase",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ВИТРИНА",
-    "target": "ВИТРИНА",
-    "evidence": "Слово 'ВИТРИНА' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "footballTutorTitle71",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лидерборд",
-    "target": "Лидерборд",
-    "evidence": "Слово 'Лидерборд' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chaosGarage",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Гараж",
-    "target": "Гараж",
-    "evidence": "Слово 'Гараж' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chaosRating",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Рейтинг",
-    "target": "Рейтинг",
-    "evidence": "Слово 'Рейтинг' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chaosStep5Part0Title",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Гараж",
-    "target": "Гараж",
-    "evidence": "Слово 'Гараж' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chaosStep7Part0Title",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Рейтинг",
-    "target": "Рейтинг",
-    "evidence": "Слово 'Рейтинг' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chaosStep7Part1Title",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Рейтинг",
-    "target": "Рейтинг",
-    "evidence": "Слово 'Рейтинг' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "rouletteTab",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Рулетка",
-    "target": "Рулетка",
-    "evidence": "Слово 'Рулетка' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "slotMachineJackpotMini",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "МИНИ",
-    "target": "МИНИ",
-    "evidence": "Слово 'МИНИ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "festivalHudTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Фестиваль",
-    "target": "Фестиваль",
-    "evidence": "Слово 'Фестиваль' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "festivalLotteryTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "ЛОТЕРЕЯ",
-    "target": "ЛОТЕРЕЯ",
-    "evidence": "Слово 'ЛОТЕРЕЯ' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "festivalContainerTitle",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "КОНТЕЙНЕР",
-    "target": "КОНТЕЙНЕР",
-    "evidence": "Слово 'КОНТЕЙНЕР' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "festivalGameContainer",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Контейнер",
-    "target": "Контейнер",
-    "evidence": "Слово 'Контейнер' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schTabShowcase",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Витрина",
-    "target": "Витрина",
-    "evidence": "Слово 'Витрина' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schTutorialPrincipalName",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Директор",
-    "target": "Директор",
-    "evidence": "Слово 'Директор' не переведено: в других строках оно переведено иначе",
-    "suggestion": null,
-    "confidence": 0.8,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "format_sec",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "СЕК",
-    "target": "СЕК",
-    "evidence": "'СЕК' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4196,9 +2986,9 @@
     "severity": "low",
     "source": "Бразилия",
     "target": "Бразилия",
-    "evidence": "'Бразилия' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4207,31 +2997,31 @@
     "severity": "low",
     "source": "Шефбургер",
     "target": "Шефбургер",
-    "evidence": "'Шефбургер' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "laGraphics",
+    "key": "blackjack_start_max",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "ГРАФИКА",
-    "target": "ГРАФИКА",
-    "evidence": "'ГРАФИКА' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "Макс.",
+    "target": "Макс.",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "laRailwayStation",
+    "key": "laMainOnline",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "ВОКЗАЛ",
-    "target": "ВОКЗАЛ",
-    "evidence": "'ВОКЗАЛ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "онлайн",
+    "target": "онлайн",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4240,9 +3030,9 @@
     "severity": "low",
     "source": "Аналог",
     "target": "Аналог",
-    "evidence": "'Аналог' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4251,9 +3041,9 @@
     "severity": "low",
     "source": "Неон",
     "target": "Неон",
-    "evidence": "'Неон' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4262,9 +3052,9 @@
     "severity": "low",
     "source": "Капот",
     "target": "Капот",
-    "evidence": "'Капот' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4273,9 +3063,9 @@
     "severity": "low",
     "source": "КЕПКИ",
     "target": "КЕПКИ",
-    "evidence": "'КЕПКИ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4284,9 +3074,9 @@
     "severity": "low",
     "source": "Беларусь",
     "target": "Беларусь",
-    "evidence": "'Беларусь' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4295,20 +3085,9 @@
     "severity": "low",
     "source": "Украина",
     "target": "Украина",
-    "evidence": "'Украина' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "car_trunk",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "багаж",
-    "target": "багаж",
-    "evidence": "'багаж' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4317,9 +3096,9 @@
     "severity": "low",
     "source": "Стайлинг",
     "target": "Стайлинг",
-    "evidence": "'Стайлинг' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4328,9 +3107,9 @@
     "severity": "low",
     "source": "КЛАКСОНЫ",
     "target": "КЛАКСОНЫ",
-    "evidence": "'КЛАКСОНЫ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4339,20 +3118,9 @@
     "severity": "low",
     "source": "НЕОН",
     "target": "НЕОН",
-    "evidence": "'НЕОН' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tune_detail_hydraulics",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "ГИДРАВЛИКА",
-    "target": "ГИДРАВЛИКА",
-    "evidence": "'ГИДРАВЛИКА' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4361,9 +3129,9 @@
     "severity": "low",
     "source": "КАПОТ",
     "target": "КАПОТ",
-    "evidence": "'КАПОТ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4372,31 +3140,9 @@
     "severity": "low",
     "source": "СПОЙЛЕР",
     "target": "СПОЙЛЕР",
-    "evidence": "'СПОЙЛЕР' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tune_modification",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "МОДИФИКАЦИЯ",
-    "target": "МОДИФИКАЦИЯ",
-    "evidence": "'МОДИФИКАЦИЯ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "tune_standart_1",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "СТАНДАРТ",
-    "target": "СТАНДАРТ",
-    "evidence": "'СТАНДАРТ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4405,31 +3151,20 @@
     "severity": "low",
     "source": "СТЕРЕО",
     "target": "СТЕРЕО",
-    "evidence": "'СТЕРЕО' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "cup",
+    "key": "alchemy_lava",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "КУБОК",
-    "target": "КУБОК",
-    "evidence": "'КУБОК' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "Лава",
+    "target": "Лава",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "alchemic",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Алхимия",
-    "target": "Алхимия",
-    "evidence": "'Алхимия' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4438,9 +3173,9 @@
     "severity": "low",
     "source": "Металл",
     "target": "Металл",
-    "evidence": "'Металл' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4449,9 +3184,9 @@
     "severity": "low",
     "source": "Нейрон",
     "target": "Нейрон",
-    "evidence": "'Нейрон' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4460,9 +3195,9 @@
     "severity": "low",
     "source": "Картон",
     "target": "Картон",
-    "evidence": "'Картон' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4471,9 +3206,9 @@
     "severity": "low",
     "source": "Маска",
     "target": "Маска",
-    "evidence": "'Маска' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4482,9 +3217,9 @@
     "severity": "low",
     "source": "Пластик",
     "target": "Пластик",
-    "evidence": "'Пластик' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4493,9 +3228,9 @@
     "severity": "low",
     "source": "Селитра",
     "target": "Селитра",
-    "evidence": "'Селитра' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4504,9 +3239,9 @@
     "severity": "low",
     "source": "Самокат",
     "target": "Самокат",
-    "evidence": "'Самокат' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4515,9 +3250,9 @@
     "severity": "low",
     "source": "Колба",
     "target": "Колба",
-    "evidence": "'Колба' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4526,9 +3261,9 @@
     "severity": "low",
     "source": "Айсберг",
     "target": "Айсберг",
-    "evidence": "'Айсберг' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4537,9 +3272,9 @@
     "severity": "low",
     "source": "Букет",
     "target": "Букет",
-    "evidence": "'Букет' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4548,9 +3283,9 @@
     "severity": "low",
     "source": "Голем",
     "target": "Голем",
-    "evidence": "'Голем' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4559,31 +3294,20 @@
     "severity": "low",
     "source": "Кактус",
     "target": "Кактус",
-    "evidence": "'Кактус' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "atm",
+    "key": "minimum",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "банкомат",
-    "target": "банкомат",
-    "evidence": "'банкомат' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "минимум",
+    "target": "минимум",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "pts_level",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "%s ур.",
-    "target": "%s ур.",
-    "evidence": "'%s ур.' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4592,20 +3316,9 @@
     "severity": "low",
     "source": "НРП",
     "target": "НРП",
-    "evidence": "'НРП' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "chat_department",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Департамент",
-    "target": "Департамент",
-    "evidence": "'Департамент' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4614,31 +3327,42 @@
     "severity": "low",
     "source": "Мегафон",
     "target": "Мегафон",
-    "evidence": "'Мегафон' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "tablet_app_arena",
+    "key": "onex_profile_title",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "Арена",
-    "target": "Арена",
-    "evidence": "'Арена' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "профиль",
+    "target": "профиль",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "drom_finish",
+    "key": "onex_bet_draw_suffix",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "Финиш!",
-    "target": "Финиш!",
-    "evidence": "'Финиш!' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "НИЧЬЯ",
+    "target": "НИЧЬЯ",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "tablet_app_tow_truck",
+    "issue_type": "same_as_source",
+    "severity": "low",
+    "source": "Эвакуатор",
+    "target": "Эвакуатор",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
+    "suggestion": null,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4647,9 +3371,9 @@
     "severity": "low",
     "source": "дерби",
     "target": "дерби",
-    "evidence": "'дерби' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4658,9 +3382,9 @@
     "severity": "low",
     "source": "дерби",
     "target": "дерби",
-    "evidence": "'дерби' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4669,9 +3393,9 @@
     "severity": "low",
     "source": "КАРТИНГ",
     "target": "КАРТИНГ",
-    "evidence": "'КАРТИНГ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4680,9 +3404,9 @@
     "severity": "low",
     "source": "Напугать",
     "target": "Напугать",
-    "evidence": "'Напугать' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4691,9 +3415,9 @@
     "severity": "low",
     "source": "Нуга",
     "target": "Нуга",
-    "evidence": "'Нуга' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4702,9 +3426,9 @@
     "severity": "low",
     "source": "Турмалин",
     "target": "Турмалин",
-    "evidence": "'Турмалин' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4713,20 +3437,20 @@
     "severity": "low",
     "source": "Металл",
     "target": "Металл",
-    "evidence": "'Металл' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "count_km",
+    "key": "pts",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "%s км",
-    "target": "%s км",
-    "evidence": "'%s км' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "ПТС",
+    "target": "ПТС",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4735,64 +3459,9 @@
     "severity": "low",
     "source": "КотоХимик",
     "target": "КотоХимик",
-    "evidence": "'КотоХимик' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "jungleTreasuresTimeSeconds",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "{seconds} сек.",
-    "target": "{seconds} сек.",
-    "evidence": "'{seconds} сек.' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "expedition_expedition",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Экспедиция",
-    "target": "Экспедиция",
-    "evidence": "'Экспедиция' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "expeditionAboutHeader",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Экспедиция",
-    "target": "Экспедиция",
-    "evidence": "'Экспедиция' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "summerRushAfkKickCountdown",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "До исключения за АФК",
-    "target": "До исключения за АФК",
-    "evidence": "Строка совпадает с оригиналом, но ни одно из её слов не переводится в других строках — возможно, это название или заимствование",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "summerRushSecondsSuffix",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "сек.",
-    "target": "сек.",
-    "evidence": "'сек.' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4801,20 +3470,20 @@
     "severity": "low",
     "source": "Маска",
     "target": "Маска",
-    "evidence": "'Маска' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "launcherSettingsTabGraphics",
+    "key": "alchemyItemLava",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "Графика",
-    "target": "Графика",
-    "evidence": "'Графика' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "Лава",
+    "target": "Лава",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4823,9 +3492,9 @@
     "severity": "low",
     "source": "Металл",
     "target": "Металл",
-    "evidence": "'Металл' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4834,9 +3503,9 @@
     "severity": "low",
     "source": "Картон",
     "target": "Картон",
-    "evidence": "'Картон' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4845,9 +3514,9 @@
     "severity": "low",
     "source": "Циркуль",
     "target": "Циркуль",
-    "evidence": "'Циркуль' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4856,9 +3525,9 @@
     "severity": "low",
     "source": "Селитра",
     "target": "Селитра",
-    "evidence": "'Селитра' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4867,9 +3536,9 @@
     "severity": "low",
     "source": "Пластик",
     "target": "Пластик",
-    "evidence": "'Пластик' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4878,9 +3547,9 @@
     "severity": "low",
     "source": "Нейрон",
     "target": "Нейрон",
-    "evidence": "'Нейрон' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4889,9 +3558,9 @@
     "severity": "low",
     "source": "Маска",
     "target": "Маска",
-    "evidence": "'Маска' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4900,9 +3569,9 @@
     "severity": "low",
     "source": "Самокат",
     "target": "Самокат",
-    "evidence": "'Самокат' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4911,9 +3580,9 @@
     "severity": "low",
     "source": "Колба",
     "target": "Колба",
-    "evidence": "'Колба' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4922,9 +3591,9 @@
     "severity": "low",
     "source": "Айсберг",
     "target": "Айсберг",
-    "evidence": "'Айсберг' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4933,9 +3602,9 @@
     "severity": "low",
     "source": "Букет",
     "target": "Букет",
-    "evidence": "'Букет' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4944,9 +3613,9 @@
     "severity": "low",
     "source": "Голем",
     "target": "Голем",
-    "evidence": "'Голем' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4955,9 +3624,20 @@
     "severity": "low",
     "source": "Кактус",
     "target": "Кактус",
-    "evidence": "'Кактус' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "alchemyBand",
+    "issue_type": "same_as_source",
+    "severity": "low",
+    "source": "Лента",
+    "target": "Лента",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
+    "suggestion": null,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4966,9 +3646,9 @@
     "severity": "low",
     "source": "Торт",
     "target": "Торт",
-    "evidence": "'Торт' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4977,9 +3657,9 @@
     "severity": "low",
     "source": "Клоун",
     "target": "Клоун",
-    "evidence": "'Клоун' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4988,9 +3668,20 @@
     "severity": "low",
     "source": "Фейерверк",
     "target": "Фейерверк",
-    "evidence": "'Фейерверк' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "birthday_camp_two_fake",
+    "issue_type": "same_as_source",
+    "severity": "low",
+    "source": "Фейк",
+    "target": "Фейк",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
+    "suggestion": null,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -4999,31 +3690,20 @@
     "severity": "low",
     "source": "Кулдаун",
     "target": "Кулдаун",
-    "evidence": "'Кулдаун' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "smugglingTitle",
+    "key": "lnyEducationCharacterName",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "КОНТРАБАНДА",
-    "target": "КОНТРАБАНДА",
-    "evidence": "'КОНТРАБАНДА' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "Мин-Чжу",
+    "target": "Мин-Чжу",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "lnyBase",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "БАЗА",
-    "target": "БАЗА",
-    "evidence": "'БАЗА' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5032,64 +3712,9 @@
     "severity": "low",
     "source": "Элита",
     "target": "Элита",
-    "evidence": "'Элита' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchFishingReel",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Катушка",
-    "target": "Катушка",
-    "evidence": "'Катушка' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuEventsHeaderExclusive",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "ЭКСКЛЮЗИВ",
-    "target": "ЭКСКЛЮЗИВ",
-    "evidence": "'ЭКСКЛЮЗИВ' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuEventsHeaderArena",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "АРЕНА",
-    "target": "АРЕНА",
-    "evidence": "'АРЕНА' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuEventsTabExclusive",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Эксклюзив",
-    "target": "Эксклюзив",
-    "evidence": "'Эксклюзив' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "userMenuEventsTabArena",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Арена",
-    "target": "Арена",
-    "evidence": "'Арена' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5098,9 +3723,9 @@
     "severity": "low",
     "source": "Вега",
     "target": "Вега",
-    "evidence": "'Вега' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5109,53 +3734,20 @@
     "severity": "low",
     "source": "ГОЛ!",
     "target": "ГОЛ!",
-    "evidence": "'ГОЛ!' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
-    "key": "footballRound",
+    "key": "slotMachineJackpotMini",
     "issue_type": "same_as_source",
     "severity": "low",
-    "source": "РАУНД",
-    "target": "РАУНД",
-    "evidence": "'РАУНД' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "source": "МИНИ",
+    "target": "МИНИ",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bingoHeistScanner",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Сканер",
-    "target": "Сканер",
-    "evidence": "'Сканер' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bingoHeistBundleScannerCount",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Сканер\nx{count}",
-    "target": "Сканер\nx{count}",
-    "evidence": "'Сканер\nx{count}' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "rouletteBank",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Банк:",
-    "target": "Банк:",
-    "evidence": "'Банк:' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5164,9 +3756,20 @@
     "severity": "low",
     "source": "ГРАНД",
     "target": "ГРАНД",
-    "evidence": "'ГРАНД' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "festivalHudTitle",
+    "issue_type": "same_as_source",
+    "severity": "low",
+    "source": "Фестиваль",
+    "target": "Фестиваль",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
+    "suggestion": null,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5175,31 +3778,9 @@
     "severity": "low",
     "source": "КОЛОДА",
     "target": "КОЛОДА",
-    "evidence": "'КОЛОДА' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schSubjectMath",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Математика",
-    "target": "Математика",
-    "evidence": "'Математика' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schSubjectInformatics",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "Информатика",
-    "target": "Информатика",
-    "evidence": "'Информатика' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5208,20 +3789,9 @@
     "severity": "low",
     "source": "Физика",
     "target": "Физика",
-    "evidence": "'Физика' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "schSubjectGeography",
-    "issue_type": "same_as_source",
-    "severity": "low",
-    "source": "География",
-    "target": "География",
-    "evidence": "'География' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
-    "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5230,9 +3800,20 @@
     "severity": "low",
     "source": "Биология",
     "target": "Биология",
-    "evidence": "'Биология' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "schTutorialPrincipalName",
+    "issue_type": "same_as_source",
+    "severity": "low",
+    "source": "Директор",
+    "target": "Директор",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
+    "suggestion": null,
+    "confidence": 0.65,
     "reviewed_by_human": false
   },
   {
@@ -5241,9 +3822,9 @@
     "severity": "low",
     "source": "Влад",
     "target": "Влад",
-    "evidence": "'Влад' совпадает с оригиналом; похоже на игровое название, заимствование или международный термин",
+    "evidence": "Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование",
     "suggestion": null,
-    "confidence": 0.45,
+    "confidence": 0.65,
     "reviewed_by_human": false
   }
 ]

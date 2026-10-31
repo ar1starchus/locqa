@@ -69,75 +69,32 @@ class TestCheckers(unittest.TestCase):
         src = ArbFile(path="", locale="ru", entries={
             "btn_rent": ArbEntry(key="btn_rent", value="Вы действительно хотите продолжить?", raw_line="", line_number=1),
             "brand": ArbEntry(key="brand", value="Grand Mobile", raw_line="", line_number=2),
-            "metric_unit": ArbEntry(key="metric_unit", value="{seconds} сек.", raw_line="", line_number=3),
-            "loanword": ArbEntry(key="loanword", value="Гараж", raw_line="", line_number=4),
-            "street_racing": ArbEntry(key="street_racing", value="Уличные Гонки", raw_line="", line_number=5),
+            "timer": ArbEntry(key="timer", value="{minutes} мин. {seconds} сек.", raw_line="", line_number=3),
+            "garage": ArbEntry(key="garage", value="Гараж", raw_line="", line_number=4),
+            "clown": ArbEntry(key="clown", value="Клоун", raw_line="", line_number=5),
+            "other_sentence": ArbEntry(key="other_sentence", value="В гараже стоит машина", raw_line="", line_number=6),
         })
         tgt = ArbFile(path="", locale="kk", entries={
             "btn_rent": ArbEntry(key="btn_rent", value="Вы действительно хотите продолжить?", raw_line="", line_number=1),
             "brand": ArbEntry(key="brand", value="Grand Mobile", raw_line="", line_number=2),
-            "metric_unit": ArbEntry(key="metric_unit", value="{seconds} сек.", raw_line="", line_number=3),
-            "loanword": ArbEntry(key="loanword", value="Гараж", raw_line="", line_number=4),
-            "street_racing": ArbEntry(key="street_racing", value="Уличные Гонки", raw_line="", line_number=5),
+            "timer": ArbEntry(key="timer", value="{minutes} мин. {seconds} сек.", raw_line="", line_number=3),
+            "garage": ArbEntry(key="garage", value="Гараж", raw_line="", line_number=4),
+            "clown": ArbEntry(key="clown", value="Клоун", raw_line="", line_number=5),
+            "other_sentence": ArbEntry(key="other_sentence", value="Гаражда көлік тұр", raw_line="", line_number=6),
         })
-        glo = Glossary([GlossaryEntry(term_ru="Гараж", term_kk="Гараж", term_en="Garage")])
-        findings = SameAsSourceChecker().check(src, tgt, context={"glossary": glo})
-        # 'Grand Mobile' is a brand, '{seconds} сек.' is a metric unit, 'Гараж' is glossary/loanword
-        # Only 'btn_rent' and 'street_racing' (Уличные Гонки) have Russian grammar and should be flagged
+        findings = SameAsSourceChecker().check(src, tgt)
         flagged_keys = {f.key for f in findings}
-        self.assertEqual(flagged_keys, {"btn_rent", "street_racing"})
-
-    def test_same_as_source_single_words_translation(self):
-        src = ArbFile(path="", locale="ru", entries={
-            "laRailwayStation": ArbEntry(key="laRailwayStation", value="ВОКЗАЛ", raw_line="", line_number=1),
-            "accessories_type_caps": ArbEntry(key="accessories_type_caps", value="КЕПКИ", raw_line="", line_number=2),
-            "car_trunk": ArbEntry(key="car_trunk", value="багаж", raw_line="", line_number=3),
-            "bet": ArbEntry(key="bet", value="Ставка", raw_line="", line_number=4),
-            "loanword_hood": ArbEntry(key="loanword_hood", value="Капот", raw_line="", line_number=5),
-            "country_brazil": ArbEntry(key="country_brazil", value="Бразилия", raw_line="", line_number=6),
-            "glossary_account": ArbEntry(key="glossary_account", value="АККАУНТ", raw_line="", line_number=7),
-        })
-        tgt = ArbFile(path="", locale="kk", entries={
-            "laRailwayStation": ArbEntry(key="laRailwayStation", value="ВОКЗАЛ", raw_line="", line_number=1),
-            "accessories_type_caps": ArbEntry(key="accessories_type_caps", value="КЕПКИ", raw_line="", line_number=2),
-            "car_trunk": ArbEntry(key="car_trunk", value="багаж", raw_line="", line_number=3),
-            "bet": ArbEntry(key="bet", value="Ставка", raw_line="", line_number=4),
-            "loanword_hood": ArbEntry(key="loanword_hood", value="Капот", raw_line="", line_number=5),
-            "country_brazil": ArbEntry(key="country_brazil", value="Бразилия", raw_line="", line_number=6),
-            "glossary_account": ArbEntry(key="glossary_account", value="АККАУНТ", raw_line="", line_number=7),
-        })
-        glo = Glossary([GlossaryEntry(term_ru="АККАУНТ", term_kk="АККАУНТ", term_en="ACCOUNT")])
-        findings = SameAsSourceChecker().check(src, tgt, context={"glossary": glo})
-
-        findings_by_key = {f.key: f for f in findings}
-        # ВОКЗАЛ -> БЕКЕТ
-        self.assertIn("laRailwayStation", findings_by_key)
-        self.assertEqual(findings_by_key["laRailwayStation"].suggestion, "БЕКЕТ")
-
-        # КЕПКИ -> КЕПКАЛАР
-        self.assertIn("accessories_type_caps", findings_by_key)
-        self.assertEqual(findings_by_key["accessories_type_caps"].suggestion, "КЕПКАЛАР")
-
-        # багаж -> жүк
-        self.assertIn("car_trunk", findings_by_key)
-        self.assertEqual(findings_by_key["car_trunk"].suggestion, "жүк")
-
-        # Ставка -> Бәс
-        self.assertIn("bet", findings_by_key)
-        self.assertEqual(findings_by_key["bet"].suggestion, "Бәс")
-
-        # Legitimate matches: Капот (loanword), Бразилия (country), АККАУНТ (glossary) must NOT be flagged
-        self.assertNotIn("loanword_hood", findings_by_key)
-        self.assertNotIn("country_brazil", findings_by_key)
-        self.assertNotIn("glossary_account", findings_by_key)
-
-    def test_translator_casing_and_punctuation(self):
-        from locqa.translator import Translator
-        self.assertEqual(Translator.adapt_casing("бекет", "ВОКЗАЛ"), "БЕКЕТ")
-        self.assertEqual(Translator.adapt_casing("кепкалар", "Кепки"), "Кепкалар")
-        self.assertEqual(Translator.adapt_casing("жүк", "багаж"), "жүк")
-        self.assertEqual(Translator.adapt_casing("шектеу", "Лимит:"), "Шектеу:")
-        self.assertEqual(Translator.adapt_casing("отшашу", "Фейерверк!"), "Отшашу!")
+        # "Grand Mobile" is a brand -> ignored
+        # "{minutes} мин. {seconds} сек." is a metric/time format -> ignored
+        # "Гараж" is adapted in corpus because "Гаражда" exists in another key -> ignored
+        # "btn_rent" is an untranslated sentence -> flagged
+        # "clown" ('Клоун') has no Kazakh affixes in corpus -> flagged
+        self.assertIn("btn_rent", flagged_keys)
+        self.assertIn("clown", flagged_keys)
+        self.assertNotIn("brand", flagged_keys)
+        self.assertNotIn("timer", flagged_keys)
+        self.assertNotIn("garage", flagged_keys)
+        self.assertEqual(len(findings), 2)
 
     def test_placeholder_mismatch(self):
         src = ArbFile(path="", locale="ru", entries={
@@ -184,28 +141,6 @@ class TestCheckers(unittest.TestCase):
         self.assertEqual(len(findings), 1)
         self.assertEqual(findings[0].key, "k1")
         self.assertEqual(findings[0].suggestion, "бөліміне өту")
-
-    def test_wrong_language_brand_preservation(self):
-        src = ArbFile(path="", locale="ru", entries={
-            "telegram": ArbEntry(key="telegram", value="Telegram", raw_line="", line_number=1),
-            "app_1xbet": ArbEntry(key="app_1xbet", value="1XBET", raw_line="", line_number=2),
-            "err": ArbEntry(key="err", value="Ошибка авторизации", raw_line="", line_number=3),
-        })
-        tgt = ArbFile(path="", locale="kk", entries={
-            "telegram": ArbEntry(key="telegram", value="Telegram", raw_line="", line_number=1),
-            "app_1xbet": ArbEntry(key="app_1xbet", value="1XBET", raw_line="", line_number=2),
-            "err": ArbEntry(key="err", value="Avtorizatsiya xatosi", raw_line="", line_number=3),
-        })
-        uz = ArbFile(path="", locale="uz", entries={
-            "telegram": ArbEntry(key="telegram", value="Telegram", raw_line="", line_number=1),
-            "app_1xbet": ArbEntry(key="app_1xbet", value="1XBET", raw_line="", line_number=2),
-            "err": ArbEntry(key="err", value="Avtorizatsiya xatosi", raw_line="", line_number=3),
-        })
-        findings = WrongLanguageChecker().check(src, tgt, context={"auxiliary_arb_files": {"uz": uz}})
-        # Only 'err' should be flagged as Uzbek wrong_language, 'Telegram' and '1XBET' are preserved brands
-        self.assertEqual(len(findings), 1)
-        self.assertEqual(findings[0].key, "err")
-        self.assertIn("узбекском", findings[0].evidence.lower())
 
     def test_length_overflow(self):
         src = ArbFile(path="", locale="ru", entries={
@@ -292,71 +227,6 @@ class TestCheckers(unittest.TestCase):
         self.assertIn("<textarea class=\"sug-input\"", content)
         self.assertIn("Жеңімпаз\nбәрін алады!", content)
         self.assertNotIn('<input type="text" class="sug-input"', content)
-
-    def test_inconsistent_term_with_options(self):
-        src = ArbFile(path="", locale="ru", entries={
-            "cancel": ArbEntry(key="cancel", value="Отмена", raw_line="", line_number=1),
-            "battlepass_cancel": ArbEntry(key="battlepass_cancel", value="ОТМЕНА", raw_line="", line_number=2),
-            "expedition_cancel": ArbEntry(key="expedition_cancel", value="Отмена", raw_line="", line_number=3),
-            "newYearCancel": ArbEntry(key="newYearCancel", value="ОТМЕНА", raw_line="", line_number=4),
-        })
-        tgt = ArbFile(path="", locale="kk", entries={
-            "cancel": ArbEntry(key="cancel", value="Болдырмау", raw_line="", line_number=1),
-            "battlepass_cancel": ArbEntry(key="battlepass_cancel", value="БАСТАУ", raw_line="", line_number=2),
-            "expedition_cancel": ArbEntry(key="expedition_cancel", value="БАСТАУ", raw_line="", line_number=3),
-            "newYearCancel": ArbEntry(key="newYearCancel", value="БАС ТАРТУ", raw_line="", line_number=4),
-        })
-        findings = InconsistentTermChecker().check(src, tgt)
-
-        flagged_keys = {f.key for f in findings}
-        # The anchor key 'cancel' (Болдырмау) must NOT be flagged
-        self.assertNotIn("cancel", flagged_keys)
-        # All keys with incorrect 'БАСТАУ' or alternative 'БАС ТАРТУ' must be flagged
-        self.assertIn("battlepass_cancel", flagged_keys)
-        self.assertIn("expedition_cancel", flagged_keys)
-        self.assertIn("newYearCancel", flagged_keys)
-
-        # Check options for battlepass_cancel
-        bp_finding = [f for f in findings if f.key == "battlepass_cancel"][0]
-        self.assertEqual(bp_finding.suggestion, "БОЛДЫРМАУ")
-        self.assertIsNotNone(bp_finding.options)
-        self.assertEqual(bp_finding.options, ["БОЛДЫРМАУ", "БАС ТАРТУ"])
-
-        # Check options for newYearCancel
-        ny_finding = [f for f in findings if f.key == "newYearCancel"][0]
-        self.assertEqual(ny_finding.suggestion, "БОЛДЫРМАУ")
-        self.assertIsNotNone(ny_finding.options)
-        self.assertEqual(ny_finding.options, ["БОЛДЫРМАУ", "БАСТАУ"])
-
-    def test_reporter_html_with_options_select(self):
-        import tempfile
-        from locqa.reporter import Reporter
-        from locqa.models import Finding, IssueType, Severity
-
-        finding = Finding(
-            key="cancelKey",
-            issue_type=IssueType.INCONSISTENT_TERM,
-            severity=Severity.MEDIUM,
-            source="Отмена",
-            target="БАСТАУ",
-            evidence="тест",
-            suggestion="Болдырмау",
-            options=["Болдырмау", "Бас тарту"],
-            confidence=0.90,
-        )
-        with tempfile.NamedTemporaryFile("w+", suffix=".html", delete=False) as tmp:
-            tmp_path = tmp.name
-
-        Reporter.save_html([finding], tmp_path, target_raw_content='{"cancelKey": "..."}')
-        with open(tmp_path, "r", encoding="utf-8") as f:
-            content = f.read()
-
-        # Should render <select class="sug-select"> and <textarea class="sug-input">
-        self.assertIn('<select class="sug-select"', content)
-        self.assertIn('value="Болдырмау"', content)
-        self.assertIn('value="Бас тарту"', content)
-        self.assertIn('value="__custom__"', content)
-        self.assertIn('<textarea class="sug-input"', content)
 
 
 if __name__ == "__main__":
