@@ -69,15 +69,22 @@ class TestCheckers(unittest.TestCase):
         src = ArbFile(path="", locale="ru", entries={
             "btn_rent": ArbEntry(key="btn_rent", value="Вы действительно хотите продолжить?", raw_line="", line_number=1),
             "brand": ArbEntry(key="brand", value="Grand Mobile", raw_line="", line_number=2),
+            "metric_unit": ArbEntry(key="metric_unit", value="{seconds} сек.", raw_line="", line_number=3),
+            "loanword": ArbEntry(key="loanword", value="Гараж", raw_line="", line_number=4),
+            "street_racing": ArbEntry(key="street_racing", value="Уличные Гонки", raw_line="", line_number=5),
         })
         tgt = ArbFile(path="", locale="kk", entries={
             "btn_rent": ArbEntry(key="btn_rent", value="Вы действительно хотите продолжить?", raw_line="", line_number=1),
             "brand": ArbEntry(key="brand", value="Grand Mobile", raw_line="", line_number=2),
+            "metric_unit": ArbEntry(key="metric_unit", value="{seconds} сек.", raw_line="", line_number=3),
+            "loanword": ArbEntry(key="loanword", value="Гараж", raw_line="", line_number=4),
+            "street_racing": ArbEntry(key="street_racing", value="Уличные Гонки", raw_line="", line_number=5),
         })
         findings = SameAsSourceChecker().check(src, tgt)
-        # "Grand Mobile" is in whitelist, so only "btn_rent" should be flagged
-        self.assertEqual(len(findings), 1)
-        self.assertEqual(findings[0].key, "btn_rent")
+        # 'Grand Mobile' is a brand, '{seconds} сек.' is a metric unit, 'Гараж' is an international loanword
+        # Only 'btn_rent' and 'street_racing' (Уличные Гонки) have Russian grammar and should be flagged
+        flagged_keys = {f.key for f in findings}
+        self.assertEqual(flagged_keys, {"btn_rent", "street_racing"})
 
     def test_placeholder_mismatch(self):
         src = ArbFile(path="", locale="ru", entries={

@@ -44,11 +44,88 @@ class SameAsSourceChecker(BaseChecker):
         "gc",
         "latin",
         "spain",
+        "1xbet",
+        "silverstar",
     }
+
+    # International metric & time unit abbreviations that are identical across Russian and Kazakh
+    COMMON_UNITS: Set[str] = {
+        "сек", "мин", "сағ", "с", "м", "см", "мм", "км", "кг", "г",
+        "шт", "ур", "макс", "бонус", "лига", "секунд", "секунды", "минут",
+        "х", "x", "lvl", "exp", "fps", "hp",
+    }
+
+    # Russian grammatical inflections and markers that do not exist in Kazakh morphology
+    RU_ADJ = re.compile(
+        r"\b\w{2,}("
+        r"[ыи]е|[ое]е|[ая]я|[ыио]й|[ое]го|[ое]му|[ыи]х|[ыи]м|[ыи]ми|[уе]ю|[ое]й"
+        r")\b",
+        re.IGNORECASE,
+    )
+
+    RU_VERB = re.compile(
+        r"\b\w{2,}("
+        r"[аеиоуыэюя]ть|[аеиоуыэюя]ться|[аеиоуыэюя]тся|[аеиоуыэюя]ти|[аеиоуыэюя]тись"
+        r")\b",
+        re.IGNORECASE,
+    )
+
+    RU_PARTICIPLE = re.compile(
+        r"\b\w{2,}("
+        r"вш[аеиу]|енн[ыаое][йхм]?|анн[ыаое][йхм]?|ем[ыаое][йхм]?|им[ыаое][йхм]?"
+        r")\b",
+        re.IGNORECASE,
+    )
+
+    RU_FUNC_WORDS = re.compile(
+        r"\b("
+        r"для|в|во|на|из|изо|под|подо|над|надо|за|к|ко|по|о|об|обо|при|от|ото|до|без|безо|у|через|сквозь|"
+        r"чтобы|если|или|как|чем|тем|только|уже|еще|ещё|тоже|также|потому|поэтому"
+        r")\b",
+        re.IGNORECASE,
+    )
+
+    RU_NOUN_SUFFIX = re.compile(
+        r"\b\w{2,}("
+        r"ость|ости|остью|остей|ение|ения|ению|ением|ении|ений|ание|ания|анию|анием|ании|аний|ии"
+        r")\b",
+        re.IGNORECASE,
+    )
 
     @property
     def issue_type(self) -> IssueType:
         return IssueType.SAME_AS_SOURCE
+
+    @classmethod
+    def is_metric_unit_string(cls, text: str) -> bool:
+        """Checks if text (with or without placeholders and numbers)
+        consists entirely of recognized metric/time units or formatting symbols.
+        E.g. '{seconds} сек.', '{minutes} мин. {seconds} сек.', '%s км', 'сек.'
+        """
+        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|%[a-zA-Z0-9_]|<[^>]+>|[\d\s\W_]+", " ", text).strip().lower()
+        if not clean:
+            return True
+        tokens = clean.split()
+        return all(tok in cls.COMMON_UNITS for tok in tokens)
+
+    @classmethod
+    def find_russian_grammar_markers(cls, text: str) -> List[str]:
+        """Detects Russian grammatical inflections and function words
+        that do not exist in Kazakh morphology or syntax.
+        """
+        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", text)
+        markers: List[str] = []
+        if cls.RU_ADJ.search(clean):
+            markers.append("окончания прилагательных")
+        if cls.RU_VERB.search(clean):
+            markers.append("глагольные формы/инфинитивы")
+        if cls.RU_PARTICIPLE.search(clean):
+            markers.append("причастия")
+        if cls.RU_FUNC_WORDS.search(clean):
+            markers.append("русские предлоги/союзы")
+        if cls.RU_NOUN_SUFFIX.search(clean):
+            markers.append("русские суффиксы существительных")
+        return markers
 
     def is_legitimate_match(self, text: str, key: str, whitelist: Set[str]) -> bool:
         s = text.strip()
@@ -72,6 +149,10 @@ class SameAsSourceChecker(BaseChecker):
         # 4. Check brand / terms whitelist (case-insensitive)
         cleaned = re.sub(r"[\W_]+", " ", s.lower()).strip()
         if cleaned in whitelist:
+            return True
+
+        # 5. International metric units and time abbreviation templates (e.g. '{seconds} сек.')
+        if self.is_metric_unit_string(s):
             return True
 
         return False
@@ -104,24 +185,27 @@ class SameAsSourceChecker(BaseChecker):
                 if self.is_legitimate_match(tgt_val, key, active_whitelist):
                     continue
 
-                # Measure severity: multi-word sentences or long strings are definitely untranslated Russian
-                word_count = len(src_val.split())
+                # Morphological and syntactic analysis of the untranslated string
+                ru_markers = self.find_russian_grammar_markers(src_val)
+                words = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", src_val).split()
+                word_count = len(words)
                 char_count = len(src_val)
 
-                if word_count >= 3 or char_count >= 25:
-                    severity = Severity.HIGH
+                # If the string contains explicit Russian grammatical markers (e.g. 'Уличные Гонки',
+                # 'Неизвестная ошибка', 'До исключения за АФК', 'и получить предмет сразу')
+                # OR is a multi-word sentence (>= 4 words)
+                if ru_markers or word_count >= 4:
+                    severity = Severity.HIGH if word_count >= 2 or char_count >= 15 else Severity.MEDIUM
                     confidence = 0.98
+                    details = f" ({', '.join(ru_markers)})" if ru_markers else ""
                     evidence = (
-                        f"Строка ({char_count} симв., {word_count} слов) полностью оставлена на языке оригинала без перевода"
+                        f"Непереведённый русский текст{details}: '{src_val}'"
                     )
-                elif word_count >= 2 or char_count >= 10:
-                    severity = Severity.MEDIUM
-                    confidence = 0.85
-                    evidence = f"Словосочетание дословно совпадает с оригиналом ({char_count} симв.)"
                 else:
-                    severity = Severity.LOW
-                    confidence = 0.65
-                    evidence = f"Одиночное слово совпадает с оригиналом, возможно интернациональный термин или заимствование"
+                    # Single words or short international loanwords without Russian grammar
+                    # (e.g. 'Гараж', 'Профиль', 'Бразилия', 'Математика', 'Бизнес класс')
+                    # are legitimate international borrowings in Kazakh Cyrillic: skip them.
+                    continue
 
                 findings.append(
                     Finding(
