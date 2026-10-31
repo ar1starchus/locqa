@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Set
 
 from locqa.checkers.base import BaseChecker
 from locqa.models import ArbFile, Finding, IssueType, Severity
+from locqa.translator import Translator
 
 
 class SameAsSourceChecker(BaseChecker):
@@ -46,6 +47,13 @@ class SameAsSourceChecker(BaseChecker):
         "spain",
         "1xbet",
         "silverstar",
+    }
+
+    # Common geographic / country names that legitimately stay identical in Cyrillic
+    COMMON_GEOGRAPHIC: Set[str] = {
+        "бразилия", "беларусь", "украина", "қазақстан", "казахстан",
+        "россия", "германия", "франция", "италия", "испания",
+        "китай", "жапония", "япония", "ақш", "сша",
     }
 
     # International metric & time unit abbreviations that are identical across Russian and Kazakh
@@ -157,6 +165,9 @@ class SameAsSourceChecker(BaseChecker):
 
         return False
 
+    def __init__(self, translator: Translator | None = None):
+        self.translator = translator or Translator()
+
     def check(
         self,
         source: ArbFile,
@@ -165,8 +176,24 @@ class SameAsSourceChecker(BaseChecker):
     ) -> List[Finding]:
         context = context or {}
         custom_whitelist: Set[str] = set(context.get("brand_whitelist", []))
-        active_whitelist = self.DEFAULT_BRAND_WHITELIST | {w.lower() for w in custom_whitelist}
 
+        glossary = context.get("glossary")
+        glossary_terms: Set[str] = set()
+        if glossary:
+            for entry in glossary.entries:
+                if entry.term_ru:
+                    glossary_terms.add(entry.term_ru.strip().lower())
+                if entry.term_kk:
+                    glossary_terms.add(entry.term_kk.strip().lower())
+
+        active_whitelist = (
+            self.DEFAULT_BRAND_WHITELIST
+            | self.COMMON_GEOGRAPHIC
+            | {w.lower() for w in custom_whitelist}
+            | glossary_terms
+        )
+
+        translator: Translator = context.get("translator") or self.translator
         findings: List[Finding] = []
 
         for key, src_entry in source.entries.items():
@@ -201,24 +228,54 @@ class SameAsSourceChecker(BaseChecker):
                     evidence = (
                         f"Непереведённый русский текст{details}: '{src_val}'"
                     )
-                else:
-                    # Single words or short international loanwords without Russian grammar
-                    # (e.g. 'Гараж', 'Профиль', 'Бразилия', 'Математика', 'Бизнес класс')
-                    # are legitimate international borrowings in Kazakh Cyrillic: skip them.
-                    continue
-
-                findings.append(
-                    Finding(
-                        key=key,
-                        issue_type=self.issue_type,
-                        severity=severity,
-                        source=src_entry.value,
-                        target=tgt_entry.value,
-                        evidence=evidence,
-                        suggestion=None,
-                        confidence=confidence,
-                        reviewed_by_human=False,
+                    suggestion = translator.translate_term(src_val, source=source, target=target)
+                    findings.append(
+                        Finding(
+                            key=key,
+                            issue_type=self.issue_type,
+                            severity=severity,
+                            source=src_entry.value,
+                            target=tgt_entry.value,
+                            evidence=evidence,
+                            suggestion=suggestion,
+                            confidence=confidence,
+                            reviewed_by_human=False,
+                        )
                     )
-                )
+                elif word_count == 1:
+                    # Single Cyrillic words left identical in target:
+                    # Check if a different, valid Kazakh translation exists via translator API / lexicon
+                    suggestion = translator.translate_term(src_val, source=source, target=target)
+                    if suggestion and suggestion.lower() != src_val.lower():
+                        findings.append(
+                            Finding(
+                                key=key,
+                                issue_type=self.issue_type,
+                                severity=Severity.MEDIUM,
+                                source=src_entry.value,
+                                target=tgt_entry.value,
+                                evidence=f"Слово '{src_val}' оставлено на русском языке без перевода (рекомендуемый перевод: '{suggestion}')",
+                                suggestion=suggestion,
+                                confidence=0.95,
+                                reviewed_by_human=False,
+                            )
+                        )
+                else:
+                    # 2-3 words without Russian grammar markers:
+                    suggestion = translator.translate_term(src_val, source=source, target=target)
+                    if suggestion and suggestion.lower() != src_val.lower():
+                        findings.append(
+                            Finding(
+                                key=key,
+                                issue_type=self.issue_type,
+                                severity=Severity.MEDIUM,
+                                source=src_entry.value,
+                                target=tgt_entry.value,
+                                evidence=f"Фраза '{src_val}' оставлена на русском языке без перевода (рекомендуемый перевод: '{suggestion}')",
+                                suggestion=suggestion,
+                                confidence=0.92,
+                                reviewed_by_human=False,
+                            )
+                        )
 
         return findings

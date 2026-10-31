@@ -13,6 +13,7 @@ from locqa.llm import GeminiClient
 from locqa.models import ArbFile, Finding
 from locqa.parser import ArbParser
 from locqa.reporter import Reporter
+from locqa.translator import Translator
 from locqa.transliteration import KazakhLatinTransliteration
 
 
@@ -90,6 +91,16 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         default=None,
         help="Optional Gemini API key for semantic calque detection (or set GEMINI_API_KEY env var)",
     )
+    check_parser.add_argument(
+        "--translate-api",
+        default=None,
+        help="Optional custom translation API URL (default: Google Translate gtx)",
+    )
+    check_parser.add_argument(
+        "--no-online-translate",
+        action="store_true",
+        help="Disable online translation API calls and use offline lexicon/corpus only",
+    )
 
     # Command: apply (applies fixes from report.json without re-running checks)
     apply_parser = subparsers.add_parser("apply", help="Apply reviewed fixes from report.json to target ARB")
@@ -157,6 +168,10 @@ def run_check(args: argparse.Namespace) -> int:
         "glossary": glossary,
         "auxiliary_arb_files": aux_files,
         "gemini_client": GeminiClient(api_key=args.gemini_key),
+        "translator": Translator(
+            api_url=args.translate_api,
+            enable_online=not args.no_online_translate,
+        ),
     }
 
     # Run QA Engine

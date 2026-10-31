@@ -80,11 +80,64 @@ class TestCheckers(unittest.TestCase):
             "loanword": ArbEntry(key="loanword", value="Гараж", raw_line="", line_number=4),
             "street_racing": ArbEntry(key="street_racing", value="Уличные Гонки", raw_line="", line_number=5),
         })
-        findings = SameAsSourceChecker().check(src, tgt)
-        # 'Grand Mobile' is a brand, '{seconds} сек.' is a metric unit, 'Гараж' is an international loanword
+        glo = Glossary([GlossaryEntry(term_ru="Гараж", term_kk="Гараж", term_en="Garage")])
+        findings = SameAsSourceChecker().check(src, tgt, context={"glossary": glo})
+        # 'Grand Mobile' is a brand, '{seconds} сек.' is a metric unit, 'Гараж' is glossary/loanword
         # Only 'btn_rent' and 'street_racing' (Уличные Гонки) have Russian grammar and should be flagged
         flagged_keys = {f.key for f in findings}
         self.assertEqual(flagged_keys, {"btn_rent", "street_racing"})
+
+    def test_same_as_source_single_words_translation(self):
+        src = ArbFile(path="", locale="ru", entries={
+            "laRailwayStation": ArbEntry(key="laRailwayStation", value="ВОКЗАЛ", raw_line="", line_number=1),
+            "accessories_type_caps": ArbEntry(key="accessories_type_caps", value="КЕПКИ", raw_line="", line_number=2),
+            "car_trunk": ArbEntry(key="car_trunk", value="багаж", raw_line="", line_number=3),
+            "bet": ArbEntry(key="bet", value="Ставка", raw_line="", line_number=4),
+            "loanword_hood": ArbEntry(key="loanword_hood", value="Капот", raw_line="", line_number=5),
+            "country_brazil": ArbEntry(key="country_brazil", value="Бразилия", raw_line="", line_number=6),
+            "glossary_account": ArbEntry(key="glossary_account", value="АККАУНТ", raw_line="", line_number=7),
+        })
+        tgt = ArbFile(path="", locale="kk", entries={
+            "laRailwayStation": ArbEntry(key="laRailwayStation", value="ВОКЗАЛ", raw_line="", line_number=1),
+            "accessories_type_caps": ArbEntry(key="accessories_type_caps", value="КЕПКИ", raw_line="", line_number=2),
+            "car_trunk": ArbEntry(key="car_trunk", value="багаж", raw_line="", line_number=3),
+            "bet": ArbEntry(key="bet", value="Ставка", raw_line="", line_number=4),
+            "loanword_hood": ArbEntry(key="loanword_hood", value="Капот", raw_line="", line_number=5),
+            "country_brazil": ArbEntry(key="country_brazil", value="Бразилия", raw_line="", line_number=6),
+            "glossary_account": ArbEntry(key="glossary_account", value="АККАУНТ", raw_line="", line_number=7),
+        })
+        glo = Glossary([GlossaryEntry(term_ru="АККАУНТ", term_kk="АККАУНТ", term_en="ACCOUNT")])
+        findings = SameAsSourceChecker().check(src, tgt, context={"glossary": glo})
+
+        findings_by_key = {f.key: f for f in findings}
+        # ВОКЗАЛ -> БЕКЕТ
+        self.assertIn("laRailwayStation", findings_by_key)
+        self.assertEqual(findings_by_key["laRailwayStation"].suggestion, "БЕКЕТ")
+
+        # КЕПКИ -> КЕПКАЛАР
+        self.assertIn("accessories_type_caps", findings_by_key)
+        self.assertEqual(findings_by_key["accessories_type_caps"].suggestion, "КЕПКАЛАР")
+
+        # багаж -> жүк
+        self.assertIn("car_trunk", findings_by_key)
+        self.assertEqual(findings_by_key["car_trunk"].suggestion, "жүк")
+
+        # Ставка -> Бәс
+        self.assertIn("bet", findings_by_key)
+        self.assertEqual(findings_by_key["bet"].suggestion, "Бәс")
+
+        # Legitimate matches: Капот (loanword), Бразилия (country), АККАУНТ (glossary) must NOT be flagged
+        self.assertNotIn("loanword_hood", findings_by_key)
+        self.assertNotIn("country_brazil", findings_by_key)
+        self.assertNotIn("glossary_account", findings_by_key)
+
+    def test_translator_casing_and_punctuation(self):
+        from locqa.translator import Translator
+        self.assertEqual(Translator.adapt_casing("бекет", "ВОКЗАЛ"), "БЕКЕТ")
+        self.assertEqual(Translator.adapt_casing("кепкалар", "Кепки"), "Кепкалар")
+        self.assertEqual(Translator.adapt_casing("жүк", "багаж"), "жүк")
+        self.assertEqual(Translator.adapt_casing("шектеу", "Лимит:"), "Шектеу:")
+        self.assertEqual(Translator.adapt_casing("отшашу", "Фейерверк!"), "Отшашу!")
 
     def test_placeholder_mismatch(self):
         src = ArbFile(path="", locale="ru", entries={
