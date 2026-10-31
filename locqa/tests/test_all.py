@@ -71,29 +71,33 @@ class TestCheckers(unittest.TestCase):
             "brand": ArbEntry(key="brand", value="Grand Mobile", raw_line="", line_number=2),
             "timer": ArbEntry(key="timer", value="{minutes} мин. {seconds} сек.", raw_line="", line_number=3),
             "garage": ArbEntry(key="garage", value="Гараж", raw_line="", line_number=4),
-            "clown": ArbEntry(key="clown", value="Клоун", raw_line="", line_number=5),
-            "other_sentence": ArbEntry(key="other_sentence", value="В гараже стоит машина", raw_line="", line_number=6),
+            "alchemy": ArbEntry(key="alchemy", value="Алхимия", raw_line="", line_number=5),
+            "settings": ArbEntry(key="settings", value="Настройки", raw_line="", line_number=6),
+            "other_sentence": ArbEntry(key="other_sentence", value="В гараже стоит машина", raw_line="", line_number=7),
         })
         tgt = ArbFile(path="", locale="kk", entries={
             "btn_rent": ArbEntry(key="btn_rent", value="Вы действительно хотите продолжить?", raw_line="", line_number=1),
             "brand": ArbEntry(key="brand", value="Grand Mobile", raw_line="", line_number=2),
             "timer": ArbEntry(key="timer", value="{minutes} мин. {seconds} сек.", raw_line="", line_number=3),
             "garage": ArbEntry(key="garage", value="Гараж", raw_line="", line_number=4),
-            "clown": ArbEntry(key="clown", value="Клоун", raw_line="", line_number=5),
-            "other_sentence": ArbEntry(key="other_sentence", value="Гаражда көлік тұр", raw_line="", line_number=6),
+            "alchemy": ArbEntry(key="alchemy", value="Алхимия", raw_line="", line_number=5),
+            "settings": ArbEntry(key="settings", value="Настройки", raw_line="", line_number=6),
+            "other_sentence": ArbEntry(key="other_sentence", value="Гаражда көлік тұр", raw_line="", line_number=7),
         })
         findings = SameAsSourceChecker().check(src, tgt)
         flagged_keys = {f.key for f in findings}
         # "Grand Mobile" is a brand -> ignored
         # "{minutes} мин. {seconds} сек." is a metric/time format -> ignored
-        # "Гараж" is adapted in corpus because "Гаражда" exists in another key -> ignored
+        # "Гараж" is adapted in corpus because "Гаражда" exists in another key -> ignored (Layer 1)
+        # "Алхимия" is in the official Kazakh dictionary -> ignored (Layer 2)
         # "btn_rent" is an untranslated sentence -> flagged
-        # "clown" ('Клоун') has no Kazakh affixes in corpus -> flagged
+        # "settings" ('Настройки') is not in dictionary and has no Kazakh affixes -> flagged
         self.assertIn("btn_rent", flagged_keys)
-        self.assertIn("clown", flagged_keys)
+        self.assertIn("settings", flagged_keys)
         self.assertNotIn("brand", flagged_keys)
         self.assertNotIn("timer", flagged_keys)
         self.assertNotIn("garage", flagged_keys)
+        self.assertNotIn("alchemy", flagged_keys)
         self.assertEqual(len(findings), 2)
 
     def test_placeholder_mismatch(self):

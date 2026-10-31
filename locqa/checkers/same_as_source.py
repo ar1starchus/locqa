@@ -1,7 +1,8 @@
 from __future__ import annotations
 
+import os
 import re
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Optional, Set
 
 from locqa.checkers.base import BaseChecker
 from locqa.models import ArbFile, Finding, IssueType, Severity
@@ -11,6 +12,8 @@ class SameAsSourceChecker(BaseChecker):
     """Detects strings in target that are identical to source,
     intelligently filtering legitimate matches (brands, IDs, numbers, formulas, technical tags).
     """
+
+    _KZ_DICT: Optional[Set[str]] = None
 
     # Common brand / technical entities that legitimately stay identical across locales
     DEFAULT_BRAND_WHITELIST: Set[str] = {
@@ -116,6 +119,58 @@ class SameAsSourceChecker(BaseChecker):
 
         return True
 
+    @classmethod
+    def get_kz_dictionary(cls, custom_path: Optional[str] = None) -> Set[str]:
+        """Loads and caches the official Kazakh Hunspell dictionary words."""
+        if cls._KZ_DICT is not None:
+            return cls._KZ_DICT
+
+        candidates = [
+            custom_path,
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), "resources", "kk_KZ.dic"),
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), "resources", "kk_dictionary.txt"),
+            os.path.join(os.getcwd(), "kk_KZ.dic"),
+        ]
+
+        words: Set[str] = set()
+        for p in candidates:
+            if p and os.path.exists(p):
+                try:
+                    with open(p, "r", encoding="utf-8", errors="ignore") as f:
+                        for line in f:
+                            w = line.strip().split("/")[0].lower()
+                            if w and not w.isdigit():
+                                words.add(w)
+                    if words:
+                        break
+                except Exception:
+                    pass
+
+        cls._KZ_DICT = words
+        return words
+
+    def is_in_kz_dictionary(self, text: str, kz_dict: Set[str], whitelist: Set[str]) -> bool:
+        """Checks if all content words in a 1-2 word string exist in the official Kazakh dictionary.
+        e.g. 'Алхимия', 'Металл', 'Маска', 'Картон', 'Айсберг', 'Торт', 'Пластик', 'Неон'.
+        """
+        if not kz_dict:
+            return False
+
+        clean = re.sub(r"\{[a-zA-Z0-9_]+\}|<[^>]+>", " ", text)
+        words = re.findall(r"[а-яәғқңөұүһіА-ЯӘҒҚҢӨҰҮҺІa-zA-Z]+", clean)
+        if not words or len(words) > 2:
+            return False
+
+        for w in words:
+            if re.fullmatch(r"[a-zA-Z]+", w) or w.lower() in whitelist:
+                continue
+            if len(w) <= 2:
+                continue
+            if w.lower() not in kz_dict:
+                return False
+
+        return True
+
     def is_legitimate_match(self, text: str, key: str, whitelist: Set[str]) -> bool:
         s = text.strip()
         if not s:
@@ -152,7 +207,11 @@ class SameAsSourceChecker(BaseChecker):
         custom_whitelist: Set[str] = set(context.get("brand_whitelist", []))
         active_whitelist = self.DEFAULT_BRAND_WHITELIST | {w.lower() for w in custom_whitelist}
 
-        # Build in-game target corpus of lowercased words for affix mining
+        # Load official Kazakh Hunspell dictionary (Layer 2)
+        dict_path = context.get("kz_dictionary_path")
+        kz_dict = self.get_kz_dictionary(dict_path)
+
+        # Build in-game target corpus of lowercased words for affix mining (Layer 1)
         corpus_words: Set[str] = set()
         for entry in target.entries.values():
             if isinstance(entry.value, str) and not entry.key.startswith("@"):
@@ -184,6 +243,10 @@ class SameAsSourceChecker(BaseChecker):
 
                 # 3. In-game corpus affix mining (adapted loanwords like 'Гараж', 'Бизнес', 'Арена')
                 if self.is_short_adapted_term(tgt_val, corpus_words, active_whitelist):
+                    continue
+
+                # 4. Official Kazakh dictionary (internationalisms like 'Алхимия', 'Металл', 'Маска', 'Картон')
+                if self.is_in_kz_dictionary(tgt_val, kz_dict, active_whitelist):
                     continue
 
                 # Measure severity: multi-word sentences or long strings are definitely untranslated Russian
