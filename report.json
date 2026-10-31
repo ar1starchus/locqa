@@ -748,17 +748,6 @@
     "reviewed_by_human": false
   },
   {
-    "key": "newYearYourDayReward",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "ВАША НАГРАДА ЗА {place} ДЕНЬ!",
-    "target": "{place}-КҮН ҮШІН СІЗДІҢ СЫЙЛЫҒЫҢЫЗ!",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{place}-КҮН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
     "key": "newYearChapter",
     "issue_type": "suffix_harmony",
     "severity": "high",
@@ -787,28 +776,6 @@
     "source": "Нельзя купить больше {max}",
     "target": "{max}-нан көп сатып алуға болмайды",
     "evidence": "Жестко зашитый аффикс после плейсхолдера: '{max}-нан'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "srv2yourPlace",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "ВЫ ЗАНЯЛИ {playerPlace} МЕСТО",
-    "target": "СІЗ {playerPlace}-ОРЫН АЛДЫҢЫЗ",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{playerPlace}-ОРЫН'. Нарушает закон сингармонизма при динамической подстановке",
-    "suggestion": null,
-    "confidence": 0.9,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "srv2playerFinishPlace",
-    "issue_type": "suffix_harmony",
-    "severity": "high",
-    "source": "Игрок <g>{playerName}</g> финишировал {playerPlace}-ым!",
-    "target": "Ойыншы <g>{playerName}</g> {playerPlace}-орында мәреге жетті!",
-    "evidence": "Жестко зашитый аффикс после плейсхолдера: '{playerPlace}-орында'. Нарушает закон сингармонизма при динамической подстановке",
     "suggestion": null,
     "confidence": 0.9,
     "reviewed_by_human": false
