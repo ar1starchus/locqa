@@ -1952,7 +1952,7 @@
   "dq_reward_title_2": "3 күн",
   "dq_donate": "Донат",
   "@dq_donate": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "Сыйлық"
   },
@@ -2998,7 +2998,7 @@
   "birthday_main_league": "Лига {name}",
   "birthday_main_updates_in": "Жаңарады: {time}",
   "@birthday_main_updates_in": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Жаңарады: time"
   },
@@ -3032,7 +3032,7 @@
   "birthday_booster_confirm": "Қайталау",
   "arena_platform_colorname": "{platformColor} платформаға тұрыңыз",
   "@arena_platform_colorname": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "{platformColo} платформаға тұрыңыз"
   },
@@ -3650,7 +3650,7 @@
   "newYearActSkip": "{act} АКТІ ӨТКІЗУ",
   "newYearInfoTitle0": "СЕЗОНДЫҚ ПАСС",
   "@newYearInfoTitle0": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "МЕЗГІЛДІК ПАСС"
   },
@@ -4048,7 +4048,7 @@
   "blackListLeaderboardName": "Ойыншы аты",
   "blackListLeaderboardRank": "Ранг",
   "@blackListLeaderboardRank": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "Дәреже"
   },
@@ -4257,7 +4257,7 @@
   "bigCatchTutorialTitleTaskFirst": "Сәлем! Мен Виктор, сенің тәлімгеріңмін",
   "bigCatchTutorialTextTaskFirst": "Алдымен негіздерден бастайық.\nСюжет бөліміне өтіп,\nалғашқы тапсырманы ал.\nМен сен үшін бастапқы\nқармақ жинағын дайындадым!",
   "@bigCatchTutorialTextTaskFirst": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "orthography",
     "previous_value": "Алдымен негіздерден бастайық.\nСюжет бөлімiне өтiп,\nалғашқы тапсырманы ал.\nМен сен үшін бастапқы\nқармақ жинағын дайындадым!"
   },
@@ -4441,7 +4441,7 @@
   "dragRacingRating": "Жарыстар",
   "dragRacingBattlePass": "Баттл пасс",
   "@dragRacingBattlePass": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "Жауынгерлік билет"
   },
@@ -4537,7 +4537,7 @@
   "dragRacingV2BuyDesc0": "Сіз шынымен\nсатып алғыңыз келе ме",
   "dragRacingV2BuyDesc1": "{blueprintTitle} үшін сызбалар",
   "@dragRacingV2BuyDesc1": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "blueprintTitle үшін сызбалар"
   },
@@ -4873,7 +4873,7 @@
   "predictionsReallyWantToBuy": "Сіз шынымен сатып алғыңыз келе ме",
   "predictionsReward": "Жүлде",
   "@predictionsReward": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "Сыйлық"
   },
@@ -4889,7 +4889,7 @@
   "predictionsBuyCoinsDiscountHint": "Сома неғұрлым көп болса, жеңілдік соғұрлым жоғары!",
   "predictionsBuyCoinsMinError": "{min}-нан аз сатып алуға болмайды",
   "@predictionsBuyCoinsMinError": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "min-нан аз сатып алуға болмайды"
   },
@@ -5093,7 +5093,7 @@
   "rustoreOfferCaseKeys": "Кейстерге арналған 100 сынық",
   "rustoreOfferBuyFor": "{price} бағасына сатып алу",
   "@rustoreOfferBuyFor": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "price бағасына сатып алу"
   },
@@ -5184,7 +5184,7 @@
   "bingoHeistLifetimeTaskAccess": "Тапсырмаларға\nмәңгілік қолжетімділік",
   "bingoHeistReward": "Жүлде",
   "@bingoHeistReward": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "Сыйақы"
   },
@@ -5305,7 +5305,7 @@
   "chaosGarageInfo1": "<g>GC</g> арқылы сатып алынған барлық көліктер <g>«Мәңгілік»</g> мәртебесімен беріледі.\nИвент аяқталғаннан кейін бұл көліктерден <g>«Мәңгілік»</g> мәртебесі алынады, тіпті сіз сюжеттік желіні аяқтамасаңыз да.",
   "chaosUpgradeText": "Сіз өз көлігіңіздің {upgradeTitle}\nкөрсеткішін {upgradeLevel} деңгейге дейін жақсарттыңыз!",
   "@chaosUpgradeText": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Сіз өз көлігіңіздің upgradeTitle\nкөрсеткішін {upgradeLevel} деңгейге дейін жақсарттыңыз!"
   },
@@ -5442,7 +5442,7 @@
   "chaosStep7Part0Title": "Рейтинг",
   "chaosStep7Part0Text": "Мұнда сен турнирдің басқа\nқатысушылары арасындағы орныңды көресің. REP\nжәне PVP жеңістері неғұрлым көп болса, соғұрлым жоғары көтерілесің.",
   "@chaosStep7Part0Text": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "orthography",
     "previous_value": "Мұнда сен турнирдің басқа\nқатысушылары арасындағы орныңды көресің. REP\nжәне PVP жеңістері неғұрлым көп болса, соғұрлым жоғары көтерілеcің."
   },
@@ -5743,7 +5743,7 @@
   "schAssignmentPeTeacher": "Дене шынықтыру мұғалімі",
   "schAssignmentTrainerIntro": "Бәрінен үздік болғың келе ме? Онда үздік бол!\n<g>Әр сағат сайын</g> бүкіл картада шамамен <g>{books} кітап</g> пайда болады!\nОларды жинау үшін бәрінен жылдам әрі епті болуың керек!\nКітаптарды жинап, маған әкелсең – сыйлық аласың.",
   "@schAssignmentTrainerIntro": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Бәрінен үздік болғың келе ме? Онда үздік бол!\n<g>Әр сағат сайын</g> бүкіл картада шамамен <g>books кітап</g> пайда болады!\nОларды жинау үшін бәрінен жылдам әрі епті болуың керек!\nКітаптарды жинап, маған әкелсең – сыйлық аласың."
   },
@@ -5763,7 +5763,7 @@
   "schDuelsInfluencePointsAmount": "{points} ЫҚПАЛ ҰПАЙЫ",
   "schDuelsPointsAmount": "{points} ҰПАЙ",
   "@schDuelsPointsAmount": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "ҰПАЙ"
   },
@@ -5846,7 +5846,7 @@
   "schPassRewardLevels": "сыйлық деңгейі",
   "schGiftPassConfirmQuestion": "Сіз шынымен {name} сыйлағыңыз келе ме",
   "@schGiftPassConfirmQuestion": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Сіз шынымен name сыйлағыңыз келе ме"
   },
@@ -5860,7 +5860,7 @@
   "schGiftPassGoToRewards": "Сыйлықтарға өту",
   "schPassSeasonPass": "Сезондық пасс",
   "@schPassSeasonPass": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "glossary_violation",
     "previous_value": "Маусымдық пасс"
   },
@@ -5868,7 +5868,7 @@
   "schPassExp": "ТӘЖІРИБЕ",
   "schPassRewardLevelRequired": "Пасстың {level}\nдеңгейі қажет",
   "@schPassRewardLevelRequired": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Пасстың {leve}\nдеңгейі қажет"
   },
@@ -5903,7 +5903,7 @@
   "schRewardsYourRewards": "Сіздің сыйлықтарыңыз",
   "schStoreCasePossiblePrizes": "Мүмкін сыйлықтар: {title}",
   "@schStoreCasePossiblePrizes": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Мүмкін сыйлықтар: title"
   },
@@ -5936,7 +5936,7 @@
   "schTutorialT2S1PlayerTeamRed": "қызыл түс — сенің командаң, көк — қарсыластар",
   "schTutorialT2S1": "Жолақты бақыла: {playerTeamText}.\nҰпайлар фракцияның барлық мүшелерінің әрекеттерінен жиналады.\nДуэльдердің ережелері мен қатысу шарттарын білу үшін\n<g>Шайқас ақпараты</g> түймесін бас!",
   "@schTutorialT2S1": {
-    "reviewed_by_human": false,
+    "reviewed_by_human": true,
     "issue_type": "placeholder_mismatch",
     "previous_value": "Жолақты бақыла: playerTeamText.\nҰпайлар фракцияның барлық мүшелерінің әрекеттерінен жиналады.\nДуэльдердің ережелері мен қатысу шарттарын білу үшін\n<g>Шайқас ақпараты</g> түймесін бас!"
   },

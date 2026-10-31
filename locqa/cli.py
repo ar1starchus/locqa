@@ -97,6 +97,12 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     apply_parser.add_argument("--report", "-r", default="report.json", help="Path to report.json (default: report.json)")
     apply_parser.add_argument("--out", "-o", default="intl_kk_fixed.arb", help="Output fixed ARB (default: intl_kk_fixed.arb)")
     apply_parser.add_argument("--only-reviewed", action="store_true", help="Only apply fixes marked as reviewed_by_human: true")
+    apply_parser.add_argument(
+        "--mark-reviewed",
+        action="store_true",
+        default=True,
+        help="Mark applied fixes with reviewed_by_human: true in ARB metadata (default: True)",
+    )
     apply_parser.add_argument("--force", action="store_true", help="Force overwrite existing output file")
 
     # Command: glossary
@@ -237,7 +243,7 @@ def run_apply(args: argparse.Namespace) -> int:
         target_arb=tgt_arb,
         findings=findings,
         output_path=args.out,
-        mark_all_reviewed=False,
+        mark_all_reviewed=getattr(args, "mark_reviewed", True),
     )
     print(f"[✓] Применено {applied_cnt} правок из {args.report} в {args.out}")
     return 0
