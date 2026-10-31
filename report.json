@@ -314,7 +314,7 @@
     "source": "Неизвестная ошибка",
     "target": "Неизвестная ошибка",
     "evidence": "Непереведённый русский текст (окончания прилагательных): 'Неизвестная ошибка'",
-    "suggestion": null,
+    "suggestion": "Белгісіз қате",
     "confidence": 0.98,
     "reviewed_by_human": false
   },
@@ -1111,6 +1111,28 @@
     "reviewed_by_human": false
   },
   {
+    "key": "laLogin",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Логин",
+    "target": "Логин",
+    "evidence": "Слово 'Логин' оставлено на русском языке без перевода (рекомендуемый перевод: 'Кіру')",
+    "suggestion": "Кіру",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "settingsGameControlAnalog",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Аналог",
+    "target": "Аналог",
+    "evidence": "Слово 'Аналог' оставлено на русском языке без перевода (рекомендуемый перевод: 'Аналогы')",
+    "suggestion": "Аналогы",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
     "key": "accessories_type_caps",
     "issue_type": "same_as_source",
     "severity": "medium",
@@ -1133,13 +1155,13 @@
     "reviewed_by_human": false
   },
   {
-    "key": "donate_menu_vehicle_1",
+    "key": "tune_styling",
     "issue_type": "same_as_source",
     "severity": "medium",
-    "source": "авто",
-    "target": "авто",
-    "evidence": "Слово 'авто' оставлено на русском языке без перевода (рекомендуемый перевод: 'көлік')",
-    "suggestion": "көлік",
+    "source": "Стайлинг",
+    "target": "Стайлинг",
+    "evidence": "Слово 'Стайлинг' оставлено на русском языке без перевода (рекомендуемый перевод: 'Сәндеу')",
+    "suggestion": "Сәндеу",
     "confidence": 0.95,
     "reviewed_by_human": false
   },
@@ -1166,6 +1188,17 @@
     "reviewed_by_human": false
   },
   {
+    "key": "tune_standart_1",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "СТАНДАРТ",
+    "target": "СТАНДАРТ",
+    "evidence": "Слово 'СТАНДАРТ' оставлено на русском языке без перевода (рекомендуемый перевод: 'СТАНДАРТТЫ')",
+    "suggestion": "СТАНДАРТТЫ",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
     "key": "cup",
     "issue_type": "same_as_source",
     "severity": "medium",
@@ -1173,6 +1206,28 @@
     "target": "КУБОК",
     "evidence": "Слово 'КУБОК' оставлено на русском языке без перевода (рекомендуемый перевод: 'ТОСТАҒАН')",
     "suggestion": "ТОСТАҒАН",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "alchemic_airdrop",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Аирдроп",
+    "target": "Аирдроп",
+    "evidence": "Слово 'Аирдроп' оставлено на русском языке без перевода (рекомендуемый перевод: 'Аэродроп')",
+    "suggestion": "Аэродроп",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "alchemy_scooter",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Самокат",
+    "target": "Самокат",
+    "evidence": "Слово 'Самокат' оставлено на русском языке без перевода (рекомендуемый перевод: 'Скутер')",
+    "suggestion": "Скутер",
     "confidence": 0.95,
     "reviewed_by_human": false
   },
@@ -1195,6 +1250,28 @@
     "target": "Букет",
     "evidence": "Слово 'Букет' оставлено на русском языке без перевода (рекомендуемый перевод: 'Гүл шоғы')",
     "suggestion": "Гүл шоғы",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "chat_nrp",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "НРП",
+    "target": "НРП",
+    "evidence": "Слово 'НРП' оставлено на русском языке без перевода (рекомендуемый перевод: 'NRP')",
+    "suggestion": "NRP",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "chat_department",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Департамент",
+    "target": "Департамент",
+    "evidence": "Слово 'Департамент' оставлено на русском языке без перевода (рекомендуемый перевод: 'Бөлім')",
+    "suggestion": "Бөлім",
     "confidence": 0.95,
     "reviewed_by_human": false
   },
@@ -1250,6 +1327,83 @@
     "target": "Аксессуары",
     "evidence": "Слово 'Аксессуары' оставлено на русском языке без перевода (рекомендуемый перевод: 'Аксессуарлар')",
     "suggestion": "Аксессуарлар",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "pts",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "ПТС",
+    "target": "ПТС",
+    "evidence": "Слово 'ПТС' оставлено на русском языке без перевода (рекомендуемый перевод: 'PTS')",
+    "suggestion": "PTS",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "passport",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Паспорт",
+    "target": "Паспорт",
+    "evidence": "Слово 'Паспорт' оставлено на русском языке без перевода (рекомендуемый перевод: 'Төлқұжат')",
+    "suggestion": "Төлқұжат",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "alabuga_chemist",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "КотоХимик",
+    "target": "КотоХимик",
+    "evidence": "Слово 'КотоХимик' оставлено на русском языке без перевода (рекомендуемый перевод: 'Мысық химик')",
+    "suggestion": "Мысық химик",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "expedition_airdrop",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Аирдроп",
+    "target": "Аирдроп",
+    "evidence": "Слово 'Аирдроп' оставлено на русском языке без перевода (рекомендуемый перевод: 'Аэродроп')",
+    "suggestion": "Аэродроп",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "halloweenBooster",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "БУСТЕР",
+    "target": "БУСТЕР",
+    "evidence": "Слово 'БУСТЕР' оставлено на русском языке без перевода (рекомендуемый перевод: 'КҮШЕЙТКІШ')",
+    "suggestion": "КҮШЕЙТКІШ",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "alchemyItemCompass",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Циркуль",
+    "target": "Циркуль",
+    "evidence": "Слово 'Циркуль' оставлено на русском языке без перевода (рекомендуемый перевод: 'Компас')",
+    "suggestion": "Компас",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "alchemyItemScooter",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Самокат",
+    "target": "Самокат",
+    "evidence": "Слово 'Самокат' оставлено на русском языке без перевода (рекомендуемый перевод: 'Скутер')",
+    "suggestion": "Скутер",
     "confidence": 0.95,
     "reviewed_by_human": false
   },
@@ -1320,6 +1474,17 @@
     "reviewed_by_human": false
   },
   {
+    "key": "birthday_camp_two_fake",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "Фейк",
+    "target": "Фейк",
+    "evidence": "Слово 'Фейк' оставлено на русском языке без перевода (рекомендуемый перевод: 'Жалған')",
+    "suggestion": "Жалған",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
     "key": "smugglingRoute",
     "issue_type": "same_as_source",
     "severity": "medium",
@@ -1327,6 +1492,17 @@
     "target": "МАРШРУТ",
     "evidence": "Слово 'МАРШРУТ' оставлено на русском языке без перевода (рекомендуемый перевод: 'БАҒЫТ')",
     "suggestion": "БАҒЫТ",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "lnyBase",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "БАЗА",
+    "target": "БАЗА",
+    "evidence": "Слово 'БАЗА' оставлено на русском языке без перевода (рекомендуемый перевод: 'НЕГІЗ')",
+    "suggestion": "НЕГІЗ",
     "confidence": 0.95,
     "reviewed_by_human": false
   },
@@ -1349,17 +1525,6 @@
     "target": "Катушка",
     "evidence": "Слово 'Катушка' оставлено на русском языке без перевода (рекомендуемый перевод: 'Шарғы')",
     "suggestion": "Шарғы",
-    "confidence": 0.95,
-    "reviewed_by_human": false
-  },
-  {
-    "key": "bigCatchBuyerLimit",
-    "issue_type": "same_as_source",
-    "severity": "medium",
-    "source": "Лимит:",
-    "target": "Лимит:",
-    "evidence": "Слово 'Лимит:' оставлено на русском языке без перевода (рекомендуемый перевод: 'Шектеу:')",
-    "suggestion": "Шектеу:",
     "confidence": 0.95,
     "reviewed_by_human": false
   },
@@ -1415,6 +1580,17 @@
     "target": "Лидерборд",
     "evidence": "Слово 'Лидерборд' оставлено на русском языке без перевода (рекомендуемый перевод: 'Көшбасшылар тақтасы')",
     "suggestion": "Көшбасшылар тақтасы",
+    "confidence": 0.95,
+    "reviewed_by_human": false
+  },
+  {
+    "key": "slotMachineJackpotMini",
+    "issue_type": "same_as_source",
+    "severity": "medium",
+    "source": "МИНИ",
+    "target": "МИНИ",
+    "evidence": "Слово 'МИНИ' оставлено на русском языке без перевода (рекомендуемый перевод: 'ШАҒЫН')",
+    "suggestion": "ШАҒЫН",
     "confidence": 0.95,
     "reviewed_by_human": false
   },

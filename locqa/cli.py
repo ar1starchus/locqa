@@ -122,6 +122,12 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     trans_parser.add_argument("--input", "-i", required=True, help="Input Cyrillic ARB")
     trans_parser.add_argument("--out", "-o", required=True, help="Output Latin ARB")
 
+    # Command: sync-translations
+    sync_parser = subparsers.add_parser("sync-translations", help="Pre-fetch translations for untranslated words via Translation API into cache")
+    sync_parser.add_argument("--source", "-s", required=True, help="Source ARB (intl_ru.arb)")
+    sync_parser.add_argument("--target", "-t", required=True, help="Target ARB (intl_kk.arb)")
+    sync_parser.add_argument("--api", default=None, help="Custom Translation API URL")
+
     return parser.parse_args(argv)
 
 
@@ -288,6 +294,18 @@ def run_transliterate(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_sync_translations(args: argparse.Namespace) -> int:
+    print(f"[*] Loading source ARB: {args.source}")
+    src_arb = ArbParser.parse_file(args.source)
+    print(f"[*] Loading target ARB: {args.target}")
+    tgt_arb = ArbParser.parse_file(args.target)
+    translator = Translator(api_url=args.api)
+    print("[*] Syncing translations via Translation API...")
+    synced = translator.sync_translations_for_arb(src_arb, tgt_arb)
+    print(f"[✓] Synced {synced} new terms to cache ({translator.cache_path})")
+    return 0
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     args = parse_args(argv)
     if args.command == "check":
@@ -298,6 +316,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         return run_build_glossary(args)
     elif args.command == "transliterate":
         return run_transliterate(args)
+    elif args.command == "sync-translations":
+        return run_sync_translations(args)
     return 1
 
 

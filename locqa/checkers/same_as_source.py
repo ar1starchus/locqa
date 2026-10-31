@@ -47,6 +47,9 @@ class SameAsSourceChecker(BaseChecker):
         "spain",
         "1xbet",
         "silverstar",
+        "гранд",
+        "ростикс",
+        "баскет",
     }
 
     # Common geographic / country names that legitimately stay identical in Cyrillic
@@ -157,6 +160,11 @@ class SameAsSourceChecker(BaseChecker):
         # 4. Check brand / terms whitelist (case-insensitive)
         cleaned = re.sub(r"[\W_]+", " ", s.lower()).strip()
         if cleaned in whitelist:
+            return True
+
+        # 5. Check if key denotes a character, NPC, mentor name, or brand product
+        key_low = key.lower()
+        if any(token in key_low for token in ("mentor", "charactername", "character_name", "npc", "principalname", "rostics", "1xbet")):
             return True
 
         # 5. International metric units and time abbreviation templates (e.g. '{seconds} сек.')
