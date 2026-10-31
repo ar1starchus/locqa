@@ -35,7 +35,6 @@ class Finding:
     target: str
     evidence: str
     suggestion: Optional[str] = None
-    options: Optional[List[str]] = None
     confidence: float = 1.0
     reviewed_by_human: bool = False
 

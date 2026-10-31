@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import hashlib
 import html
 import json
 import os
@@ -50,10 +49,7 @@ class Reporter:
         for idx, f in enumerate(findings, 1):
             sev = f.severity.value if isinstance(f.severity, Severity) else str(f.severity)
             itype = f.issue_type.value if isinstance(f.issue_type, IssueType) else str(f.issue_type)
-            
-            f_dict = f.to_dict()
-            f_dict["idx"] = idx
-            findings_json_list.append(f_dict)
+            findings_json_list.append(f.to_dict())
 
             badge_color = {
                 "high": "#ef4444",
@@ -62,7 +58,6 @@ class Reporter:
             }.get(sev.lower(), "#6b7280")
 
             k_esc = html.escape(f.key)
-            k_arg = f.key.replace("\\", "\\\\").replace("'", "\\'")
             s_esc = html.escape(f.source or "")
             t_esc = html.escape(f.target or "")
             e_esc = html.escape(f.evidence or "")
@@ -73,7 +68,7 @@ class Reporter:
             btn_html = ""
             if has_sug:
                 btn_html = f"""
-                <button type="button" class="btn-approve" onclick="toggleApprove({idx}, '{k_arg}')" id="btn-{idx}">
+                <button type="button" class="btn-approve" onclick="toggleApprove('{k_esc}')" id="btn-{k_esc}">
                   Одобрить
                 </button>
                 """
@@ -81,37 +76,14 @@ class Reporter:
                 btn_html = '<span style="color:#94a3b8;font-size:12px;">—</span>'
 
             sug_rows = max(1, min(6, sug_val.count("\n") + 1))
-            if f.options and len(f.options) >= 1:
-                opt_elements = []
-                for o_idx, opt in enumerate(f.options):
-                    opt_esc = html.escape(opt)
-                    is_sel = " selected" if opt == sug_val else ""
-                    rec_label = " (рекомендуемый)" if o_idx == 0 else ""
-                    opt_elements.append(f'<option value="{opt_esc}"{is_sel}>{opt_esc}{rec_label}</option>')
-                opt_elements.append('<option value="__custom__">✏️ Свой вариант (вручную)...</option>')
-
-                sel_html = (
-                    f'<select class="sug-select" id="sel-{idx}" autocomplete="off" onchange="onSelectOption({idx}, \'{k_arg}\', this.value)">'
-                    f'{"".join(opt_elements)}'
-                    f'</select>'
-                )
-                txt_html = (
-                    f'<textarea class="sug-input" id="sug-{idx}" rows="{sug_rows}" autocomplete="off" spellcheck="false" '
-                    f'oninput="onCustomInput({idx}, \'{k_arg}\', this.value)" '
-                    f'onchange="onCustomInput({idx}, \'{k_arg}\', this.value)">{sug_esc}</textarea>'
-                )
-                sug_cell = f'<div class="sug-wrapper">{sel_html}{txt_html}</div>'
-            elif has_sug:
-                sug_cell = (
-                    f'<textarea class="sug-input" id="sug-{idx}" rows="{sug_rows}" autocomplete="off" spellcheck="false" '
-                    f'oninput="updateCustomSuggestion({idx}, \'{k_arg}\', this.value)" '
-                    f'onchange="updateCustomSuggestion({idx}, \'{k_arg}\', this.value)">{sug_esc}</textarea>'
-                )
-            else:
-                sug_cell = '<span style="color:#94a3b8;">—</span>'
+            sug_cell = (
+                f'<textarea class="sug-input" id="sug-{k_esc}" rows="{sug_rows}" oninput="updateCustomSuggestion(\'{k_esc}\', this.value)" onchange="updateCustomSuggestion(\'{k_esc}\', this.value)">{sug_esc}</textarea>'
+                if has_sug
+                else '<span style="color:#94a3b8;">—</span>'
+            )
 
             row = f"""
-            <tr data-sev="{sev}" data-type="{itype}" id="row-{idx}" data-key="{k_esc}" data-has-sug="{str(has_sug).lower()}" data-conf="{f.confidence}">
+            <tr data-sev="{sev}" data-type="{itype}" id="row-{k_esc}" data-key="{k_esc}" data-has-sug="{str(has_sug).lower()}" data-conf="{f.confidence}">
               <td style="text-align:center;color:#6b7280;">{idx}</td>
               <td><code>{k_esc}</code></td>
               <td><span class="badge" style="background:#e0e7ff;color:#3730a3;">{itype}</span></td>
@@ -121,7 +93,7 @@ class Reporter:
               <td class="evidence-cell">{e_esc}</td>
               <td class="sug-cell">{sug_cell}</td>
               <td style="text-align:center;">{f.confidence:.2f}</td>
-              <td style="text-align:center;" id="action-{idx}">{btn_html}</td>
+              <td style="text-align:center;" id="action-{k_esc}">{btn_html}</td>
             </tr>
             """
             rows_html.append(row)
@@ -129,7 +101,6 @@ class Reporter:
         type_options = "".join(f'<option value="{t}">{t} ({c})</option>' for t, c in by_type.most_common())
         findings_json_str = json.dumps(findings_json_list, ensure_ascii=False)
         target_raw_escaped = json.dumps(target_raw_content, ensure_ascii=False)
-        report_hash = hashlib.md5(findings_json_str.encode("utf-8")).hexdigest()[:8]
 
         html_template = f"""<!DOCTYPE html>
 <html lang="ru">
@@ -178,9 +149,6 @@ class Reporter:
     .text-cell {{ max-width: 240px; word-break: break-word; white-space: pre-wrap; line-height: 1.4; }}
     .evidence-cell {{ max-width: 260px; color: #475569; font-size: 12px; line-height: 1.4; }}
     .sug-cell {{ min-width: 220px; }}
-    .sug-wrapper {{ display: flex; flex-direction: column; gap: 6px; width: 100%; min-width: 200px; }}
-    .sug-select {{ width: 100%; padding: 5px 8px; border: 1px solid #93c5fd; background: #eff6ff; border-radius: 6px; font-size: 12px; font-weight: 600; color: #1e40af; outline: none; cursor: pointer; }}
-    .sug-select:focus {{ border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.2); }}
     .sug-input {{ width: 100%; min-width: 200px; padding: 6px 10px; border: 1px solid #a7f3d0; background: #f0fdf4; border-radius: 6px; font-size: 13px; font-family: inherit; color: #065f46; font-weight: 500; outline: none; resize: vertical; white-space: pre-wrap; line-height: 1.4; box-sizing: border-box; }}
     .sug-input:focus {{ border-color: #10b981; background: #fff; box-shadow: 0 0 0 2px rgba(16,185,129,0.2); }}
     
@@ -274,86 +242,46 @@ class Reporter:
   <script>
     const findingsData = {findings_json_str};
     const targetRawContent = {target_raw_escaped};
-    const REPORT_ID = "{report_hash}";
-    const STORAGE_KEY_APP = "locqa_approvals_" + REPORT_ID;
-    const STORAGE_KEY_SUG = "locqa_custom_sug_" + REPORT_ID;
 
-    // State of approved keys and custom suggestions (scoped to this report run)
-    let approvals = JSON.parse(localStorage.getItem(STORAGE_KEY_APP) || '{{}}');
-    let customSuggestions = JSON.parse(localStorage.getItem(STORAGE_KEY_SUG) || '{{}}');
+    // State of approved keys and custom suggestions
+    let approvals = JSON.parse(localStorage.getItem('locqa_approvals') || '{{}}');
+    let customSuggestions = JSON.parse(localStorage.getItem('locqa_custom_sug') || '{{}}');
 
     function updateCounter() {{
       const count = Object.values(approvals).filter(Boolean).length;
       document.getElementById('approvedCounter').innerText = count;
     }}
 
-    function toggleApprove(idx, key) {{
+    function toggleApprove(key) {{
       const isApproved = !approvals[key];
       approvals[key] = isApproved;
-      localStorage.setItem(STORAGE_KEY_APP, JSON.stringify(approvals));
+      localStorage.setItem('locqa_approvals', JSON.stringify(approvals));
 
-      findingsData.filter(f => f.key === key).forEach(f => {{
-        const row = document.getElementById('row-' + f.idx);
-        const btn = document.getElementById('btn-' + f.idx);
-        if (row && btn) {{
-          if (isApproved) {{
-            row.classList.add('row-approved');
-            btn.classList.add('btn-approved');
-            btn.innerText = '✓ Одобрено';
-          }} else {{
-            row.classList.remove('row-approved');
-            btn.classList.remove('btn-approved');
-            btn.innerText = 'Одобрить';
-          }}
-        }}
-      }});
+      const row = document.getElementById('row-' + key);
+      const btn = document.getElementById('btn-' + key);
+      if (isApproved) {{
+        row.classList.add('row-approved');
+        btn.classList.add('btn-approved');
+        btn.innerText = '✓ Одобрено';
+      }} else {{
+        row.classList.remove('row-approved');
+        btn.classList.remove('btn-approved');
+        btn.innerText = 'Одобрить';
+      }}
       updateCounter();
     }}
 
-    function updateCustomSuggestion(idx, key, value) {{
+    function updateCustomSuggestion(key, value) {{
       customSuggestions[key] = value;
-      localStorage.setItem(STORAGE_KEY_SUG, JSON.stringify(customSuggestions));
-    }}
-
-    function onSelectOption(idx, key, val) {{
-      const textarea = document.getElementById('sug-' + idx);
-      if (val === '__custom__') {{
-        if (textarea) {{
-          textarea.focus();
-          textarea.select();
-        }}
-      }} else {{
-        if (textarea) {{
-          textarea.value = val;
-        }}
-        updateCustomSuggestion(idx, key, val);
-      }}
-    }}
-
-    function onCustomInput(idx, key, val) {{
-      updateCustomSuggestion(idx, key, val);
-      const select = document.getElementById('sel-' + idx);
-      if (select) {{
-        let matched = false;
-        for (let i = 0; i < select.options.length; i++) {{
-          if (select.options[i].value === val) {{
-            select.selectedIndex = i;
-            matched = true;
-            break;
-          }}
-        }}
-        if (!matched) {{
-          select.value = '__custom__';
-        }}
-      }}
+      localStorage.setItem('locqa_custom_sug', JSON.stringify(customSuggestions));
     }}
 
     function approveHighConfidence() {{
       findingsData.forEach(f => {{
         if (f.suggestion && f.confidence >= 0.95) {{
           approvals[f.key] = true;
-          const row = document.getElementById('row-' + f.idx);
-          const btn = document.getElementById('btn-' + f.idx);
+          const row = document.getElementById('row-' + f.key);
+          const btn = document.getElementById('btn-' + f.key);
           if (row && btn) {{
             row.classList.add('row-approved');
             btn.classList.add('btn-approved');
@@ -361,7 +289,7 @@ class Reporter:
           }}
         }}
       }});
-      localStorage.setItem(STORAGE_KEY_APP, JSON.stringify(approvals));
+      localStorage.setItem('locqa_approvals', JSON.stringify(approvals));
       updateCounter();
     }}
 
@@ -369,8 +297,8 @@ class Reporter:
       findingsData.forEach(f => {{
         if (f.suggestion) {{
           approvals[f.key] = true;
-          const row = document.getElementById('row-' + f.idx);
-          const btn = document.getElementById('btn-' + f.idx);
+          const row = document.getElementById('row-' + f.key);
+          const btn = document.getElementById('btn-' + f.key);
           if (row && btn) {{
             row.classList.add('row-approved');
             btn.classList.add('btn-approved');
@@ -378,15 +306,13 @@ class Reporter:
           }}
         }}
       }});
-      localStorage.setItem(STORAGE_KEY_APP, JSON.stringify(approvals));
+      localStorage.setItem('locqa_approvals', JSON.stringify(approvals));
       updateCounter();
     }}
 
     function resetApprovals() {{
       approvals = {{}};
       customSuggestions = {{}};
-      localStorage.removeItem(STORAGE_KEY_APP);
-      localStorage.removeItem(STORAGE_KEY_SUG);
       localStorage.removeItem('locqa_approvals');
       localStorage.removeItem('locqa_custom_sug');
       document.querySelectorAll('tr.row-approved').forEach(r => r.classList.remove('row-approved'));
@@ -396,10 +322,8 @@ class Reporter:
       }});
       findingsData.forEach(f => {{
         if (f.suggestion) {{
-          const inp = document.getElementById('sug-' + f.idx);
+          const inp = document.getElementById('sug-' + f.key);
           if (inp) inp.value = f.suggestion;
-          const sel = document.getElementById('sel-' + f.idx);
-          if (sel) sel.selectedIndex = 0;
         }}
       }});
       updateCounter();
@@ -410,10 +334,8 @@ class Reporter:
       const updated = findingsData.map(f => {{
         const isApproved = Boolean(approvals[f.key]);
         const customSug = customSuggestions[f.key];
-        const res = Object.assign({{}}, f);
-        delete res.idx;
         return {{
-          ...res,
+          ...f,
           suggestion: customSug !== undefined ? customSug : f.suggestion,
           reviewed_by_human: isApproved
         }};
@@ -527,34 +449,20 @@ class Reporter:
 
     // Initial state restore
     window.addEventListener('DOMContentLoaded', () => {{
-      findingsData.forEach(f => {{
-        if (approvals[f.key]) {{
-          const row = document.getElementById('row-' + f.idx);
-          const btn = document.getElementById('btn-' + f.idx);
+      Object.keys(approvals).forEach(k => {{
+        if (approvals[k]) {{
+          const row = document.getElementById('row-' + k);
+          const btn = document.getElementById('btn-' + k);
           if (row && btn) {{
             row.classList.add('row-approved');
             btn.classList.add('btn-approved');
             btn.innerText = '✓ Одобрено';
           }}
         }}
-        if (customSuggestions[f.key] !== undefined) {{
-          const inp = document.getElementById('sug-' + f.idx);
-          if (inp) inp.value = customSuggestions[f.key];
-          const sel = document.getElementById('sel-' + f.idx);
-          if (sel) {{
-            let matched = false;
-            for (let i = 0; i < sel.options.length; i++) {{
-              if (sel.options[i].value === customSuggestions[f.key]) {{
-                sel.selectedIndex = i;
-                matched = true;
-                break;
-              }}
-            }}
-            if (!matched) {{
-              sel.value = '__custom__';
-            }}
-          }}
-        }}
+      }});
+      Object.keys(customSuggestions).forEach(k => {{
+        const inp = document.getElementById('sug-' + k);
+        if (inp) inp.value = customSuggestions[k];
       }});
       updateCounter();
     }});

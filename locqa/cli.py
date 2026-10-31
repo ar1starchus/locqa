@@ -13,7 +13,6 @@ from locqa.llm import GeminiClient
 from locqa.models import ArbFile, Finding
 from locqa.parser import ArbParser
 from locqa.reporter import Reporter
-from locqa.translator import Translator
 from locqa.transliteration import KazakhLatinTransliteration
 
 
@@ -91,16 +90,6 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         default=None,
         help="Optional Gemini API key for semantic calque detection (or set GEMINI_API_KEY env var)",
     )
-    check_parser.add_argument(
-        "--translate-api",
-        default=None,
-        help="Optional custom translation API URL (default: Google Translate gtx)",
-    )
-    check_parser.add_argument(
-        "--no-online-translate",
-        action="store_true",
-        help="Disable online translation API calls and use offline lexicon/corpus only",
-    )
 
     # Command: apply (applies fixes from report.json without re-running checks)
     apply_parser = subparsers.add_parser("apply", help="Apply reviewed fixes from report.json to target ARB")
@@ -122,12 +111,6 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     trans_parser.add_argument("--input", "-i", required=True, help="Input Cyrillic ARB")
     trans_parser.add_argument("--out", "-o", required=True, help="Output Latin ARB")
 
-    # Command: sync-translations
-    sync_parser = subparsers.add_parser("sync-translations", help="Pre-fetch translations for untranslated words via Translation API into cache")
-    sync_parser.add_argument("--source", "-s", required=True, help="Source ARB (intl_ru.arb)")
-    sync_parser.add_argument("--target", "-t", required=True, help="Target ARB (intl_kk.arb)")
-    sync_parser.add_argument("--api", default=None, help="Custom Translation API URL")
-
     return parser.parse_args(argv)
 
 
@@ -147,16 +130,6 @@ def run_check(args: argparse.Namespace) -> int:
                 print(f"[*] Loading auxiliary ARB ({loc}): {path}")
                 aux_files[loc] = ArbParser.parse_file(path)
 
-    # Auto-detect sibling aux files in target/source directory if not explicitly passed
-    for base_path in (args.target, args.source):
-        base_dir = os.path.dirname(os.path.abspath(base_path))
-        for auto_loc in ("uz", "en"):
-            if auto_loc not in aux_files:
-                candidate = os.path.join(base_dir, f"intl_{auto_loc}.arb")
-                if os.path.exists(candidate):
-                    print(f"[*] Auto-detected auxiliary ARB ({auto_loc}): {candidate}")
-                    aux_files[auto_loc] = ArbParser.parse_file(candidate)
-
     # Load or build glossary
     glossary: Optional[Glossary] = None
     if os.path.exists(args.glossary):
@@ -174,10 +147,6 @@ def run_check(args: argparse.Namespace) -> int:
         "glossary": glossary,
         "auxiliary_arb_files": aux_files,
         "gemini_client": GeminiClient(api_key=args.gemini_key),
-        "translator": Translator(
-            api_url=args.translate_api,
-            enable_online=not args.no_online_translate,
-        ),
     }
 
     # Run QA Engine
@@ -259,7 +228,6 @@ def run_apply(args: argparse.Namespace) -> int:
                     target=item.get("target", ""),
                     evidence=item.get("evidence", ""),
                     suggestion=item["suggestion"],
-                    options=item.get("options"),
                     confidence=item.get("confidence", 1.0),
                     reviewed_by_human=item.get("reviewed_by_human", False),
                 )
@@ -295,18 +263,6 @@ def run_transliterate(args: argparse.Namespace) -> int:
     return 0
 
 
-def run_sync_translations(args: argparse.Namespace) -> int:
-    print(f"[*] Loading source ARB: {args.source}")
-    src_arb = ArbParser.parse_file(args.source)
-    print(f"[*] Loading target ARB: {args.target}")
-    tgt_arb = ArbParser.parse_file(args.target)
-    translator = Translator(api_url=args.api)
-    print("[*] Syncing translations via Translation API...")
-    synced = translator.sync_translations_for_arb(src_arb, tgt_arb)
-    print(f"[✓] Synced {synced} new terms to cache ({translator.cache_path})")
-    return 0
-
-
 def main(argv: Optional[List[str]] = None) -> int:
     args = parse_args(argv)
     if args.command == "check":
@@ -317,8 +273,6 @@ def main(argv: Optional[List[str]] = None) -> int:
         return run_build_glossary(args)
     elif args.command == "transliterate":
         return run_transliterate(args)
-    elif args.command == "sync-translations":
-        return run_sync_translations(args)
     return 1
 
 
